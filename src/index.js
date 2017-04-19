@@ -5,17 +5,17 @@ import auth from './modules/components/Auth'
 import App from './modules/App';
 import About from './modules/pages/About';
 import Browser from './modules/pages/Browser';
-import Comments from './modules/pages/Comments';
+import Notes from './modules/pages/Notes';
 import Help from './modules/pages/Help';
 import Home from './modules/pages/Home';
 import Login from './modules/pages/Login'
 import Logout from './modules/pages/Logout'
 import ParaTexts from './modules/pages/ParaTexts';
-import References from './modules/pages/References';
+import Links from './modules/pages/Links';
 import Search from './modules/pages/SearchPage';
-import SearchComments from './modules/pages/SearchComments';
-import SearchReferences from './modules/pages/SearchReferences';
-import Texts from './modules/pages/Texts';
+import SearchNotes from './modules/pages/SearchNotes';
+import SearchLinks from './modules/pages/SearchLinks';
+import TextParts from './modules/pages/TextParts';
 import 'react-select/dist/react-select.css';
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import './App.css';
@@ -45,13 +45,13 @@ render((
     <Route path="/" component={App} >
       <IndexRoute component={Home}/>
       <Route path="/home" component={Home }/>
-      <Route path="/texts" component={Texts } onEnter={requireAuth}/>
+      <Route path="/textparts" component={TextParts } onEnter={requireAuth}/>
       <Route path="/paratexts" component={ParaTexts } onEnter={requireAuth}/>
-      <Route path="/comments" component={Comments } onEnter={requireAuth}/>
-      <Route path="/commentsSearch" component={SearchComments } onEnter={requireAuth}/>
-      <Route path="/references" component={References } onEnter={requireAuth}/>
-      <Route path="/referencesSearch" component={SearchReferences } onEnter={requireAuth}/>
-      <Route path="/search" component={Search } onEnter={requireAuth}/>
+      <Route path="/notes" component={Notes } onEnter={requireAuth}/>
+      <Route path="/notesSearch" component={SearchNotes } onEnter={requireAuth}/>
+      <Route path="/links" component={Links } onEnter={requireAuth}/>
+      <Route path="/linksSearch" component={SearchLinks } onEnter={requireAuth}/>
+      <Route path="/searchtextparts" component={Search} onEnter={requireAuth}/>
       <Route path="/browser" component={Browser } onEnter={requireAuth}/>
       <Route path="/about" component={About}/>
       <Route path="/help" component={Help}  onEnter={requireAuth}/>

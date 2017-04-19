@@ -6,6 +6,9 @@ div.container-fluid {
     width: 100%;
     background-color: black;
 }
+.container {
+    padding-bottom: 20px;
+}
 .App-header {
     z-index: -1;
 }

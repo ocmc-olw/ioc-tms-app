@@ -1432,6 +1432,13 @@ cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
     parse-json "^2.2.0"
     require-from-string "^1.1.0"
 
+create-react-class@^15.5.2:
+  version "15.5.2"
+  resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.5.2.tgz#6a8758348df660b88326a0e764d569f274aad681"
+  dependencies:
+    fbjs "^0.8.9"
+    object-assign "^4.1.1"
+
 cross-spawn@4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-4.0.2.tgz#7b9247621c23adfdd3856004a823cbe397424d41"
@@ -1755,7 +1762,7 @@ electron-to-chromium@^1.2.5:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.2.6.tgz#f38ad51d1919b06bc07275c62629db803ddca05a"
 
-element-class@^0.2.2:
+element-class@^0.2.0, element-class@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/element-class/-/element-class-0.2.2.tgz#9d3bbd0767f9013ef8e1c8ebe722c1402a60050e"
 
@@ -2062,6 +2069,10 @@ exec-sh@^0.2.0:
   dependencies:
     merge "^1.1.3"
 
+exenv@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.0.tgz#3835f127abf075bfe082d0aed4484057c78e3c89"
+
 exit-hook@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/exit-hook/-/exit-hook-1.1.1.tgz#f05ca233b48c05d54fff07765df8507e95c02ff8"
@@ -2169,7 +2180,7 @@ fbjs@^0.6.1:
     ua-parser-js "^0.7.9"
     whatwg-fetch "^0.9.0"
 
-fbjs@^0.8.1, fbjs@^0.8.4:
+fbjs@^0.8.1, fbjs@^0.8.4, fbjs@^0.8.9:
   version "0.8.9"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.9.tgz#180247fbd347dcc9004517b904f865400a0c8f14"
   dependencies:
@@ -2730,9 +2741,9 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-ioc-liturgical-react@0.0.21:
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.0.21.tgz#18d6edf6fa76cc57fbf7e9afabb446a1578d2844"
+ioc-liturgical-react@0.0.23:
+  version "0.0.23"
+  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.0.23.tgz#c27aa7b0bede1b5a2a3a88c266178a1f9e2207df"
   dependencies:
     axios "^0.15.3"
     bootstrap "^3.3.7"
@@ -2743,11 +2754,12 @@ ioc-liturgical-react@0.0.21:
     react "^15.4.2"
     react-bootstrap "0.30.7"
     react-bootstrap-date-picker "4.0.0"
-    react-bootstrap-table "2.7.1"
+    react-bootstrap-table "3.1.7"
+    react-checkbox-list "0.0.2"
     react-dom "^15.4.2"
     react-file-download "^0.3.2"
     react-fontawesome "^1.5.0 "
-    react-jsonschema-form "^0.41.2"
+    react-jsonschema-form "^0.43.0"
     react-select "^1.0.0-rc.2"
     svgo "^0.7.1"
     url-loader "^0.5.7"
@@ -3844,7 +3856,7 @@ object-assign@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
 
-object-assign@^4.0.1, object-assign@^4.1.0:
+object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
@@ -4362,6 +4374,12 @@ promise@7.1.1, promise@^7.0.3, promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
+prop-types@^15.5.7:
+  version "15.5.8"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.8.tgz#6b7b2e141083be38c8595aa51fc55775c7199394"
+  dependencies:
+    fbjs "^0.8.9"
+
 proxy-addr@~1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-1.1.3.tgz#dc97502f5722e888467b3fa2297a7b1ff47df074"
@@ -4460,12 +4478,13 @@ react-bootstrap-date-picker@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-bootstrap-date-picker/-/react-bootstrap-date-picker-4.0.0.tgz#63b243a571e295e83a11eee56b081f21d1ec4612"
 
-react-bootstrap-table@2.7.1:
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/react-bootstrap-table/-/react-bootstrap-table-2.7.1.tgz#72d0de5f88bd2ccb600d58b649d75c032441115e"
+react-bootstrap-table@3.1.7:
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/react-bootstrap-table/-/react-bootstrap-table-3.1.7.tgz#99339e9299d5771b675173a33050bfb32592fca7"
   dependencies:
     "@allenfang/react-toastr" "2.8.2"
     classnames "^2.1.2"
+    react-modal "^1.4.0"
 
 react-bootstrap@0.30.7:
   version "0.30.7"
@@ -4480,6 +4499,10 @@ react-bootstrap@0.30.7:
     react-prop-types "^0.4.0"
     uncontrollable "^4.0.1"
     warning "^3.0.0"
+
+react-checkbox-list@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/react-checkbox-list/-/react-checkbox-list-0.0.2.tgz#8f4b26261f5bb468db25107eebbebc5d61224cc9"
 
 react-dev-utils@^0.4.2:
   version "0.4.2"
@@ -4497,7 +4520,7 @@ react-dev-utils@^0.4.2:
   version "15.3.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.3.2.tgz#c46b0aa5380d7b838e7a59c4a7beff2ed315531f"
 
-react-dom@^15.4.1, react-dom@^15.4.2:
+react-dom@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
   dependencies:
@@ -4523,14 +4546,6 @@ react-input-autosize@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-1.1.0.tgz#3fe1ac832387d8abab85f6051ceab1c9e5570853"
 
-react-jsonschema-form@^0.41.2:
-  version "0.41.2"
-  resolved "https://registry.yarnpkg.com/react-jsonschema-form/-/react-jsonschema-form-0.41.2.tgz#a77921ceff102fc5d04344e50b8e622a7e0373c2"
-  dependencies:
-    jsonschema "^1.0.2"
-    lodash.topath "^4.5.2"
-    setimmediate "^1.0.5"
-
 react-jsonschema-form@^0.43.0:
   version "0.43.0"
   resolved "https://registry.yarnpkg.com/react-jsonschema-form/-/react-jsonschema-form-0.43.0.tgz#586b69de7bda6d3a9cd9f74c1bee9b7fa353d1e5"
@@ -4538,6 +4553,16 @@ react-jsonschema-form@^0.43.0:
     jsonschema "^1.0.2"
     lodash.topath "^4.5.2"
     setimmediate "^1.0.5"
+
+react-modal@^1.4.0:
+  version "1.7.6"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-1.7.6.tgz#ee719e480b0e0d959c2e249bcb7acc204950c755"
+  dependencies:
+    create-react-class "^15.5.2"
+    element-class "^0.2.0"
+    exenv "1.2.0"
+    lodash.assign "^4.2.0"
+    prop-types "^15.5.7"
 
 react-overlays@^0.6.10:
   version "0.6.12"
@@ -4647,7 +4672,7 @@ react-themeable@^1.1.0:
     envify "^3.0.0"
     fbjs "^0.6.1"
 
-react@^15.4.1, react@^15.4.2:
+react@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
   dependencies:

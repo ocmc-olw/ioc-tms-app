@@ -14,22 +14,19 @@ export class Header extends React.Component {
           menu: "Parallel Texts"
         }
         , texts: {
-          menu: "Texts"
-          , itemNew: "New Text"
-          , itemSearch: "Search Texts"
+          menu: "Text Parts"
+          , itemNew: "New Text Part"
+          , itemSearch: "Search Text Parts"
         }
-        , comments: {
-          menu: "Comments"
-          , itemNew: "New Comment"
-          , itemSearch: "Search Comments"
-        }
-        , references: {
-          menu: "References"
-          , itemNew: "New Reference"
-          , itemSearch: "Search References"
+        , notes: {
+          menu: "Notes"
+          , itemNew: "New Note"
+          , itemSearch: "Search Notes"
         }
         , links: {
-          menu: "Links"
+          menu: "Text Links"
+          , itemNew: "New Text Link"
+          , itemSearch: "Search Text Links"
         }
       }
     }
@@ -61,9 +58,9 @@ export class Header extends React.Component {
             <Navbar.Collapse>
               <Nav pullRight>
                 {auth.isAuthenticated() ?
-                  <NavDropdown eventKey={"texts"} title={<span><FontAwesome name="book"/> {this.state.labels.texts.menu}</span>} id="comments-nav-dropdown">
-                  <LinkContainer to="/texts"><NavItem  className="App-submenu-item" eventKey={"text.new"} >{<FontAwesome className="App-header-ico"  name="plus"/>}{this.state.labels.texts.itemNew}</NavItem></LinkContainer>
-                  <LinkContainer to="/search"><NavItem  className="App-submenu-item" eventKey={"text.search"} >{<FontAwesome className="App-header-ico"  name="search"/>}{this.state.labels.texts.itemSearch}</NavItem></LinkContainer>
+                  <NavDropdown eventKey={"texts"} title={<span><FontAwesome name="list-ul"/> {this.state.labels.texts.menu}</span>} id="notes-nav-dropdown">
+                  <LinkContainer to="/textparts"><NavItem  className="App-submenu-item" eventKey={"text.new"} >{<FontAwesome className="App-header-ico"  name="plus"/>}{this.state.labels.texts.itemNew}</NavItem></LinkContainer>
+                  <LinkContainer to="/searchtextparts"><NavItem  className="App-submenu-item" eventKey={"text.search"} >{<FontAwesome className="App-header-ico"  name="search"/>}{this.state.labels.texts.itemSearch}</NavItem></LinkContainer>
                   </NavDropdown>
                     :
                     ""
@@ -76,17 +73,17 @@ export class Header extends React.Component {
                     ""
                 }
                 {auth.isAuthenticated() ?
-                    <NavDropdown eventKey={"comments"} title={<span><FontAwesome name="comments"/> {this.state.labels.comments.menu}</span>} id="comments-nav-dropdown">
-                      <LinkContainer to="/comments"><NavItem className="App-submenu-item" eventKey={"comments.new"} >{<FontAwesome className="App-header-ico"  name="plus"/>}{this.state.labels.comments.itemNew}</NavItem></LinkContainer>
-                      <LinkContainer to="/commentsSearch"><NavItem  className="App-submenu-item" eventKey={"comments.search"} >{<FontAwesome className="App-header-ico"  name="search"/>}{this.state.labels.comments.itemSearch}</NavItem></LinkContainer>
+                    <NavDropdown eventKey={"notes"} title={<span><FontAwesome name="pencil-square-o"/> {this.state.labels.notes.menu}</span>} id="notes-nav-dropdown">
+                      <LinkContainer to="/notes"><NavItem className="App-submenu-item" eventKey={"notes.new"} >{<FontAwesome className="App-header-ico"  name="plus"/>}{this.state.labels.notes.itemNew}</NavItem></LinkContainer>
+                      <LinkContainer to="/notesSearch"><NavItem  className="App-submenu-item" eventKey={"notes.search"} >{<FontAwesome className="App-header-ico"  name="search"/>}{this.state.labels.notes.itemSearch}</NavItem></LinkContainer>
                     </NavDropdown>
                     :
                     ""
                 }
                 {auth.isAuthenticated() ?
-                    <NavDropdown eventKey={"references"} title={<span><FontAwesome name="external-link"/> {this.state.labels.references.menu}</span>} id="comments-nav-dropdown">
-                      <LinkContainer to="/references"><NavItem  className="App-submenu-item" eventKey={"references.new"} >{<FontAwesome className="App-header-ico"  name="plus"/>}{this.state.labels.references.itemNew}</NavItem></LinkContainer>
-                      <LinkContainer to="/referencesSearch"><NavItem  className="App-submenu-item" eventKey={"references.search"} >{<FontAwesome className="App-header-ico"  name="search"/>}{this.state.labels.references.itemSearch}</NavItem></LinkContainer>
+                    <NavDropdown eventKey={"links"} title={<span><FontAwesome name="chain"/> {this.state.labels.links.menu}</span>} id="notes-nav-dropdown">
+                      <LinkContainer to="/links"><NavItem  className="App-submenu-item" eventKey={"links.new"} >{<FontAwesome className="App-header-ico"  name="plus"/>}{this.state.labels.links.itemNew}</NavItem></LinkContainer>
+                      <LinkContainer to="/linksSearch"><NavItem  className="App-submenu-item" eventKey={"links.search"} >{<FontAwesome className="App-header-ico"  name="search"/>}{this.state.labels.links.itemSearch}</NavItem></LinkContainer>
                     </NavDropdown>
                     :
                     ""
