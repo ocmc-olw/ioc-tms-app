@@ -19,6 +19,9 @@ import TextParts from './modules/pages/TextParts';
 import 'react-select/dist/react-select.css';
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import './App.css';
+import { createStore } from 'redux'
+import { reducers } from './reducers/index';
+import { Provider } from 'react-redux';
 
 /**
  * To add a new route:
@@ -30,6 +33,7 @@ import './App.css';
  * when the page loads: window.location = "/#/search";
  */
 
+const store = createStore(reducers, this.state);
 
 function requireAuth(nextState, replace) {
   if (!auth.isAuthenticated()) {
@@ -41,22 +45,24 @@ function requireAuth(nextState, replace) {
 }
 
 render((
-  <Router history={hashHistory}>
-    <Route path="/" component={App} >
-      <IndexRoute component={Home}/>
-      <Route path="/home" component={Home }/>
-      <Route path="/textparts" component={TextParts } onEnter={requireAuth}/>
-      <Route path="/paratexts" component={ParaTexts } onEnter={requireAuth}/>
-      <Route path="/notes" component={Notes } onEnter={requireAuth}/>
-      <Route path="/notesSearch" component={SearchNotes } onEnter={requireAuth}/>
-      <Route path="/links" component={Links } onEnter={requireAuth}/>
-      <Route path="/linksSearch" component={SearchLinks } onEnter={requireAuth}/>
-      <Route path="/searchtextparts" component={Search} onEnter={requireAuth}/>
-      <Route path="/browser" component={Browser } onEnter={requireAuth}/>
-      <Route path="/about" component={About}/>
-      <Route path="/help" component={Help}  onEnter={requireAuth}/>
-      <Route path="/login" component={Login}/>
-      <Route path="/logout" component={Logout} />
-    </Route>
-  </Router>
+  <Provider store={store}>
+    <Router history={hashHistory}>
+      <Route path="/" component={App} >
+        <IndexRoute component={Home}/>
+        <Route path="/home" component={Home }/>
+        <Route path="/textparts" component={TextParts } onEnter={requireAuth}/>
+        <Route path="/paratexts" component={ParaTexts } onEnter={requireAuth}/>
+        <Route path="/notes" component={Notes } onEnter={requireAuth}/>
+        <Route path="/notesSearch" component={SearchNotes } onEnter={requireAuth}/>
+        <Route path="/links" component={Links } onEnter={requireAuth}/>
+        <Route path="/linksSearch" component={SearchLinks } onEnter={requireAuth}/>
+        <Route path="/searchtextparts" component={Search} onEnter={requireAuth}/>
+        <Route path="/browser" component={Browser } onEnter={requireAuth}/>
+        <Route path="/about" component={About}/>
+        <Route path="/help" component={Help}  onEnter={requireAuth}/>
+        <Route path="/login" component={Login}/>
+        <Route path="/logout" component={Logout} />
+      </Route>
+    </Router>
+  </Provider>
 ), document.getElementById('root'))

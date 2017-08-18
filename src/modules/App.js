@@ -23,6 +23,7 @@ export class App extends React.Component {
         }
       }
     }
+
     this.handleLanguageChange = this.handleLanguageChange.bind(this);
   };
 

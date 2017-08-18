@@ -16,6 +16,7 @@ export class Login extends React.Component {
     }
     this.onSubmit = this.onSubmit.bind(this);
     this.setCredentials = this.setCredentials.bind(this);
+    this.handleDropdownsCallback = this.handleDropdownsCallback.bind(this);
   }
 
   setCredentials = (status, valid, username, password) => {
@@ -50,6 +51,25 @@ export class Login extends React.Component {
     }
   };
 
+  // called after a successful login
+  handleDropdownsCallback = (response) => {
+    let forms = response.data;
+    this.setState({
+      formsLoaded: true
+      , forms: forms.data
+      , domains: forms.domains
+      , formsDropdown: forms.formsDropdown
+      , formsValueSchemas: forms.valueSchemas
+      , formsValues: forms.values
+      , ontologyDropdowns: forms.ontologyDropdowns
+      , biblicalBooksDropdown: forms.biblicalBooksDropdown
+      , biblicalChaptersDropdown: forms.biblicalChaptersDropdown
+      , biblicalVersesDropdown: forms.biblicalVersesDropdown
+      , biblicalSubversesDropdown: forms.biblicalSubversesDropdown
+    });
+  }
+
+
   render() {
     return (
         <div className="App-login">
@@ -60,6 +80,7 @@ export class Login extends React.Component {
               loginCallback={this.onSubmit}
               formPrompt={this.props.labels.pageLogin.prompt}
               formMsg={this.state.loginFormMsg}
+              dropdownsCallback={this.handleDropdownsCallback}
           />
         </div>
     );
