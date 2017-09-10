@@ -2,11 +2,12 @@
  * Created by mac002 on 12/7/16.
  */
 import React from 'react';
-import auth from '../components/Auth'
 import {Login as IocLogin} from 'ioc-liturgical-react'
 import server from '../../config/server';
+import { connect } from 'react-redux';
+import Actions from '../../reducers/actionTypes';
 
-export class Login extends React.Component {
+class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,30 +16,41 @@ export class Login extends React.Component {
       ,loginFormMsg: ""
     }
     this.onSubmit = this.onSubmit.bind(this);
-    this.setCredentials = this.setCredentials.bind(this);
     this.handleDropdownsCallback = this.handleDropdownsCallback.bind(this);
   }
 
-  setCredentials = (status, valid, username, password) => {
-    auth.setCredentials(
-        username
-        , password
-        , valid
-    );
+  onSubmit = (status, valid, username, password, userinfo) => {
+    let theStatusMsg = this.props.app.language.labels.pageLogin.good;
     if (status === 200) {
-      const { location } = this.props
-      if (location.state && location.state.nextPathname) {
-        this.props.router.replace(location.state.nextPathname)
-      } else {
-        this.props.router.replace('/home')
-      }
-    }
-  }
-
-  onSubmit = (status, valid, username, password) => {
-    let theStatusMsg = "";
-    if (status !== 200) {
-      theStatusMsg = this.props.labels.pageLogin.bad;
+      this.props.dispatch(
+          {
+            type: Actions.USER_LOGIN
+            , user: {
+              authenticated: valid
+              , username: username
+              , password: password
+              , firstName: userinfo.firstname
+              , lastName: userinfo.lastname
+              , title: userinfo.title
+              , domain: userinfo.domain
+              , email: userinfo.email
+            }
+          }
+      );
+      this.setState(
+          {
+            username: username
+            , password: password
+            , loginFormMsg: theStatusMsg
+            , firstName: userinfo.firstname
+            , lastName: userinfo.lastname
+            , title: userinfo.title
+            , domain: userinfo.domain
+            , email: userinfo.email
+          }
+      );
+    } else {
+      theStatusMsg = this.props.app.language.labels.pageLogin.bad;
       this.setState(
           {
             username: username
@@ -46,27 +58,27 @@ export class Login extends React.Component {
             , loginFormMsg: theStatusMsg
           }
       );
-    } else {
-    this.setCredentials(status, valid, username,password)
     }
   };
 
-  // called after a successful login
   handleDropdownsCallback = (response) => {
     let forms = response.data;
-    this.setState({
-      formsLoaded: true
-      , forms: forms.data
-      , domains: forms.domains
-      , formsDropdown: forms.formsDropdown
-      , formsValueSchemas: forms.valueSchemas
-      , formsValues: forms.values
-      , ontologyDropdowns: forms.ontologyDropdowns
-      , biblicalBooksDropdown: forms.biblicalBooksDropdown
-      , biblicalChaptersDropdown: forms.biblicalChaptersDropdown
-      , biblicalVersesDropdown: forms.biblicalVersesDropdown
-      , biblicalSubversesDropdown: forms.biblicalSubversesDropdown
-    });
+    this.props.dispatch(
+        {
+          type: Actions.SET_DROPDOWNS
+          , formsLoaded: true
+          , forms: forms.data
+          , domains: forms.domains
+          , formsDropdown: forms.formsDropdown
+          , formsValueSchemas: forms.valueSchemas
+          , formsValues: forms.values
+          , ontologyDropdowns: forms.ontologyDropdowns
+          , biblicalBooksDropdown: forms.biblicalBooksDropdown
+          , biblicalChaptersDropdown: forms.biblicalChaptersDropdown
+          , biblicalVersesDropdown: forms.biblicalVersesDropdown
+          , biblicalSubversesDropdown: forms.biblicalSubversesDropdown
+        }
+    )
   }
 
 
@@ -78,7 +90,7 @@ export class Login extends React.Component {
               username={this.state.username}
               password={this.state.password}
               loginCallback={this.onSubmit}
-              formPrompt={this.props.labels.pageLogin.prompt}
+              formPrompt={this.props.app.language.labels.pageLogin.prompt}
               formMsg={this.state.loginFormMsg}
               dropdownsCallback={this.handleDropdownsCallback}
           />
@@ -87,4 +99,16 @@ export class Login extends React.Component {
   }
 }
 
-export default Login;
+/**
+ * Maps the redux store state to this component's props.
+ * @param state
+ * @returns {{app: *}}
+ */
+function mapStateToProps(state) {
+  return (
+      {
+        app: state
+      }
+  );
+}
+export default connect(mapStateToProps) (Login);

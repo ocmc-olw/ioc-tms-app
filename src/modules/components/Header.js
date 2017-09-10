@@ -1,42 +1,27 @@
 import React from 'react';
 import { Nav, Navbar, NavDropdown, MenuItem, NavItem } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap';
 import {Flag} from 'ioc-liturgical-react';
-import auth from './Auth';
 import FontAwesome from 'react-fontawesome';
+import { connect } from 'react-redux';
+import Actions from '../../reducers/actionTypes';
 
 export class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      labels: {
-        paratexts: {
-          menu: "Parallel Texts"
-        }
-        , texts: {
-          menu: "Text Parts"
-          , itemNew: "New Text Part"
-          , itemSearch: "Search Text Parts"
-        }
-        , notes: {
-          menu: "Notes"
-          , itemNew: "New Note"
-          , itemSearch: "Search Notes"
-        }
-        , links: {
-          menu: "Text Links"
-          , itemNew: "New Text Link"
-          , itemSearch: "Search Text Links"
-        }
-      }
-    }
+    this.state = {someProp: ""}
 
     this.handleLanguageChange = this.handleLanguageChange.bind(this);
   };
 
   handleLanguageChange = (event) => {
     if (event.target.id) {
-      this.props.changeHandler(event.target.id);
+      this.props.dispatch(
+          {
+            type: Actions.LANGUAGE_SET_CODE
+            , code: event.target.id
+          }
+      );
       event.preventDefault();
     }
   };
@@ -45,74 +30,71 @@ export class Header extends React.Component {
     return (
         <div className="App-header">
           <Navbar fluid fixedTop inverse collapseOnSelect>
-            <Navbar.Header >
+            <Navbar.Header>
               <Navbar.Brand>
-                <LinkContainer to="/home">
-                  <NavItem eventKey={"home"}>
-                    <span className="App-title">Translation Management System</span>
+                <IndexLinkContainer to="/home">
+                  <NavItem eventKey={1}>
+                    <span className="App-title">IOC Translation Management System</span>
                   </NavItem>
-                </LinkContainer>
+                </IndexLinkContainer>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>
             <Navbar.Collapse>
-              <Nav pullRight>
-                {auth.isAuthenticated() ?
-                  <NavDropdown eventKey={"texts"} title={<span><FontAwesome name="list-ul"/> {this.state.labels.texts.menu}</span>} id="notes-nav-dropdown">
-                  <LinkContainer to="/textparts"><NavItem  className="App-submenu-item" eventKey={"text.new"} >{<FontAwesome className="App-header-ico"  name="plus"/>}{this.state.labels.texts.itemNew}</NavItem></LinkContainer>
-                  <LinkContainer to="/searchtextparts"><NavItem  className="App-submenu-item" eventKey={"text.search"} >{<FontAwesome className="App-header-ico"  name="search"/>}{this.state.labels.texts.itemSearch}</NavItem></LinkContainer>
-                  </NavDropdown>
-                    :
-                    ""
-                }
-                {auth.isAuthenticated() ?
-                    <LinkContainer to="/paratexts">
-                      <NavItem eventKey={"paratexts"}>{<FontAwesome  className="App-header-ico" name="columns"/>} {this.state.labels.paratexts.menu}</NavItem>
+              <Nav>
+                {this.props.app.user.authenticated ?
+                    <LinkContainer to="/add">
+                      <NavItem eventKey={"add"}>{<FontAwesome className="App-header-ico"  name="plus"/>} {this.props.app.language.localLabels.add.menu}</NavItem>
                     </LinkContainer>
-                    :
-                    ""
+                    : ""
                 }
-                {auth.isAuthenticated() ?
-                    <NavDropdown eventKey={"notes"} title={<span><FontAwesome name="pencil-square-o"/> {this.state.labels.notes.menu}</span>} id="notes-nav-dropdown">
-                      <LinkContainer to="/notes"><NavItem className="App-submenu-item" eventKey={"notes.new"} >{<FontAwesome className="App-header-ico"  name="plus"/>}{this.state.labels.notes.itemNew}</NavItem></LinkContainer>
-                      <LinkContainer to="/notesSearch"><NavItem  className="App-submenu-item" eventKey={"notes.search"} >{<FontAwesome className="App-header-ico"  name="search"/>}{this.state.labels.notes.itemSearch}</NavItem></LinkContainer>
+                {this.props.app.user.authenticated ?
+                    <NavDropdown eventKey={"edit"} title={<span><FontAwesome name="pencil-square-o"/> {this.props.app.language.localLabels.edit.menu}</span>} id="notes-nav-dropdown">
+                      <LinkContainer to="/editages"><NavItem className="App-submenu-item" eventKey={"edit.ages"} >{this.props.app.language.localLabels.edit.itemAges}</NavItem></LinkContainer>
+                      <LinkContainer to="/editoslw"><NavItem  className="App-submenu-item" eventKey={"edit.oslw"} >{this.props.app.language.localLabels.edit.itemOslw}</NavItem></LinkContainer>
+                      <LinkContainer to="/edittopic"><NavItem  className="App-submenu-item" eventKey={"edit.topic"} >{this.props.app.language.localLabels.edit.itemTopic}</NavItem></LinkContainer>
                     </NavDropdown>
                     :
                     ""
                 }
-                {auth.isAuthenticated() ?
-                    <NavDropdown eventKey={"links"} title={<span><FontAwesome name="chain"/> {this.state.labels.links.menu}</span>} id="notes-nav-dropdown">
-                      <LinkContainer to="/links"><NavItem  className="App-submenu-item" eventKey={"links.new"} >{<FontAwesome className="App-header-ico"  name="plus"/>}{this.state.labels.links.itemNew}</NavItem></LinkContainer>
-                      <LinkContainer to="/linksSearch"><NavItem  className="App-submenu-item" eventKey={"links.search"} >{<FontAwesome className="App-header-ico"  name="search"/>}{this.state.labels.links.itemSearch}</NavItem></LinkContainer>
+                {this.props.app.user.authenticated ?
+                    <NavDropdown eventKey={"generate"} title={<span><FontAwesome name="cogs"/> {this.props.app.language.localLabels.generate.menu}</span>} id="notes-nav-dropdown">
+                      <LinkContainer to="/generateages"><NavItem className="App-submenu-item" eventKey={"generate.ages"} >{this.props.app.language.localLabels.generate.itemAges}</NavItem></LinkContainer>
+                      <LinkContainer to="/generateoslw"><NavItem  className="App-submenu-item" eventKey={"generate.oslw"} >{this.props.app.language.localLabels.generate.itemOslw}</NavItem></LinkContainer>
                     </NavDropdown>
                     :
                     ""
                 }
-                {auth.isAuthenticated() ?
-                    <LinkContainer to="/browser">
-                      <NavItem eventKey={"browser"}>{<FontAwesome  className="App-header-ico" name="database"/>} {this.props.labels.browser}</NavItem>
-                    </LinkContainer>
+                {this.props.app.user.authenticated ?
+                    <NavDropdown eventKey={"search"} title={<span><FontAwesome name="search"/> {this.props.app.language.localLabels.search.menu}</span>} id="notes-nav-dropdown">
+                      <LinkContainer to="/searchlinks"><NavItem  className="App-submenu-item" eventKey={"search.links"} >{<FontAwesome className="App-header-ico"  name="chain"/>}{this.props.app.language.localLabels.search.itemLink}</NavItem></LinkContainer>
+                      <LinkContainer to="/searchnotes"><NavItem  className="App-submenu-item" eventKey={"search.notes"} >{<FontAwesome className="App-header-ico"  name="comment-o"/>}{this.props.app.language.localLabels.search.itemNote}</NavItem></LinkContainer>
+                      <LinkContainer to="/searchontology"><NavItem  className="App-submenu-item" eventKey={"search.ontology"} >{<FontAwesome className="App-header-ico"  name="sitemap"/>}{this.props.app.language.localLabels.search.itemOntology}</NavItem></LinkContainer>
+                      <LinkContainer to="/searchtext"><NavItem  className="App-submenu-item" eventKey={"search.text"} >{<FontAwesome className="App-header-ico"  name="file-text-o"/>}{this.props.app.language.localLabels.search.itemText}</NavItem></LinkContainer>
+                    </NavDropdown>
                     :
                     ""
+                }
+                {this.props.app.user.authenticated ?
+                    <LinkContainer to="/admin">
+                      <NavItem eventKey={5}>{<FontAwesome className="App-header-ico"  name="lock"/>}{"Administer"}</NavItem>
+                    </LinkContainer>
+                    : ""
                 }
                 <LinkContainer to="/about">
-                  <NavItem eventKey={"about"}>{<FontAwesome className="App-header-ico" name="info-circle"/>} {this.props.labels.about}</NavItem>
+                  <NavItem eventKey={4}>{<FontAwesome className="App-header-ico" name="info-circle"/>}{this.props.app.language.labels.header.about}</NavItem>
                 </LinkContainer>
-                {auth.isAuthenticated() ?
-                    <LinkContainer to="/help">
-                      <NavItem eventKey={"help"}>{<FontAwesome className="App-header-ico"  name="question-circle"/>} {this.props.labels.help}</NavItem>
-                    </LinkContainer>
-                    :
-                    ""
-                }
-                <NavDropdown eventKey={"lang"} title={<Flag code={this.props.language}/>} id="basic-nav-dropdown">
-                  <MenuItem eventKey={"lang.en"} id="en" onClick={this.handleLanguageChange}><Flag code="en"/></MenuItem>
-                  <MenuItem eventKey={"lang.el"} id="el" onClick={this.handleLanguageChange}><Flag code="el"/></MenuItem>
+                <LinkContainer to="/help">
+                  <NavItem eventKey={6}>{<FontAwesome className="App-header-ico"  name="question-circle"/>}{this.props.app.language.labels.header.help}</NavItem>
+                </LinkContainer>
+                <NavDropdown eventKey={7} title={<Flag code={this.props.app.language.code}/>} id="basic-nav-dropdown">
+                  <MenuItem eventKey={7.1} id="en" onClick={this.handleLanguageChange}><Flag code="en"/></MenuItem>
+                  <MenuItem eventKey={7.2} id="el" onClick={this.handleLanguageChange}><Flag code="el"/></MenuItem>
                 </NavDropdown>
-                <NavDropdown eventKey={"user"} title={<FontAwesome name="user-o"/>} id="basic-nav-dropdown">
-                  {! auth.isAuthenticated() ?
-                      <LinkContainer to="/login"><NavItem  className="App-submenu-item" eventKey={"user.login"} >{<FontAwesome className="App-header-ico"  name="sign-in"/>}{this.props.labels.login}</NavItem></LinkContainer>
-                      : <LinkContainer to="/logout"><NavItem  className="App-submenu-item" eventKey={"user.logout"} >{<FontAwesome className="App-header-ico"  name="sign-out"/>}{this.props.labels.logout}</NavItem></LinkContainer>
+                <NavDropdown eventKey={8} title={<FontAwesome name="user-o"/>} id="basic-nav-dropdown">
+                  {! this.props.app.user.authenticated ?
+                      <LinkContainer to="/login"><NavItem eventKey={7.1} >{<FontAwesome className="App-header-ico"  name="sign-in"/>}{this.props.app.language.labels.header.login}</NavItem></LinkContainer>
+                      : <LinkContainer to="/logout"><NavItem eventKey={7.1} >{<FontAwesome className="App-header-ico"  name="sign-out"/>}{this.props.app.language.labels.header.logout}</NavItem></LinkContainer>
                   }
                 </NavDropdown>
               </Nav>
@@ -123,5 +105,16 @@ export class Header extends React.Component {
   }
 }
 
-export default Header;
-
+/**
+ * Maps the redux store state to this component's props.
+ * @param state
+ * @returns {{app: *}}
+ */
+function mapStateToProps(state) {
+  return (
+      {
+        app: state
+      }
+  );
+}
+export default connect(mapStateToProps) (Header);
