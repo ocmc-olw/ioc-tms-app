@@ -47,6 +47,11 @@ function PrivateRoute ({component: Component, authed, ...rest}) {
 class App extends React.Component {
 
   componentWillMount = () => {
+    this.props.dispatch({
+          type: Actions.SET_SESSION_REST_SERVER
+          , restServer: server.getWsServerPath()
+    }
+    );
     server.getDbInfo()
         .then(response => {
           let {

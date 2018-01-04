@@ -75,9 +75,9 @@ export default function session(
       return new_state;
     }
     case Actions.SET_SESSION_LANGUAGE_CODE: {
-      new_state.languageCode = action.languageCode;
-      new_state.labels = Labels.getAllLabels(action.languageCode);
-      new_state.localLabels = LocalLabels.getAllLabels(action.languageCode);
+      new_state.languageCode = action.code;
+      new_state.labels = Labels.getAllLabels(action.code);
+      new_state.localLabels = LocalLabels.getAllLabels(action.code);
       return new_state;
     }
     case Actions.SET_SESSION_USER_LOGIN: {

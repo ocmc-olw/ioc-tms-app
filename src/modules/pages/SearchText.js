@@ -12,9 +12,9 @@ render() {
     return (
         <div className="App-page App-search">
           <Search
-              session={this.state.session}
-              searchLabels={this.state.language.labels.search}
-              resultsTableLabels={this.state.language.labels.resultsTable}
+              session={this.props.app.session}
+              searchLabels={this.props.app.session.labels.search}
+              resultsTableLabels={this.props.app.session.labels.resultsTable}
               initialDocType="Liturgical"
           />
         </div>

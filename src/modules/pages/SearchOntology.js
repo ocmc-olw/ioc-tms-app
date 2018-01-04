@@ -7,10 +7,7 @@ class SearchOntology extends React.Component {
   render() {
     return <div className="App-page App-page-search-ontology">
       <Search
-          restServer={server.getWsServerPath()}
-          username={this.props.app.user.username}
-          password={this.props.app.user.password}
-          languageCode={this.props.app.language.code}
+          session={this.props.app.session}
           editor={true}
           initialType={"Human"}
           fixedType={false}

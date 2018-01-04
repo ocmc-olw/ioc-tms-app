@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
 import { connect } from 'react-redux';
-import server from '../../config/server';
 import {ParaColTextEditor} from 'ioc-liturgical-react';
 
 class EditWithTopic extends React.Component {
@@ -13,12 +12,8 @@ render() {
     return (
         <div className="App-page App-edit App-edit-topic">
           <ParaColTextEditor
-              restServer={server.getWsServerPath()}
-              username={this.props.app.user.username}
-              password={this.props.app.user.password}
-              languageCode={this.props.app.language.code}
-              domains={this.props.app.dropdowns.domains}
-              source={"gr_gr_cog"}
+            session={this.props.app.session}
+            source={"gr_gr_cog"}
           />
         </div>
     )

@@ -18,7 +18,7 @@ export class Header extends React.Component {
     if (event.target.id) {
       this.props.dispatch(
           {
-            type: Actions.LANGUAGE_SET_CODE
+            type: Actions.SET_SESSION_LANGUAGE_CODE
             , code: event.target.id
           }
       );

@@ -1,10 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { SearchNotes as Search } from 'ioc-liturgical-react';
 
 class SearchNotes extends React.Component {
   render() {
     return <div className="App-page App-page-editor">
-      <h1>When I grow up, I will be the notes SEARCH page...</h1>
+      <Search
+          session={this.props.app.session}
+          editor={true}
+          initialType={"NoteUser"}
+          fixedType={false}
+      />
     </div>
   }
 }

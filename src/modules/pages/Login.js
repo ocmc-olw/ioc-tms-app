@@ -2,7 +2,7 @@
  * Created by mac002 on 12/7/16.
  */
 import React from 'react';
-import {Login as IocLogin} from 'ioc-liturgical-react'
+import {Login as IocLogin, UiSchemas} from 'ioc-liturgical-react'
 import server from '../../config/server';
 import { connect } from 'react-redux';
 import Actions from '../../reducers/actionTypes';
@@ -65,11 +65,11 @@ class Login extends React.Component {
   handleDropdownsCallback = (response) => {
     let forms = response.data;
     let domains = forms.domains;
-    let uiSchemas = {
-      formsDropdown: forms.formsDropdown
-      , formsSchemas: forms.valueSchemas
-      , forms: forms.values
-    };
+    let uiSchemas = new UiSchemas(
+        forms.formsDropdown
+        , forms.valueSchemas
+        , forms.values
+    );
     let dropdowns = {
       biblicalBooksDropdown: forms.biblicalBooksDropdown
         , biblicalChaptersDropdown: forms.biblicalChaptersDropdown

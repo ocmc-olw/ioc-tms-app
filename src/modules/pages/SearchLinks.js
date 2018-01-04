@@ -1,18 +1,14 @@
 import React from 'react';
 import {SearchRelationships} from 'ioc-liturgical-react';
-import server from '../../config/server';
 import { connect } from 'react-redux';
 
 class SearchLinks extends React.Component {
   render() {
     return <div className="App-page App-page-search-links">
       <SearchRelationships
-          restServer={server.getWsServerPath()}
-          username={this.props.app.user.username}
-          password={this.props.app.user.password}
-          languageCode={this.props.app.language.code}
-          searchLabels={this.props.app.language.labels.search}
-          resultsTableLabels={this.props.app.language.labels.linkSearchResultsTable}
+          session={this.props.app.session}
+          searchLabels={this.props.app.session.labels.searchLinks}
+          resultsTableLabels={this.props.app.session.labels.linkSearchResultsTable}
       />
     </div>
   }

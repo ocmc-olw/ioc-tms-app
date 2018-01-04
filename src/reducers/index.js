@@ -4,6 +4,12 @@
 import { combineReducers } from 'redux';
 import session from './session';
 
+/**
+ * This is stubbed out so that additional reducers
+ * can be combined.
+ *
+ */
+
 export const reducers = combineReducers({
   session: session
 });
