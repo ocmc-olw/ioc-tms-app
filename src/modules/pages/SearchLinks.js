@@ -10,6 +10,7 @@ class SearchLinks extends React.Component {
           restServer={server.getWsServerPath()}
           username={this.props.app.user.username}
           password={this.props.app.user.password}
+          languageCode={this.props.app.language.code}
           searchLabels={this.props.app.language.labels.search}
           resultsTableLabels={this.props.app.language.labels.linkSearchResultsTable}
       />

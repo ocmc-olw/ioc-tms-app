@@ -32,14 +32,16 @@ p {
     top: 16px;
     left: 130px;
     color: gold;
-    font-size: large;
+    font-size: 2vmax;
     font-style: italic;
 }
 .App-flag {
     height: 1em;
     width: 1.3em;
 }
-
+.App-Modal-Para-Row-Editor {
+    width: 90vw;
+}
 #basic-nav-dropdown {
     padding-top: 21px;
     padding-left: 22px;
@@ -85,8 +87,28 @@ p {
 }
 .navbar-nav {
     padding-top: 30px;
+    font-size: 100%;
 }
-
+.modal-title {
+    font-size: smaller;
+    padding-bottom: 10px;
+    color: #5bc0de;
+}
+.App-Notes-Lister {
+    margin-top: 0px !important;
+}
+.Select {
+    max-width: 90vw;
+}
+.Schema-Based-Add-Button {
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0;
+}
+.App-Add-ico {
+    padding: 5px !important;
+}
 .panel-title {
     color: #007eff !important;
     font-weight: bolder;
@@ -129,12 +151,12 @@ a.collapsed {
 .App-search-options {
     background-color: white;
 }
+.App-Search-Options-Text-Div {
+}
 .App-search-text-input {
-    color: black;
-    background-color: white;
     height: auto;
-    width: 76%;
-    resize: vertical;
+    width: 80%;
+    box-sizing: border-box;
 }
 .App-search-by-id-parts-icon {
     color: black;
@@ -146,7 +168,10 @@ a.collapsed {
     resize: vertical;
 }
 
-
+.modal-dialog {
+    margin: 5vw !important;
+    width: 90vw !important;
+}
 .App-search-form {
     background-color: #eaeced;
 }
@@ -205,14 +230,10 @@ a.collapsed {
 div[class*='App-page'] {
     margin-top: 105px;
 }
-@media (max-width: 1200px !important) {
-    .App-img-logo {
-        top: 9px;
-    }
-    .App-title {
-        top: 14px;
-        font-size: 15px;
-    }
+.caret {
+    border-top: 4px solid !important;
+}
+@media (max-width: 600px !important) {
     .navbar-header {
         float: none;
     }
@@ -220,19 +241,18 @@ div[class*='App-page'] {
         float: none !important;
     }
     .navbar-toggle {
-        display: block !important;
+        display: block;
     }
     .navbar-collapse {
         border-top: 1px solid transparent;
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-        width: 20px;
     }
     .navbar-fixed-top {
         top: 0;
         border-width: 0 0 1px;
     }
     .navbar-collapse.collapse {
-        display: none;
+        display: none!important;
     }
     .navbar-nav {
         float: none!important;
@@ -253,12 +273,28 @@ div[class*='App-page'] {
 div.App-logo.navbar-header {
     overflow: scroll;
 }
-
+.App-DependencyDiagram-Container {
+    overflow: scroll;
+}
 .App-demo-version {
     margin-left: 20px;
     color: #5bc0de;
 }
-.App-Para-Col-Editor .resourceSelector {
+.App-Grammar-Well {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.App-Modal-Dependency-Diagram-Title {
+    color: blue;
+    font-weight: bold;
+}
+.App-Para-Col-Editor {
+    padding-left: 15px;
+}
+.App-ParaRow-Text-Editor {
+    background-color: #eaeced;
+}
+.resourceSelector {
     padding-left: 15px;
 }
 .App-table-filter-clear {
@@ -269,6 +305,17 @@ div.App-logo.navbar-header {
 }
 .App-Label-Selector-POS .Select-control{
     float: left;
+    width: 45ch;
+}
+.App-Label-Selector-Dependency .Select-control{
+    float: left;
+    width: 45ch;
+}
+.App-Label-Selector-Referent .Select-control{
+    float: left;
+    width: 45ch;
+}
+.App-Label-Selector-Person .Select-control {
     width: 45ch;
 }
 .App-Label-Selector-Tense .Select-control {
@@ -289,11 +336,14 @@ div.App-logo.navbar-header {
 .App-Label-Selector-Case .Select-control {
     width: 45ch;
 }
-.App-WordTagger-Lemma {
+.App-TokenTagger-Lemma {
     width: 45ch;
 }
-.App-WordTagger-Gloss {
+.App-TokenTagger-Gloss {
     width: 45ch;
+}
+.App-Label-Selector-Help {
+    padding-top: 10px;
 }
 .App-data-tr {
     max-width: 90%;
@@ -392,4 +442,8 @@ path.link {
 .App-page-home-welcome-text {
     padding-left: 20px;
 }
-
+.boxsizingBorder {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

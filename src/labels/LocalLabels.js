@@ -30,11 +30,14 @@ const   labels = {
       , itemText: "Text"
       , itemTopic: "Topic"
     }
+    , administer: {
+      menu: "Administer"
+    }
     , edit: {
       menu: "Edit"
-    , itemAges: "Using AGES"
-    , itemOslw: "Using OSLW"
-    , itemTopic: "Using Topic"
+      , itemAges: "Using AGES"
+      , itemOslw: "Using OSLW"
+      , itemTopic: "Using Topic"
     }
     , generate: {
       menu: "Generate"
@@ -49,12 +52,12 @@ const   labels = {
       , itemText: "Texts"
     }
   }
-  , el: {
+    , el: {
     paratexts: {
       menu: "Parallel Texts"
     }
     , texts: {
-      menu: "Text Parts"
+      menu: "Texts"
       , itemNew: "New Text Part"
       , itemSearch: "Search Text Parts"
     }
@@ -64,9 +67,38 @@ const   labels = {
       , itemSearch: "Search Notes"
     }
     , links: {
-      menu: "Text Links"
+      menu: "Links"
       , itemNew: "New Text Link"
       , itemSearch: "Search Text Links"
+    }
+    , add: {
+      menu: "Προσθήκη"
+      , itemEntity: "Entity"
+      , itemLink: "Link"
+      , itemNote: "Note"
+      , itemText: "Text"
+      , itemTopic: "Topic"
+    }
+    , administer: {
+      menu: "Διαχειριστής"
+    }
+    , edit: {
+      menu: "Επεξεργασία"
+    , itemAges: "Χρήση το AGES"
+    , itemOslw: "Χρήση το OSLW"
+    , itemTopic: "Χρήση το Topic"
+    }
+    , generate: {
+      menu: "Δημιουργία"
+      , itemAges: "Χρήση το AGES"
+      , itemOslw: "Χρήση το OSLW"
+    }
+    , search: {
+      menu: "Αναζήτηση"
+      , itemLink: "Σύνδεσμοι"
+      , itemNote: "Σημειώσεις"
+      , itemOntology: "Οντολογία"
+      , itemText: "κείμενα"
     }
   }
 }

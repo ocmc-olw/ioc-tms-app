@@ -26,7 +26,7 @@ class Login extends React.Component {
       console.log('200');
       this.props.dispatch(
           {
-            type: Actions.USER_LOGIN
+            type: Actions.SET_SESSION_USER_LOGIN
             , user: {
               authenticated: valid
               , username: username

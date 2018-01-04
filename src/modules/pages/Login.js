@@ -20,21 +20,22 @@ class Login extends React.Component {
   }
 
   onSubmit = (status, valid, username, password, userinfo) => {
-    let theStatusMsg = this.props.app.language.labels.pageLogin.good;
+    let theStatusMsg = this.props.app.session.labels.pageLogin.good;
     if (status === 200) {
+      let userInfo = {
+        username: username
+        , password: password
+        , firstName: userinfo.firstname
+        , lastName: userinfo.lastname
+        , title: userinfo.title
+        , domain: userinfo.domain
+        , email: userinfo.email
+        , authenticated: valid
+      }
       this.props.dispatch(
           {
-            type: Actions.USER_LOGIN
-            , user: {
-              authenticated: valid
-              , username: username
-              , password: password
-              , firstName: userinfo.firstname
-              , lastName: userinfo.lastname
-              , title: userinfo.title
-              , domain: userinfo.domain
-              , email: userinfo.email
-            }
+            type: Actions.SET_SESSION_USER_LOGIN
+            , userInfo: userInfo
           }
       );
       this.setState(
@@ -50,7 +51,7 @@ class Login extends React.Component {
           }
       );
     } else {
-      theStatusMsg = this.props.app.language.labels.pageLogin.bad;
+      theStatusMsg = this.props.app.session.labels.pageLogin.bad;
       this.setState(
           {
             username: username
@@ -63,20 +64,35 @@ class Login extends React.Component {
 
   handleDropdownsCallback = (response) => {
     let forms = response.data;
+    let domains = forms.domains;
+    let uiSchemas = {
+      formsDropdown: forms.formsDropdown
+      , formsSchemas: forms.valueSchemas
+      , forms: forms.values
+    };
+    let dropdowns = {
+      biblicalBooksDropdown: forms.biblicalBooksDropdown
+        , biblicalChaptersDropdown: forms.biblicalChaptersDropdown
+        , biblicalVersesDropdown: forms.biblicalVersesDropdown
+        , biblicalSubversesDropdown: forms.biblicalSubversesDropdown
+        , formsDropdown: forms.formsDropdown
+        , ontologyTypesDropdown: forms.ontologyTypesDropdown
+        , templateNewTemplateDropdown: forms.templateNewTemplateDropdown
+        , templatePartsDropdown: forms.templatePartsDropdown
+        , templateWhenDayNameCasesDropdown: forms.templateWhenDayNameCasesDropdown
+        , templateWhenDayOfMonthCasesDropdown: forms.templateWhenDayOfMonthCasesDropdown
+        , templateWhenDayOfSeasonCasesDropdown: forms.templateWhenDayOfSeasonCasesDropdown
+        , templateWhenModeOfWeekCasesDropdown: forms.templateWhenModeOfWeekCasesDropdown
+        , templateWhenMonthNameCasesDropdown: forms.templateWhenMonthNameCasesDropdown
+    };
     this.props.dispatch(
         {
-          type: Actions.SET_DROPDOWNS
+          type: Actions.SET_SESSION_DROPDOWNS
           , formsLoaded: true
           , forms: forms.data
-          , domains: forms.domains
-          , formsDropdown: forms.formsDropdown
-          , formsValueSchemas: forms.valueSchemas
-          , formsValues: forms.values
-          , ontologyDropdowns: forms.ontologyDropdowns
-          , biblicalBooksDropdown: forms.biblicalBooksDropdown
-          , biblicalChaptersDropdown: forms.biblicalChaptersDropdown
-          , biblicalVersesDropdown: forms.biblicalVersesDropdown
-          , biblicalSubversesDropdown: forms.biblicalSubversesDropdown
+          , domains: domains
+          , uiSchema: uiSchemas
+          , dropdowns: dropdowns
         }
     )
   }
@@ -90,7 +106,7 @@ class Login extends React.Component {
               username={this.state.username}
               password={this.state.password}
               loginCallback={this.onSubmit}
-              formPrompt={this.props.app.language.labels.pageLogin.prompt}
+              formPrompt={this.props.app.session.labels.pageLogin.prompt}
               formMsg={this.state.loginFormMsg}
               dropdownsCallback={this.handleDropdownsCallback}
           />

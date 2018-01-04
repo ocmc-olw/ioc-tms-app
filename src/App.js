@@ -57,7 +57,7 @@ class App extends React.Component {
           } = response;
           this.props.dispatch(
               {
-                type: Actions.DB_SET_INFO
+                type: Actions.SET_SESSION_DB_INFO
                 , domain: dbServerDomain
                 , isProtected: databaseProtected
                 , isReadOnly: databaseReadOnly
@@ -68,7 +68,7 @@ class App extends React.Component {
         .catch((error) => {
           this.props.dispatch(
               {
-                type: Actions.DB_SET_INFO
+                type: Actions.SET_SESSION_DB_INFO
                 , domain: undefined
                 , isProtected: true
                 , isReadOnly: false
@@ -91,68 +91,68 @@ class App extends React.Component {
                   <Route exact path="/" component={Home} />
                   <Route path="/about" component={About} />
                   <PrivateRoute
-                      authed={this.props.app.user.authenticated}
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/add'
                       component={AddEntity}
                   />
                   <PrivateRoute
-                      authed={this.props.app.user.authenticated}
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/editages'
                       component={EditWithAges}
                   />
                   <PrivateRoute
-                      authed={this.props.app.user.authenticated}
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/edittopic'
                       component={EditWithTopic}
                   />
                   <PrivateRoute
-                      authed={this.props.app.user.authenticated}
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/generateages'
                       component={GenerateWithAges}
                   />
                   <PrivateRoute
-                      authed={this.props.app.user.authenticated}
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/links'
                       component={Links}
                   />
                   <PrivateRoute
-                      authed={this.props.app.user.authenticated}
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/notes'
                       component={Notes}
                   />
                   <PrivateRoute
-                      authed={this.props.app.user.authenticated}
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/paratexts'
                       component={ParaTexts}
                   />
                   <PrivateRoute
-                      authed={this.props.app.user.authenticated}
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/notesSearch'
                       component={SearchNotes}
                   />
                   <PrivateRoute
-                      authed={this.props.app.user.authenticated}
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/textparts'
                       component={TextParts}
                   />
                   <PrivateRoute
-                      authed={this.props.app.user.authenticated}
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/searchlinks'
                       component={SearchLinks}
                   />
                   <PrivateRoute
-                      authed={this.props.app.user.authenticated}
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/searchontology'
                       component={SearchOntology}
                   />
                   <PrivateRoute
-                      authed={this.props.app.user.authenticated}
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/searchtext'
                       component={SearchTextParts}
                   />
                   <Route path="/home" component={Home}/>
                   <PrivateRoute
-                      authed={this.props.app.user.authenticated}
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/admin'
                       component={Admin}
                   />
