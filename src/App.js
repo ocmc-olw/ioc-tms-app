@@ -132,7 +132,7 @@ class App extends React.Component {
                   />
                   <PrivateRoute
                       authed={this.props.app.session.userInfo.authenticated}
-                      path='/notesSearch'
+                      path='/searchNotes'
                       component={SearchNotes}
                   />
                   <PrivateRoute

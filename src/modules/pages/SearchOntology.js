@@ -1,6 +1,5 @@
 import React from 'react';
 import {SearchOntology as Search} from 'ioc-liturgical-react';
-import server from '../../config/server';
 import { connect } from 'react-redux';
 
 class SearchOntology extends React.Component {

@@ -154,8 +154,9 @@ a.collapsed {
 .App-Search-Options-Text-Div {
 }
 .App-search-text-input {
+    margin-left: 16px;
     height: auto;
-    width: 80%;
+    width: 75%;
     box-sizing: border-box;
 }
 .App-search-by-id-parts-icon {
