@@ -34,7 +34,7 @@ export class Header extends React.Component {
               <Navbar.Brand>
                 <IndexLinkContainer to="/home">
                   <NavItem eventKey={1}>
-                    <span className="App-title">IOC Translation Management System</span>
+                    <span className="App-title">Translation Management System</span>
                   </NavItem>
                 </IndexLinkContainer>
               </Navbar.Brand>
@@ -87,7 +87,7 @@ export class Header extends React.Component {
                 <LinkContainer to="/help">
                   <NavItem eventKey={6}>{<FontAwesome className="App-header-ico"  name="question-circle"/>}{this.props.app.session.labels.header.help}</NavItem>
                 </LinkContainer>
-                <NavDropdown eventKey={7} title={<Flag code={this.props.app.session.code}/>} id="basic-nav-dropdown">
+                <NavDropdown eventKey={7} title={<Flag code={this.props.app.session.languageCode}/>} id="basic-nav-dropdown">
                   <MenuItem eventKey={7.1} id="en" onClick={this.handleLanguageChange}><Flag code="en"/></MenuItem>
                   <MenuItem eventKey={7.2} id="el" onClick={this.handleLanguageChange}><Flag code="el"/></MenuItem>
                 </NavDropdown>

@@ -7,11 +7,6 @@ import { connect } from 'react-redux';
 import {Administrator} from 'ioc-liturgical-react';
 
 class Admin extends React.Component {
-
-
-  componentDidMount() {
-  }
-
   render() {
     return (
     <div className="App-page-admin"><p>Admin page...</p>

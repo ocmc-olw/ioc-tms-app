@@ -60,24 +60,30 @@ class App extends React.Component {
             , databaseReadOnly
             , databaseProtected
           } = response;
+          let db = {
+              domain: dbServerDomain
+              , isProtected: databaseProtected
+              , isReadOnly: databaseReadOnly
+              , wsVersion: wsVersion
+          };
           this.props.dispatch(
               {
                 type: Actions.SET_SESSION_DB_INFO
-                , domain: dbServerDomain
-                , isProtected: databaseProtected
-                , isReadOnly: databaseReadOnly
-                , wsVersion: wsVersion
+                , db: db
               }
           );
         })
         .catch((error) => {
+          let db = {
+            domain: undefined
+            , isProtected: true
+            , isReadOnly: false
+            , wsVersion: undefined
+          };
           this.props.dispatch(
               {
                 type: Actions.SET_SESSION_DB_INFO
-                , domain: undefined
-                , isProtected: true
-                , isReadOnly: false
-                , wsVersion: undefined
+                , db: db
               }
           );
         });
@@ -94,7 +100,6 @@ class App extends React.Component {
               <div className="row App-content-row">
                 <div className="col-sm-12 col-md-12 col-lg-12">
                   <Route exact path="/" component={Home} />
-                  <Route path="/about" component={About} />
                   <PrivateRoute
                       authed={this.props.app.session.userInfo.authenticated}
                       path='/add'

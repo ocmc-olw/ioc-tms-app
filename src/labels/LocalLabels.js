@@ -35,13 +35,13 @@ const   labels = {
     }
     , edit: {
       menu: "Edit"
-      , itemAges: "Using AGES"
+      , itemAges: "Using AGES DCS"
       , itemOslw: "Using OSLW"
       , itemTopic: "Using Topic"
     }
     , generate: {
       menu: "Generate"
-      , itemAges: "Using AGES"
+      , itemAges: "Using AGES DCS"
       , itemOslw: "Using OSLW"
     }
     , search: {
