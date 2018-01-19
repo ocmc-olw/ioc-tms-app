@@ -31,7 +31,6 @@ import SearchTextParts from './modules/pages/SearchText';
 import TextParts from './modules/pages/TextParts';
 
 import Header from './modules/components/Header'
-import Logo from './modules/components/images/Logo';
 
 function PrivateRoute ({component: Component, authed, ...rest}) {
   return (
@@ -93,7 +92,6 @@ class App extends React.Component {
   render = () => {
     return (
         <div className="App ">
-          <Logo/>
           <Router>
             <div>
               <Header/>

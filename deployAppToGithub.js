@@ -1,6 +1,6 @@
 /**
  * Created by Michael Colburn, Dec 2016
- *p
+ *
  * Run this from the command line,
  *
  * node deployAppToGithub
@@ -26,8 +26,8 @@ if (!which('git')) {
 if (test('-d', './deploy')) {
   // we are happy
 } else {
-  if (exec('git clone https://github.com/OCMC-Translation-Projects/ioc-liturgical-db-public-website deploy').code === 0) {
-    echo('cloned ioc-liturgical-db-public-website from github');
+  if (exec('git clone https://github.com/OCMC-Translation-Projects/ioc-tms-website deploy').code === 0) {
+    echo('cloned ioc-liturgical-tms-website from github');
   } else {
     echo('Error: Git clone failed');
     exit(1);
@@ -36,10 +36,10 @@ if (test('-d', './deploy')) {
 ls;
 exec(
     'cd build' +
-    '; zip -r ../deploy/ioc-liturgical-db-public-website.v' + pjson.version + '.zip *; cd ..'
+    '; zip -r ../deploy/ioc-tms-website.v' + pjson.version + '.zip *; cd ..'
         + '; cd deploy'
     + '; ls'
-    + '; git add ' + 'ioc-liturgical-db-public-website.v' + pjson.version + '.zip'
+    + '; git add ' + 'ioc-tms-website.v' + pjson.version + '.zip'
     + '; git commit -m ' + '"v' + pjson.version + '"'
     + '; git push origin'
     , function(code, stdout, stderr) {

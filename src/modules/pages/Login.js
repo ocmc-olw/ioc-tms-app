@@ -72,18 +72,19 @@ class Login extends React.Component {
     );
     let dropdowns = {
       biblicalBooksDropdown: forms.biblicalBooksDropdown
-        , biblicalChaptersDropdown: forms.biblicalChaptersDropdown
-        , biblicalVersesDropdown: forms.biblicalVersesDropdown
-        , biblicalSubversesDropdown: forms.biblicalSubversesDropdown
-        , formsDropdown: forms.formsDropdown
-        , ontologyTypesDropdown: forms.ontologyTypesDropdown
-        , templateNewTemplateDropdown: forms.templateNewTemplateDropdown
-        , templatePartsDropdown: forms.templatePartsDropdown
-        , templateWhenDayNameCasesDropdown: forms.templateWhenDayNameCasesDropdown
-        , templateWhenDayOfMonthCasesDropdown: forms.templateWhenDayOfMonthCasesDropdown
-        , templateWhenDayOfSeasonCasesDropdown: forms.templateWhenDayOfSeasonCasesDropdown
-        , templateWhenModeOfWeekCasesDropdown: forms.templateWhenModeOfWeekCasesDropdown
-        , templateWhenMonthNameCasesDropdown: forms.templateWhenMonthNameCasesDropdown
+      , biblicalChaptersDropdown: forms.biblicalChaptersDropdown
+      , biblicalVersesDropdown: forms.biblicalVersesDropdown
+      , biblicalSubversesDropdown: forms.biblicalSubversesDropdown
+      , formsDropdown: forms.formsDropdown
+      , ontologyTypesDropdown: forms.ontologyTypesDropdown
+      , templateNewTemplateDropdown: forms.templateNewTemplateDropdown
+      , templatePartsDropdown: forms.templatePartsDropdown
+      , templateWhenDayNameCasesDropdown: forms.templateWhenDayNameCasesDropdown
+      , templateWhenDayOfMonthCasesDropdown: forms.templateWhenDayOfMonthCasesDropdown
+      , templateWhenDayOfSeasonCasesDropdown: forms.templateWhenDayOfSeasonCasesDropdown
+      , templateWhenModeOfWeekCasesDropdown: forms.templateWhenModeOfWeekCasesDropdown
+      , templateWhenMonthNameCasesDropdown: forms.templateWhenMonthNameCasesDropdown
+      , liturgicalBooksDropdown: forms.liturgicalBooksDropdown
     };
     this.props.dispatch(
         {
