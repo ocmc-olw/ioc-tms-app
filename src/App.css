@@ -19,12 +19,14 @@ div.container {
     padding-left: 10px;
     padding-right: 10px;
 }
+.App-content-row {
+    padding-top: 30px;
+}
 .App-header {
 }
 .App-img-logo {
 }
-.App-page-admin {
-
+.App-page-about {
 }
 .App-nav-dropdown {
     position: relative;
@@ -610,4 +612,10 @@ path.link {
 }
 .App-DependencyDiagram-Node-Lemma {
     padding-left: 4px;
+}
+.App-about-list-item {
+    font-size: larger;
+}
+.jumbotron {
+    padding: 10px;
 }
