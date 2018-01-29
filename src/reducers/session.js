@@ -58,6 +58,8 @@ export default function session(
 
   switch (action.type) {
     case Actions.SET_SESSION: {
+      console.log('set session: uiSchemas');
+      console.log(action.uiSchemas);
       new_state.restServer = action.restServer;
       new_state.languageCode = action.languageCode;
       new_state.userInfo = action.userInfo;

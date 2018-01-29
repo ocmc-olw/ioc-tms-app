@@ -222,7 +222,7 @@ a.collapsed {
     background-color: white;
     height: auto;
     padding-left: 12px;
-    width: 90vw;
+    width: 80%;
     box-sizing: border-box;
     resize: vertical;
 }

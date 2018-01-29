@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './graphics/ocmc-globe-3.png'
+import logo from './graphics/ocmc-globe-3.jpg'
 
 class Logo extends React.Component {
   render() {

@@ -32,10 +32,10 @@ class About extends React.Component {
         <div className="App-page App-page-about">
           <PageHeader>{this.state.labels.about.title}</PageHeader>
           <Jumbotron>
-            <p>{this.state.labels.about.p1}</p>
-            <p>{this.state.labels.about.p2}
+            <p>{this.state.labels.about.p1}
             <a rel="noopener noreferrer" href="http://www.ocmc.org/" target="_blank"> (OCMC)</a>
             </p>
+            <p>{this.state.labels.about.p2}</p>
             <p>{this.state.labels.about.p3}</p>
           </Jumbotron>
           <PageHeader>{this.state.labels.about.userFeaturesTitle}</PageHeader>

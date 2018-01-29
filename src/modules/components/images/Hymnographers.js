@@ -1,5 +1,5 @@
 import React from 'react'
-import hymnographers from './graphics/KosmasJohnDNiko.png'
+import hymnographers from './graphics/KosmasJohnDNiko.jpg'
 import {Image} from 'react-bootstrap'
 
 class Hymnographers extends React.Component {

@@ -53,7 +53,7 @@ const   labels = {
     }
     , about: {
       title: "About the TMS"
-      , p1: "This Translation Management System (TMS) was developed by and is maintained by staff of the Orthodox Christian Mission Center. It is Pan-Orthodox, available for all canonical jurisdictions of the Eastern Orthodox Christian Church world-wide."
+      , p1: "This Translation Management System (TMS) was developed by and is maintained by staff of the Orthodox Christian Mission Center."
       , p2: "It is Pan-Orthodox, available for all canonical jurisdictions of the Eastern Orthodox Christian Church world-wide."
       , p3: "The purpose of the TMS is provide a secure environment for people to create, manage, and publish translations of the Eastern Orthodox Christian liturgical texts.  It can also be used for other types of material such as daily readings, educational, or catechetical texts."
       , userFeaturesTitle: "TMS Features for Translators"
@@ -127,7 +127,7 @@ const   labels = {
     }
     , about: {
       title: "Σχετικά με το TMS"
-      , p1: "This Translation Management System (TMS) was developed by and is maintained by staff of the Orthodox Christian Mission Center. It is Pan-Orthodox, available for all canonical jurisdictions of the Eastern Orthodox Christian Church world-wide."
+      , p1: "This Translation Management System (TMS) was developed by and is maintained by staff of the Orthodox Christian Mission Center."
       , p2: "It is Pan-Orthodox, available for all canonical jurisdictions of the Eastern Orthodox Christian Church world-wide."
       , p3: "The purpose of the TMS is provide a secure environment for people to create, manage, and publish translations of the Eastern Orthodox Christian liturgical texts.  It can also be used for other types of material such as daily readings, educational, or catechetical texts."
       , userFeaturesTitle: "Features for Users of the TMS"
