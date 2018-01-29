@@ -34,7 +34,7 @@ class About extends React.Component {
           <Jumbotron>
             <p>{this.state.labels.about.p1}</p>
             <p>{this.state.labels.about.p2}
-            <a href="http://www.ocmc.org/" target="_blank"> (OCMC)</a>
+            <a rel="noopener noreferrer" href="http://www.ocmc.org/" target="_blank"> (OCMC)</a>
             </p>
             <p>{this.state.labels.about.p3}</p>
           </Jumbotron>
