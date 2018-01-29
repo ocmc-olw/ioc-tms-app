@@ -33,7 +33,10 @@ class About extends React.Component {
           <PageHeader>{this.state.labels.about.title}</PageHeader>
           <Jumbotron>
             <p>{this.state.labels.about.p1}</p>
-            <p>{this.state.labels.about.p2}</p>
+            <p>{this.state.labels.about.p2}
+            <a href="http://www.ocmc.org/" target="_blank"> (OCMC)</a>
+            </p>
+            <p>{this.state.labels.about.p3}</p>
           </Jumbotron>
           <PageHeader>{this.state.labels.about.userFeaturesTitle}</PageHeader>
           <Jumbotron>
@@ -41,6 +44,7 @@ class About extends React.Component {
             <ol>
               <li className="App-about-list-item">{this.state.labels.about.userFeature01}</li>
               <li className="App-about-list-item">{this.state.labels.about.userFeature02}</li>
+              <li className="App-about-list-item">{this.state.labels.about.userFeature02b}</li>
               <li className="App-about-list-item">{this.state.labels.about.userFeature03}</li>
               <li className="App-about-list-item">{this.state.labels.about.userFeature04}</li>
               <li className="App-about-list-item">{this.state.labels.about.userFeature05}</li>
