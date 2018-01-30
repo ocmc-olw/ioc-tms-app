@@ -22,6 +22,7 @@ import Home from './modules/pages/Home';
 import Links from './modules/pages/Links';
 import Login from './modules/pages/Login';
 import Logout from './modules/pages/Logout';
+import MyRecords from './modules/pages/MyRecords';
 import Notes from './modules/pages/Notes';
 import ParaTexts from './modules/pages/ParaTexts';
 import SearchLinks from './modules/pages/SearchLinks';
@@ -168,6 +169,7 @@ class App extends React.Component {
                   <Route path="/help" component={Help}/>
                   <Route path="/login" component={Login} />
                   <Route path="/logout" component={Logout}/>
+                  <Route path="/download" component={MyRecords}/>
                 </div>
               </div>
             </div>

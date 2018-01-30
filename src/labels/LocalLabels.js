@@ -7,6 +7,9 @@ const   labels = {
     paratexts: {
       menu: "Parallel Texts"
     }
+    , myRecords: {
+      p1: "Click the button below to download the records in your personal library. The file will have a .json extension. The records are formatted using json. You can open the file using any text editor."
+    }
     , texts: {
       menu: "Texts"
       , itemNew: "New Text Part"
@@ -80,6 +83,9 @@ const   labels = {
     , el: {
     paratexts: {
       menu: "Parallel Texts"
+    }
+    , myRecords: {
+      p1: "Click the button below to download the records in your personal library. The file will have a .json extension. The records are formatted using json. You can open the file using any text editor."
     }
     , texts: {
       menu: "Texts"
@@ -160,5 +166,8 @@ module.exports = {
     }
   , getAboutTmsLabels: (code) => {
     return labels[code].about;
+  }
+  , getMyRecordsLabels: (code) => {
+    return labels[code].myRecords;
   }
 }

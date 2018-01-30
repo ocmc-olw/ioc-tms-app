@@ -44,7 +44,6 @@ class About extends React.Component {
             <ol>
               <li className="App-about-list-item">{this.state.labels.about.userFeature01}</li>
               <li className="App-about-list-item">{this.state.labels.about.userFeature02}</li>
-              <li className="App-about-list-item">{this.state.labels.about.userFeature02b}</li>
               <li className="App-about-list-item">{this.state.labels.about.userFeature03}</li>
               <li className="App-about-list-item">{this.state.labels.about.userFeature04}</li>
               <li className="App-about-list-item">{this.state.labels.about.userFeature05}</li>

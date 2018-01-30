@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar, NavDropdown, MenuItem, NavItem } from 'react-bootstrap';
+import { Glyphicon, Nav, Navbar, NavDropdown, MenuItem, NavItem } from 'react-bootstrap';
 import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap';
 import {Flag} from 'ioc-liturgical-react';
 import FontAwesome from 'react-fontawesome';
@@ -94,12 +94,16 @@ export class Header extends React.Component {
                   <MenuItem eventKey={7.1} id="en" onClick={this.handleLanguageChange}><Flag code="en"/></MenuItem>
                   <MenuItem eventKey={7.2} id="el" onClick={this.handleLanguageChange}><Flag code="el"/></MenuItem>
                 </NavDropdown>
-                <NavDropdown className="App-nav-dropdown" eventKey={8} title={<FontAwesome  className="App-header-ico" name="user-o"/>} id="basic-nav-dropdown">
-                  {! this.props.app.session.userInfo.authenticated ?
-                      <LinkContainer to="/login"><NavItem eventKey={7.1} >{<FontAwesome className="App-header-ico"  name="sign-in"/>} {this.props.app.session.labels.header.login}</NavItem></LinkContainer>
-                      : <LinkContainer to="/logout"><NavItem eventKey={7.1} >{<FontAwesome className="App-header-ico"  name="sign-out"/>} {this.props.app.session.labels.header.logout}</NavItem></LinkContainer>
-                  }
-                </NavDropdown>
+                {this.props.app.session.userInfo.authenticated ?
+                    <NavDropdown className="App-nav-dropdown" eventKey={8} title={<FontAwesome  className="App-header-ico" name="user-o"/>} id="basic-nav-dropdown">
+                      <LinkContainer to="/download"><NavItem eventKey={8.1} >{<Glyphicon glyph="download-alt"/>} {this.props.app.session.labels.header.myRecords}</NavItem></LinkContainer>
+                      <LinkContainer to="/logout"><NavItem eventKey={8.1} >{<Glyphicon glyph="log-out"/>} {this.props.app.session.labels.header.logout}</NavItem></LinkContainer>
+                    </NavDropdown>
+                    :
+                    <NavDropdown className="App-nav-dropdown" eventKey={8} title={<FontAwesome  className="App-header-ico" name="user-o"/>} id="basic-nav-dropdown">
+                          <LinkContainer to="/login"><NavItem eventKey={8.1} >{<Glyphicon glyph="log-in"/>} {this.props.app.session.labels.header.login}</NavItem></LinkContainer>
+                    </NavDropdown>
+                }
               </Nav>
             </Navbar.Collapse>
           </Navbar>
