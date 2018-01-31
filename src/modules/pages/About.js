@@ -37,6 +37,7 @@ class About extends React.Component {
             </p>
             <p>{this.state.labels.about.p2}</p>
             <p>{this.state.labels.about.p3}</p>
+            <p>{this.state.labels.about.p4}</p>
           </Jumbotron>
           <PageHeader>{this.state.labels.about.userFeaturesTitle}</PageHeader>
           <Jumbotron>
