@@ -21,8 +21,51 @@ div.container {
 }
 .App-content-row {
     padding-top: 30px;
+    padding-bottom: 30px;
 }
 .App-header {
+}
+.App-img-logo-ages-div {
+    padding-top: 8px;
+    display: inline-block;
+}
+.App-img-logo-ages {
+    color: #ff200d;
+    padding-top: 10px;
+}
+.App-img-logo-ages-initiatives {
+    color: white;
+    padding-top: 10px;
+    margin-left: -5px;
+    margin-right: 10px;
+}
+.App-img-logo-scriptorium-div {
+    padding-top: 8px;
+    display: inline-block;
+}
+.App-img-logo-scriptorium {
+    color: #ff200d;
+    padding-top: 10px;
+    margin-right: 20px;
+}
+.App-footer {
+    background-color: black;
+    color: gold;
+    backgroundColor: #F8F8F8;
+    borderTop: 1px solid #E7E7E7;
+    textAlign: center;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 40px;
+    width: 100%;
+    display: block;
+}
+.App-footer-powered-by {
+
+}
+.App-footer-app-name {
+    font-style: italic;
 }
 .App-img-logo {
 }

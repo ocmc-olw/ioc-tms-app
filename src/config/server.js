@@ -6,20 +6,20 @@ import axios from 'axios';
 const adminApi = "/admin/api/v1/";
 const dbApi = "/db/api/v1/";
 const user = "/user/";
-//const useRemoteNet = false;
-//const useRemoteOrg = false;
+const hostname = document.location.hostname;
+const protocol = document.location.protocol;
 
 var getDbServer = () => {
-  return document.location.protocol +  "//" + document.location.hostname + ":7474";
-}
+  return protocol +  "//" + hostname + ":7474";
+};
 
 var getWsServer = () => {
-  if (document.location.hostname === "localhost") {
-    return document.location.protocol +  "//" + document.location.hostname + ":4567";
+  if (hostname === "localhost") {
+    return protocol +  "//" + hostname + ":4567";
   } else {
-    return document.location.protocol +  "//" + document.location.hostname;
+    return protocol +  "//" + hostname;
   }
-}
+};
 
 export default {
   getDbInfo: () => {

@@ -13,6 +13,14 @@
     react-addons-update "^0.14.0 || <15.4.0"
     react-dom "^0.14.0 || <15.4.0"
 
+"@tinymce/tinymce-react@^2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@tinymce/tinymce-react/-/tinymce-react-2.1.3.tgz#d14228b0a0aefff7fa87655e638f244c29ca2441"
+  dependencies:
+    prop-types "^15.6.0"
+    react "^16.2.0"
+    react-dom "^16.2.0"
+
 abab@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.3.tgz#b81de5f7274ec4e756d797cd834f303642724e5d"
@@ -1916,8 +1924,8 @@ diffie-hellman@^5.0.0:
     randombytes "^2.0.0"
 
 disposables@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/disposables/-/disposables-1.0.1.tgz#064727a25b54f502bd82b89aa2dfb8df9f1b39e3"
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/disposables/-/disposables-1.0.2.tgz#36c6a674475f55a2d6913567a601444e487b4b6e"
 
 dnd-core@^2.5.4:
   version "2.5.4"
@@ -2418,7 +2426,7 @@ execa@^0.7.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-exenv@1.2.0:
+exenv@1.2.0, exenv@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.0.tgz#3835f127abf075bfe082d0aed4484057c78e3c89"
 
@@ -3275,10 +3283,11 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-ioc-liturgical-react@^0.0.48:
-  version "0.0.48"
-  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.0.48.tgz#7cfa0f2bb67c69344a704b5548619ae41f4e0abb"
+ioc-liturgical-react@^0.0.50:
+  version "0.0.50"
+  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.0.50.tgz#808f69ff2f9a373017b5725a2426aaf7b38ea147"
   dependencies:
+    "@tinymce/tinymce-react" "^2.1.3"
     axios "^0.15.3"
     bootstrap "^3.3.7"
     classnames "^2.2.5"
@@ -3308,6 +3317,7 @@ ioc-liturgical-react@^0.0.48:
     react-sortable-tree "^1.5.2"
     react-virtualized-select "^3.1.0"
     svgo "^0.7.2"
+    tinymce "^4.7.6"
     url-loader "^0.5.7"
 
 ip@^1.1.0, ip@^1.1.5:
@@ -3820,8 +3830,8 @@ jest@20.0.4:
     jest-cli "^20.0.4"
 
 jquery-mockjax@^2.2.0:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/jquery-mockjax/-/jquery-mockjax-2.2.2.tgz#9c7d2b103a44cf61c99cc78a9ee7878504b60907"
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/jquery-mockjax/-/jquery-mockjax-2.3.0.tgz#e55eb65626d44bf35b3990dc56ef94a64c6b5c1f"
   dependencies:
     jquery ">=1.5.2"
 
@@ -4070,8 +4080,8 @@ loader-utils@^1.0.2, loader-utils@^1.1.0:
     json5 "^0.5.0"
 
 loadjs@^3.3.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/loadjs/-/loadjs-3.5.1.tgz#01ce858f841d4f424a018214642e03f2f9a9dfde"
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/loadjs/-/loadjs-3.5.2.tgz#add0e0e0322859840b362598f762c02f5539ce0b"
 
 locate-path@^2.0.0:
   version "2.0.0"
@@ -4362,8 +4372,8 @@ mute-stream@0.0.7:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
 
 mz@^2.3.1:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/mz/-/mz-2.6.0.tgz#c8b8521d958df0a4f2768025db69c719ee4ef1ce"
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/mz/-/mz-2.7.0.tgz#95008057a56cafadc2bc63dde7f9ff6955948e32"
   dependencies:
     any-promise "^1.0.0"
     object-assign "^4.0.1"
@@ -5209,7 +5219,7 @@ prop-types-extra@^1.0.1:
   dependencies:
     warning "^3.0.0"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.5.x:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -5357,13 +5367,13 @@ react-bootstrap-table@3.4.6:
     react-modal "^1.4.0"
 
 react-bootstrap-table@^4.0.2:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/react-bootstrap-table/-/react-bootstrap-table-4.0.5.tgz#9eb38218d0c0cb31d05ecbf00498fe6df2a00940"
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/react-bootstrap-table/-/react-bootstrap-table-4.3.1.tgz#f704be55b7f6bf0557d2fc5bec6d25fd307d0cde"
   dependencies:
     classnames "^2.1.2"
     prop-types "^15.5.10"
-    react-modal "^1.4.0"
-    react-s-alert "^1.3.0"
+    react-modal "^3.1.7"
+    react-s-alert "^1.3.2"
 
 react-bootstrap@0.30.7:
   version "0.30.7"
@@ -5380,8 +5390,8 @@ react-bootstrap@0.30.7:
     warning "^3.0.0"
 
 react-bootstrap@^0.31.2:
-  version "0.31.3"
-  resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-0.31.3.tgz#db2b7d45b00b5dac1ab8b6de3dd97feb3091b849"
+  version "0.31.5"
+  resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-0.31.5.tgz#57040fa8b1274e1e074803c21a1b895fdabea05a"
   dependencies:
     babel-runtime "^6.11.6"
     classnames "^2.2.5"
@@ -5390,8 +5400,7 @@ react-bootstrap@^0.31.2:
     keycode "^2.1.2"
     prop-types "^15.5.10"
     prop-types-extra "^1.0.1"
-    react-overlays "^0.7.0"
-    react-prop-types "^0.4.0"
+    react-overlays "^0.7.4"
     uncontrollable "^4.1.0"
     warning "^3.0.0"
 
@@ -5471,6 +5480,15 @@ react-dom@^15.3.2, react-dom@^15.5.4, react-dom@^15.6.1:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
+react-dom@^16.2.0:
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.2.0.tgz#69003178601c0ca19b709b33a83369fe6124c044"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
+
 react-error-overlay@^1.0.10:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-1.0.10.tgz#da8cd1eafac41afdca2a33792b23694ef6c528f1"
@@ -5507,10 +5525,8 @@ react-iframe@^0.0.04:
   resolved "https://registry.yarnpkg.com/react-iframe/-/react-iframe-0.0.4.tgz#24f2f63439f1d141788b0971acc10cdd06fd7b75"
 
 react-iframe@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/react-iframe/-/react-iframe-1.0.7.tgz#c20fef7ca30e44e1f54922b9f6357c1c49f1d8e9"
-  dependencies:
-    prop-types "^15.5.x"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-iframe/-/react-iframe-1.1.0.tgz#fe0ac2eee934750ddd3fce1993fc97a967711d69"
 
 react-input-autosize@^1.1.3:
   version "1.1.4"
@@ -5547,6 +5563,14 @@ react-modal@^1.4.0:
     prop-types "^15.5.7"
     react-dom-factories "^1.0.0"
 
+react-modal@^3.1.7:
+  version "3.1.13"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.1.13.tgz#9b27e7774e6ecdc255f489487f518eb4361716ab"
+  dependencies:
+    exenv "^1.2.0"
+    prop-types "^15.5.10"
+    warning "^3.0.0"
+
 react-overlays@^0.6.10:
   version "0.6.12"
   resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-0.6.12.tgz#a079c750cc429d7db4c7474a95b4b54033e255c3"
@@ -5556,9 +5580,9 @@ react-overlays@^0.6.10:
     react-prop-types "^0.4.0"
     warning "^3.0.0"
 
-react-overlays@^0.7.0:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-0.7.1.tgz#0b84708d8007082163c47155a2f60a0858c7a3c7"
+react-overlays@^0.7.4:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-0.7.4.tgz#ef2ec652c3444ab8aa014262b18f662068e56d5c"
   dependencies:
     classnames "^2.2.5"
     dom-helpers "^3.2.1"
@@ -5610,9 +5634,9 @@ react-router@^4.1.1, react-router@^4.1.2:
     prop-types "^15.5.4"
     warning "^3.0.0"
 
-react-s-alert@^1.3.0:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/react-s-alert/-/react-s-alert-1.3.1.tgz#4de6e8258cd233bcffef84f73fbf46ea9507dcc9"
+react-s-alert@^1.3.2:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/react-s-alert/-/react-s-alert-1.4.1.tgz#ef3665a9d98c4cf2e448fc2d84e48aeca799bb5a"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -5669,15 +5693,15 @@ react-select@^1.0.0-rc.2, react-select@^1.0.0-rc.5:
     react-input-autosize "^1.1.3"
 
 react-sortable-tree@^1.5.2:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/react-sortable-tree/-/react-sortable-tree-1.5.3.tgz#6805e86887156a24fd9bd5b7daefaa92f00bf87a"
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/react-sortable-tree/-/react-sortable-tree-1.8.1.tgz#648f72eff758e029a1458ce9a1dc4de1783534e2"
   dependencies:
     lodash.isequal "^4.4.0"
     prop-types "^15.6.0"
     react-dnd "2.5.4"
     react-dnd-html5-backend "2.5.4"
     react-dnd-scrollzone "^4.0.0"
-    react-virtualized "^9.13.0"
+    react-virtualized "^9.16.1"
 
 react-themeable@^1.1.0:
   version "1.1.0"
@@ -5686,23 +5710,23 @@ react-themeable@^1.1.0:
     object-assign "^3.0.0"
 
 react-virtualized-select@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/react-virtualized-select/-/react-virtualized-select-3.1.0.tgz#968e89c4d74d98890cacf480378b6abee743c2d8"
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/react-virtualized-select/-/react-virtualized-select-3.1.3.tgz#e5c1fed5e493e3e5a628e53100e83d27cfd8c0ac"
   dependencies:
     babel-runtime "^6.11.6"
     prop-types "^15.5.8"
     react-select "^1.0.0-rc.2"
     react-virtualized "^9.0.0"
 
-react-virtualized@^9.0.0, react-virtualized@^9.13.0:
-  version "9.15.0"
-  resolved "https://registry.yarnpkg.com/react-virtualized/-/react-virtualized-9.15.0.tgz#489013849f310ab150005e81882bbe31ba29179a"
+react-virtualized@^9.0.0, react-virtualized@^9.16.1:
+  version "9.18.5"
+  resolved "https://registry.yarnpkg.com/react-virtualized/-/react-virtualized-9.18.5.tgz#42dd390ebaa7ea809bfcaf775d39872641679b89"
   dependencies:
     babel-runtime "^6.26.0"
     classnames "^2.2.3"
     dom-helpers "^2.4.0 || ^3.0.0"
     loose-envify "^1.3.0"
-    prop-types "^15.5.4"
+    prop-types "^15.6.0"
 
 "react@^0.14.0 || <15.4.0":
   version "15.3.2"
@@ -5721,6 +5745,15 @@ react@^15.3.2, react@^15.5.4, react@^15.6.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
     prop-types "^15.5.10"
+
+react@^16.2.0:
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 read-all-stream@^3.0.0:
   version "3.1.0"
@@ -6587,6 +6620,10 @@ timers-browserify@^2.0.2:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.4.tgz#96ca53f4b794a5e7c0e1bd7cc88a372298fa01e6"
   dependencies:
     setimmediate "^1.0.4"
+
+tinymce@^4.7.6:
+  version "4.7.6"
+  resolved "https://registry.yarnpkg.com/tinymce/-/tinymce-4.7.6.tgz#6c70931d3308a8ff4ba20e5ee82379b46714eb5c"
 
 tmp@^0.0.31:
   version "0.0.31"

@@ -36,8 +36,8 @@ export class Header extends React.Component {
                 <IndexLinkContainer to="/home">
                   <NavItem eventKey={1}>
                     <Logo/>
-                    <span className="App-title-full">Translation Management System</span>
-                    <span className="App-title-short">TMS</span>
+                    <span className="App-title-full">Online Liturgical Workbench</span>
+                    <span className="App-title-short">OLW</span>
                   </NavItem>
                 </IndexLinkContainer>
               </Navbar.Brand>

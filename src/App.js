@@ -30,6 +30,7 @@ import SearchOntology from './modules/pages/SearchOntology';
 import SearchNotes from './modules/pages/SearchNotes';
 import SearchTextParts from './modules/pages/SearchText';
 import TextParts from './modules/pages/TextParts';
+import Ocmc from './modules/components/images/Ocmc';
 
 import Header from './modules/components/Header'
 
@@ -171,6 +172,11 @@ class App extends React.Component {
                   <Route path="/logout" component={Logout}/>
                   <Route path="/download" component={MyRecords}/>
                 </div>
+              </div>
+              <div className="App-footer">
+                <span className="App-footer-powered-by">Powered by the </span>
+                <Ocmc/>
+                <span className="App-footer-app-name">Online Liturgical Workbench</span>
               </div>
             </div>
           </Router>
