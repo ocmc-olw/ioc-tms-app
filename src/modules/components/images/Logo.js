@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 import logoOcmc from './graphics/ocmc-globe-3.jpg';
-import logoAges from './graphics/AGES_logo_tagline.png';
 
 class Logo extends React.Component {
   constructor(props) {
@@ -16,7 +15,7 @@ class Logo extends React.Component {
     this.state = {
       logo: logo
     }
-  }
+  };
   render() {
     if (this.props.client === "ages") {
       return (
@@ -25,7 +24,7 @@ class Logo extends React.Component {
             <span className="App-img-logo-ages-initiatives">Initiatives</span>
           </div>
       );
-    } else if (this.props.client == "scriptorium") {
+    } else if (this.props.client === "scriptorium") {
       return (
           <div className="App-img-logo-scriptorium-div">
             <span className="App-img-logo-scriptorium">The Scriptorium</span>

@@ -88,7 +88,7 @@ class App extends React.Component {
               }
           );
         });
-  }
+  };
 
 
   render = () => {
@@ -174,9 +174,15 @@ class App extends React.Component {
                 </div>
               </div>
               <div className="App-footer">
-                <span className="App-footer-powered-by">Powered by the </span>
-                <Ocmc/>
-                <span className="App-footer-app-name">Online Liturgical Workbench</span>
+                <span className="App-footer-provided-by">This website and the </span>
+                <span className="App-footer-app-name">Online Liturgical Workstation </span>
+                <span className="App-footer-provided-by">are provided by </span>
+                <a href={"https://ocmc.org"} target={"_blank"}><Ocmc/></a>
+                <span className="App-footer-provided-by">as a service to the Pan-Orthodox Community. </span>
+              </div>
+              <div className="App-footer-short">
+                <span className="App-footer-provided-by">Website and software provided by </span>
+                <a className="App-anchor-ocmc" href={"https://ocmc.org"} target={"_blank"}>OCMC</a>
               </div>
             </div>
           </Router>

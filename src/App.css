@@ -55,19 +55,30 @@ div.container {
     borderTop: 1px solid #E7E7E7;
     textAlign: center;
     position: fixed;
+    padding-top: 3px;
     left: 0px;
     bottom: 0px;
     height: 40px;
     width: 100%;
     display: block;
 }
+.App-anchor-ocmc {
+    color: red;
+}
+.App-footer-short {
+    display: none;
+}
 .App-footer-powered-by {
 
+}
+.App-footer-provided-by {
+    color: white;
 }
 .App-footer-app-name {
     font-style: italic;
 }
-.App-img-logo {
+.App-img-logo-ocmc {
+    margin-top: 3px;
 }
 .App-page-about {
 }
@@ -365,11 +376,28 @@ div[class*='App-page'] {
     .App-title-full {
         display: none;
     }
+    .App-footer {
+        display: none;
+    }
     .App-title-short {
         display: inline;
         color: gold;
         font-style: italic;
         margin-top: 10px;
+    }
+    .App-footer-short {
+        background-color: black;
+        color: gold;
+        backgroundColor: #F8F8F8;
+        borderTop: 1px solid #E7E7E7;
+        textAlign: center;
+        position: fixed;
+        left: 0px;
+        padding-top: 5px;
+        bottom: 0px;
+        height: 30px;
+        width: 100%;
+        display: block;
     }
     .navbar-brand {
         display: flex;
