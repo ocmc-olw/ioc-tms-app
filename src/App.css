@@ -22,8 +22,9 @@ span.App {
     margin-left: 5px;
 }
 .App {
+    width: 98vw;
     margin-right: 0px;
-    margin-left: 3px;
+    margin-left: 5px;
     padding-left: 0px;
     padding-right: 0px;
     word-wrap: break-word;
@@ -35,29 +36,6 @@ span.App {
 }
 .App-header {
 }
-.App-img-logo-ages-div {
-    padding-top: 8px;
-    display: inline-block;
-}
-.App-img-logo-ages {
-    color: #ff200d;
-    padding-top: 10px;
-}
-.App-img-logo-ages-initiatives {
-    color: white;
-    padding-top: 10px;
-    margin-left: -5px;
-    margin-right: 10px;
-}
-.App-img-logo-scriptorium-div {
-    padding-top: 8px;
-    display: inline-block;
-}
-.App-img-logo-scriptorium {
-    color: #ff200d;
-    padding-top: 10px;
-    margin-right: 20px;
-}
 .App-footer {
     background-color: black;
     color: gold;
@@ -65,6 +43,7 @@ span.App {
     borderTop: 1px solid #E7E7E7;
     textAlign: center;
     position: fixed;
+    padding-left: 10px;
     padding-top: 3px;
     left: 0px;
     bottom: 0px;
@@ -92,7 +71,7 @@ span.App {
     font-style: italic;
 }
 .App-img-logo {
-    margin-top: 3px;
+    margin-right: 8px;
 }
 .App-page-about {
 }
@@ -190,6 +169,7 @@ span.App {
     resize: vertical;
 }
 .App-font-awesome-spinner {
+    margin-left: 20px;
     color: red;
 }
 .panel-title {
@@ -394,6 +374,7 @@ div[class*='App-page'] {
         display: none;
     }
     .App-footer {
+        padding-left: 10px;
         display: none;
     }
     .App-title-short {
@@ -889,7 +870,8 @@ path.link {
     margin-bottom: 8px;
 }
 .App-spinner {
-    color: black;
+    color: red;
+    margin-left: 20px;
 }
 .rdw-editor-main {
     background-color: white;

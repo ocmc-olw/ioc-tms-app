@@ -181,8 +181,8 @@ class App extends React.Component {
                 <a href={"https://ocmc.org"} target={"_blank"}><Ocmc/></a>
                 <span className="App-footer-provided-by-part-2">as a service to the Pan-Orthodox Community. </span>
               </div>
-              <div className="App-footer-short">
-                <span className="App-footer-provided-by">Website and software provided by </span>
+              <div className="App App-footer-short">
+                <span className="App App-footer-provided-by">Website and software provided by </span>
                 <a className="App-anchor-ocmc" href={"https://ocmc.org"} target={"_blank"}>OCMC</a>
               </div>
             </div>
