@@ -176,7 +176,7 @@ class App extends React.Component {
               </div>
               <div className="App-footer">
                 <span className="App-footer-provided-by">This website and the </span>
-                <span className="App-footer-app-name">Online Liturgical Workstation </span>
+                <span className="App-footer-app-name">Online Liturgical Workstation &trade; </span>
                 <span className="App-footer-provided-by">are provided by </span>
                 <a href={"https://ocmc.org"} target={"_blank"}><Ocmc/></a>
                 <span className="App-footer-provided-by-part-2">as a service to the Pan-Orthodox Community. </span>
