@@ -6,7 +6,7 @@ import {AgesEditor} from 'ioc-liturgical-react';
 class EditWithAges extends React.Component {
 
   componentWillMount = () => {
-  }
+  };
 
 render() {
     return (

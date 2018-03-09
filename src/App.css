@@ -13,11 +13,21 @@ div.container {
     padding-right: 10px;
     width: 100%;
 }
+span {
+    padding-left: 0px !important;
+    margins: 0px;
+}
+span.App {
+    padding-left: 5px;
+    margin-left: 5px;
+}
 .App {
     margin-right: 0px;
-    margin-left: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 3px;
+    padding-left: 0px;
+    padding-right: 0px;
+    word-wrap: break-word;
+    white-space: normal;
 }
 .App-content-row {
     padding-top: 30px;
@@ -73,6 +83,10 @@ div.container {
 }
 .App-footer-provided-by {
     color: white;
+}
+.App-footer-provided-by-part-2 {
+    color: white;
+    margin-left: 5px;
 }
 .App-footer-app-name {
     font-style: italic;
@@ -159,11 +173,13 @@ div.container {
 .App-HyperToken {
 }
 .App-HyperToken-Index {
+    padding-top: 5px;
     font-size: larger;
 }
 .App-HyperToken-Word {
     color: blue;
     cursor: pointer;
+    padding-left: 10px !important;
 }
 .App-HyperToken-Word-Selected {
     color: blue;
@@ -237,6 +253,7 @@ a.collapsed {
 }
 
 .control-label,  .resourceSelectorPrompt {
+    margin-right: 8px;
     color: #5bc0de;
 }
 .App-Notes-Lister {
@@ -689,4 +706,247 @@ path.link {
 }
 .jumbotron {
     padding: 10px;
+}
+.App-Text-Note-Text-Source {
+    padding-left: 10px;
+    font-size: smaller;
+}
+.App-Text-Note-Editor-Type-Row {
+    margin-top: 0px;
+}
+.App-Text-Note-Editor-Scope-Row {
+    margin-top: 0px;
+}
+.App-Text-Note-Editor-Scope-Biblical-Row {
+    margin-bottom: 8px;
+}
+.App-Text-Note-Editor-Lemma-Row {
+    margin-top: 0px;
+}
+.App-Text-Note-Editor-Title-Row {
+    margin-top: 0px;
+}
+.App-Bible-Ref-Selector-Row {
+    margin-top: 8px;
+}
+.App-Ontology-Ref-Selector-Row {
+    margin-top: 0px;
+}
+.App-Text-Note-Editor-Library-Row {
+    margin-top: 0px;
+}
+.App-Text-Note-Editor-Scope {
+    height: auto;
+    width: 80%;
+    box-sizing: border-box;
+}
+.App-Text-Note-Editor-Lemma {
+    height: auto;
+    width: 80%;
+    box-sizing: border-box;
+}
+.App-Text-Note-Editor-Title {
+    height: auto;
+    width: 80%;
+    box-sizing: border-box;
+}
+.mce-container-body {
+    width: 80vw;
+}
+.mce-branding {
+    visibility: hidden !important;
+}
+.App-Text-Note-Header-Scope-Glyph {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+.App-Text-Note-Type-As-Heading {
+    margins: 0px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: larger;
+}
+.App-Text-Note-Type-Glyph {
+    margin-left: 10px !important;
+}
+.App-Text-Note-Type {
+    text-align: center;
+}
+.App-Text-Note-Type-Selector {
+    width: 100%;
+}
+.App-Text-Note-formatted {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    text-align: justify;
+    word-spacing:normal;
+    text-justify: auto;
+    overflow-wrap: break-word;
+}
+.App-Text-Note-Header-Scope {
+    font-weight: bold;
+    text-justify: none;
+    display: inline-block;
+}
+
+.App-Text-Note-Header-Scope-Biblical {
+    font-weight: bold;
+    text-justify: none;
+    display: inline-block;
+}
+.App-Text-Note-Header-Scope-Ontological {
+    font-weight: bold;
+    text-justify: none;
+    display: inline-block;
+}
+.App-Text-Note-Header-Lemma {
+    font-weight: bold;
+    font-style: italic;
+    text-justify: none;
+    display: inline-block;
+    margin-left: 5px !important;
+}
+
+.App-Text-Note-Header-Title {
+    font-weight: bold;
+    text-justify: none;
+    display: inline-block !important;
+    margin-left: 5px !important;
+    margin-right: 5px;
+}
+
+.App-Text-Note-Header-Note > p {
+    text-justify: inter-word;
+    display: inline-block;
+}
+.App-Text-Note-Header-Note > ul {
+    padding-left: 16px;
+}
+.App-Text-Note-Header-Note > li {
+}
+.App-no-display {
+    margins: 0px;
+    padding: 0px;
+    display: none;
+}
+
+.App-Bible-Ref-Selector-Container {
+    display: inline-flex;
+}
+.App-Bible-Ref-Selector-Book .Select-control{
+    float: left;
+    width: 30ch;
+}
+.App-Bible-Ref-Selector-Chapter .Select-control{
+    float: left;
+    width: 12ch;
+}
+.App-Bible-Ref-Selector-Verse .Select-control{
+    float: left;
+    width: 12ch;
+}
+.App-Ontology-Ref-Selector-Container {
+    display: inline-block;
+    max-width: 80vw;
+}
+.App-Ontology-Ref-Selector-Type .Select-control{
+    float: left;
+    width: 30ch;
+}
+.App-Ontology-Ref-Selector-Entity{
+    width: 100%;
+}
+.App-Button {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.App-Workflow-Selector-Row {
+
+}
+.App-Workflow-Selector-Label {
+
+}
+.App-Workflow-Selector-Dropdown {
+
+}
+.Select-control {
+    margin-bottom: 10px;
+}
+
+.App-Text-Note-Editor-Button-Row {
+}
+.App-Text-Editor-Workflow-Glyph {
+    color: #5bc0de;
+}
+.App-Workflow-Selector-icon {
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 10px;
+    display: inline;
+}
+.App-search-text-input {
+    margin-bottom: 8px;
+}
+.App-spinner {
+    color: black;
+}
+.rdw-editor-main {
+    background-color: white;
+}
+
+.DraftEditor-root {
+    background: #fff;
+    border: 1px solid #ddd;
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    padding: 15px;
+}
+
+.RichEditor-editor {
+    border-top: 1px solid #ddd;
+    cursor: text;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.rdw-editor-wrapper {
+    border-style: solid;
+    border-width: thin;
+    border-color: lightgrey;
+}
+.rdw-inline-wrapper {
+    border-right-style: solid;
+    border-right-width: thin;
+    border-right-color: lightgrey;
+}
+.rdw-list-wrapper {
+    border-left-style: solid;
+    border-left-width: thin;
+    border-left-color: lightgrey;
+}
+.rdw-link-wrapper {
+    border-left-style: solid;
+    border-left-width: thin;
+    border-left-color: lightgrey;
+}
+.rdw-history-wrapper {
+    border-left-style: solid;
+    border-left-width: thin;
+    border-left-color: lightgrey;
+}
+.Text-Note-Add-Button {
+    margin-left: 10px;
+    padding: 1px;
+}
+.App-Window-Launch {
+    cursor: pointer;
+    font-style: italic;
+}
+.active {
+    color: inherit !important;
+}
+
+.btn {
+    padding-left: 5px;
+    padding-right: 5px;
 }

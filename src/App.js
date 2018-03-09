@@ -25,9 +25,10 @@ import Logout from './modules/pages/Logout';
 import MyRecords from './modules/pages/MyRecords';
 import Notes from './modules/pages/Notes';
 import ParaTexts from './modules/pages/ParaTexts';
-import SearchLinks from './modules/pages/SearchLinks';
+//import SearchLinks from './modules/pages/SearchLinks';
 import SearchOntology from './modules/pages/SearchOntology';
 import SearchNotes from './modules/pages/SearchNotes';
+import SearchTextNotes from './modules/pages/SearchTextNotes';
 import SearchTextParts from './modules/pages/SearchText';
 import TextParts from './modules/pages/TextParts';
 import Ocmc from './modules/components/images/Ocmc';
@@ -147,8 +148,8 @@ class App extends React.Component {
                   />
                   <PrivateRoute
                       authed={this.props.app.session.userInfo.authenticated}
-                      path='/searchlinks'
-                      component={SearchLinks}
+                      path='/searchtextnotes'
+                      component={SearchTextNotes}
                   />
                   <PrivateRoute
                       authed={this.props.app.session.userInfo.authenticated}
@@ -178,7 +179,7 @@ class App extends React.Component {
                 <span className="App-footer-app-name">Online Liturgical Workstation </span>
                 <span className="App-footer-provided-by">are provided by </span>
                 <a href={"https://ocmc.org"} target={"_blank"}><Ocmc/></a>
-                <span className="App-footer-provided-by">as a service to the Pan-Orthodox Community. </span>
+                <span className="App-footer-provided-by-part-2">as a service to the Pan-Orthodox Community. </span>
               </div>
               <div className="App-footer-short">
                 <span className="App-footer-provided-by">Website and software provided by </span>

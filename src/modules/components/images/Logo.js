@@ -41,7 +41,7 @@ Logo.propTypes = {
 };
 
 Logo.defaultProps = {
-  client: "scriptorium"
+  client: "ocmc"
 };
 export default Logo;
 

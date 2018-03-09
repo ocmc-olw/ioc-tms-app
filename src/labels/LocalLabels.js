@@ -50,9 +50,10 @@ const   labels = {
     , search: {
       menu: "Search"
       , itemLink: "Links"
-      , itemNote: "Notes"
+      , itemNote: "Personal Notes"
       , itemOntology: "Ontology"
       , itemText: "Texts"
+      , itemTextNote: "Text Notes"
     }
     , about: {
       title: "About the TMS"
@@ -128,9 +129,10 @@ const   labels = {
     , search: {
       menu: "Αναζήτηση"
       , itemLink: "Σύνδεσμοι"
-      , itemNote: "Σημειώσεις"
+      , itemNote: "Προσωπικές σημειώσεις"
       , itemOntology: "Οντολογία"
       , itemText: "κείμενα"
+      , itemTextNote: "Σημειώσεις κειμένου"
     }
     , about: {
       title: "Σχετικά με το TMS"

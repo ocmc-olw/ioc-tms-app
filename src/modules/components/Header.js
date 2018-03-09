@@ -70,10 +70,10 @@ export class Header extends React.Component {
                 }
                 {this.props.app.session.userInfo.authenticated ?
                     <NavDropdown eventKey={"search"} title={<span><FontAwesome  className="App-header-ico" name="search"/> {this.props.app.session.localLabels.search.menu}</span>} id="notes-nav-dropdown">
-                      <LinkContainer to="/searchlinks"><NavItem  className="App-submenu-item" eventKey={"search.links"} >{<FontAwesome className="App-header-sub-item-ico"  name="chain"/>}{this.props.app.session.localLabels.search.itemLink}</NavItem></LinkContainer>
-                      <LinkContainer to="/searchnotes"><NavItem  className="App-submenu-item" eventKey={"search.notes"} >{<FontAwesome className="App-header-sub-item-ico"  name="comment-o"/>}{this.props.app.session.localLabels.search.itemNote}</NavItem></LinkContainer>
                       <LinkContainer to="/searchontology"><NavItem  className="App-submenu-item" eventKey={"search.ontology"} >{<FontAwesome className="App-header-sub-item-ico"  name="sitemap"/>}{this.props.app.session.localLabels.search.itemOntology}</NavItem></LinkContainer>
+                      <LinkContainer to="/searchnotes"><NavItem  className="App-submenu-item" eventKey={"search.notes"} >{<FontAwesome className="App-header-sub-item-ico"  name="comment-o"/>}{this.props.app.session.localLabels.search.itemNote}</NavItem></LinkContainer>
                       <LinkContainer to="/searchtext"><NavItem  className="App-submenu-item" eventKey={"search.text"} >{<FontAwesome className="App-header-sub-item-ico"  name="file-text-o"/>}{this.props.app.session.localLabels.search.itemText}</NavItem></LinkContainer>
+                      <LinkContainer to="/searchtextnotes"><NavItem  className="App-submenu-item" eventKey={"search.text.notes"} >{<FontAwesome className="App-header-sub-item-ico"  name="sticky-note"/>}{this.props.app.session.localLabels.search.itemTextNote}</NavItem></LinkContainer>
                     </NavDropdown>
                     :
                     ""
