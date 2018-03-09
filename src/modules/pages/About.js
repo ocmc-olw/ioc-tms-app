@@ -12,7 +12,7 @@ class About extends React.Component {
     super(props);
     this.state = {
       labels: {
-        about: LocalLabels.getAboutTmsLabels(props.app.session.languageCode)
+        about: LocalLabels.getAboutOlwLabels(props.app.session.languageCode)
       }
     }
   }
@@ -20,7 +20,7 @@ class About extends React.Component {
     this.setState(
         {
           labels: {
-            about: LocalLabels.getAboutTmsLabels(nextProps.app.session.languageCode)
+            about: LocalLabels.getAboutOlwLabels(nextProps.app.session.languageCode)
           }
         }
     )
@@ -49,6 +49,18 @@ class About extends React.Component {
               <li className="App-about-list-item">{this.state.labels.about.userFeature04}</li>
               <li className="App-about-list-item">{this.state.labels.about.userFeature05}</li>
               <li className="App-about-list-item">{this.state.labels.about.userFeature06}</li>
+              <li className="App-about-list-item">{this.state.labels.about.userFeature07}</li>
+            </ol>
+          </Jumbotron>
+          <PageHeader>{this.state.labels.about.annotatorFeaturesTitle}</PageHeader>
+          <Jumbotron>
+            <p>{this.state.labels.about.annotatorFeaturesIntro}</p>
+            <ol>
+              <li className="App-about-list-item">{this.state.labels.about.annotatorFeature01}</li>
+              <li className="App-about-list-item">{this.state.labels.about.annotatorFeature02}</li>
+              <li className="App-about-list-item">{this.state.labels.about.annotatorFeature03}</li>
+              <li className="App-about-list-item">{this.state.labels.about.annotatorFeature04}</li>
+              <li className="App-about-list-item">{this.state.labels.about.annotatorFeature05}</li>
             </ol>
           </Jumbotron>
           <PageHeader>{this.state.labels.about.securityFeaturesTitle}</PageHeader>
