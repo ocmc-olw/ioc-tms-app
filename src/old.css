@@ -6,46 +6,147 @@ div.container-fluid {
     width: 100%;
     background-color: black;
 }
-p {
+div.container {
+    margin-right: 0px;
+    margin-left: 2px;
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
+}
+span {
+    padding-left: 0px !important;
+    margins: 0px;
+}
+span.App {
+    padding-left: 5px;
+    margin-left: 5px;
+}
+.App {
+    width: 98vw;
+    margin-right: 0px;
+    margin-left: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    word-wrap: break-word;
+    white-space: normal;
 }
 .App-content-row {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 4px;
 }
 .App-header {
-    z-index: -1;
 }
-.App-img-logo {
+.App-footer {
+    background-color: black;
+    color: gold;
+    backgroundColor: #F8F8F8;
+    borderTop: 1px solid #E7E7E7;
+    textAlign: center;
+    position: fixed;
+    padding-left: 10px;
+    padding-top: 10px;
+    left: 0px;
+    bottom: 0px;
+    height: 40px;
+    width: 100%;
+    display: block;
 }
-.App-page-admin {
+.App-anchor-ocmc {
+    color: red;
+}
+.App-footer-short {
+    display: none;
+}
+.App-footer-powered-by {
 
 }
+.App-footer-provided-by {
+    color: white;
+}
+.App-footer-provided-by-part-2 {
+    color: white;
+    margin-left: 5px;
+}
+.App-footer-app-name {
+    font-style: italic;
+}
+.App-img-logo {
+    margin-right: 8px;
+}
+.App-img-logo-ocmc {
+    margin-top: 3px;
+}
+.App-page-about {
+}
+.App-nav-dropdown {
+    position: relative;
+    top: -5px;
+}
 .App-title-full {
-    z-index: 8999;
-    position: absolute;
-    top: 16px;
     color: gold;
     font-style: italic;
 }
 .App-title-short {
-    display:none;
+    display: none;
 }
 .App-flag {
     height: 1em;
     width: 1.3em;
 }
 .App-Modal-Para-Row-Editor {
-    width: 90vw;
+    width: 80vw;
+}
+.modal-title {
+    font-size: small;
+    padding-bottom: 10px;
+    color: #5bc0de;
+}
+.modal-content {
+    max-width: 95vw;
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+    position: absolute;
 }
 #basic-nav-dropdown {
     padding-top: 21px;
     padding-left: 22px;
 }
+.App-search {
+    margin: 10px;
+}
 .App-search-form {
     padding-top: 15px;
     padding-bottom: 15px;
+    position: relative;
+    background-color: #eaeced;
+}
+.App-Template-Editor-Button {
+    margin: 2px;
+}
+.App-Template-Editor-Node-Button {
+    color: #2e6da4;
+    margin-right: 2px;
+}
+.App-InputGroup-Static {
+    background-color: white;
+    border-color: #2e6da4;
+}
+.App-Template-Editor-Input {
+    background-color: yellow;
+    padding-bottom: 10px;
+}
+.rst__rowTitle {
+    color: #5bc0de;
+}
+.rst__rowTitleWithSubtitle {
+    color: #5bc0de;
+    margin-bottom: 2px !important;
+}
+.rst__rowSubtitle {
+    font-weight: bold;
+    padding-top: 30px !important;
+    margin-top: 10px !important;
 }
 .App-search-panel {
 }
@@ -55,30 +156,39 @@ p {
 .App-HyperToken {
 }
 .App-HyperToken-Index {
+    padding-top: 5px;
     font-size: larger;
 }
 .App-HyperToken-Word {
     color: blue;
+    cursor: pointer;
+    padding-left: 10px !important;
+}
+.App-HyperToken-Word-Selected {
+    color: blue;
+    background-color: #bce8f1;
     cursor: pointer;
 }
 .App-iframe-wrapper {
     resize: vertical;
 }
 .App-font-awesome-spinner {
+    margin-left: 20px;
     color: red;
 }
-.navbar.Collapse {
+.panel-title {
+    cursor: pointer;
+}
+.Navbar.Collapse {
     position: fixed;
     top: 6px;
+    left: 500px;
+    right: 0;
 }
-.navbar.container {
-    margin-left: 0;
-    margin-right: 0;
-}
-
 .navbar-brand {
     display: flex;
-    align-items: center;
+    position: relative;
+    top: -14px;
 }
 .navbar-brand>img {
 }
@@ -127,9 +237,18 @@ a.collapsed {
 }
 
 .control-label,  .resourceSelectorPrompt {
+    margin-right: 8px;
     color: #5bc0de;
 }
-
+.App-Notes-Lister {
+    margin-top: 0px !important;
+}
+.Schema-Based-Add-Button {
+    padding: 1px;
+}
+.App-Add-ico {
+    padding: 5px !important;
+}
 .App-login {
     margin: 20%;
 }
@@ -181,9 +300,12 @@ a.collapsed {
 }
 
 .App-search-results {
-    background-color: #eaeced;
+    margin: 10px;
 }
 
+.App-ParaRow-Text-Editor {
+    background-color: #eaeced;
+}
 .row {
     margin: 0px;
 }
@@ -191,10 +313,8 @@ a.collapsed {
 .App-search-checkbox {
     margin: 10px;
 }
-.react-bs-table-container {
-    padding: 14px;
-}
 .react-bs-table table tr {
+    padding: 10px;
     max-width: 80%;
 }
 .react-bs-table table td {
@@ -222,37 +342,77 @@ a.collapsed {
     color: red;
 }
 
+.App-header-ico {
+    margin: 0px;
+    padding: 0px;
+}
+.App-header-sub-item-ico {
+    padding-right: 10px;
+}
 .App-header-ico.fa-info-circle {
     color: inherit;
 }
-.modal-container {
-    position: relative;
+.App-Well-From-Text {
+    margin-bottom: 0px;
 }
-.modal-container .modal, .modal-container .modal-backdrop {
-    position: absolute;
+.App-Well-To-Text {
+}
+.App-Text-Refers-To {
+    color: #5bc0de;
+    padding-left: 20px;
 }
 div[class*='App-page'] {
-    margin-top: 105px;
+    margin-top: 80px;
 }
-.caret {
-    border-top: 4px solid !important;
+.modal-dialog {
+    margin: 5vw !important;
+    width: 90vw !important;
 }
-@media (max-width: 820px !important) {
-    .App-img-logo {
-        position: relative;
-        top: -10px;
+@media screen
+and (max-width: 820px)
+and (min-width: 200px) {
+    .App-content-row {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: -1px;
     }
-    .App-title-short {
-        position: relative;
-        top: -10px;
-        color: red;
-        font-size: 1vmax;
+    .App-img-logo {
+        height: 40px;
+        width: 40px;
     }
     .App-title-full {
-        display:none;
+        display: none;
+    }
+    .App-footer {
+        padding-left: 10px;
+        display: none;
+    }
+    .App-title-short {
+        display: inline;
+        color: gold;
+        font-style: italic;
+        margin-top: 10px;
+    }
+    .App-footer-short {
+        background-color: black;
+        color: gold;
+        backgroundColor: #F8F8F8;
+        borderTop: 1px solid #E7E7E7;
+        textAlign: center;
+        position: fixed;
+        left: -5px;
+        padding-top: 5px;
+        bottom: 0px;
+        height: 30px;
+        width: 100%;
+        display: block;
+    }
+    .navbar-brand {
+        display: flex;
+        position: relative;
+        top: -8px;
     }
     .navbar-header {
-        z-index: 2000;
         float: none;
     }
     .navbar-left,.navbar-right {
@@ -287,13 +447,35 @@ div[class*='App-page'] {
         display:block !important;
     }
 }
-
 div.App-logo.navbar-header {
-    z-index: 2000;
     overflow: scroll;
 }
-.App-DependencyDiagram-Container {
+.indent {
+    width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.list-group-item {
+    padding-left: 0 !important;
+    margin: 0 !important;
+}
+.treeview {
+    padding-left: 1px !important;
+    margin-left: 1px !important;
+}
+.list-group {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+.App-Modal-Dependency-Diagram {
+    width: 95vw;
+}
+.treeview {
     overflow: scroll;
+}
+.App-DependencyDiagram-Well {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
 }
 .App-demo-version {
     margin-left: 20px;
@@ -314,16 +496,17 @@ div.App-logo.navbar-header {
     background-color: #eaeced;
 }
 .resourceSelector {
-    padding-left: 15px;
+    max-width: 80%;
 }
 .App-table-filter-clear {
     float: right;
 }
-.Button-Select-FontAwesome {
-    padding-left: 0px;
+.Select {
+    max-width: 90vw;
 }
-.Select-control {
-    max-width: 80%;
+.App-Grammar-Well {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .App-Label-Selector-POS .Select-control{
     float: left;
@@ -338,40 +521,30 @@ div.App-logo.navbar-header {
     width: 45ch;
 }
 .App-Label-Selector-Person .Select-control {
-    float: left;
     width: 45ch;
 }
 .App-Label-Selector-Tense .Select-control {
-    float: left;
     width: 45ch;
 }
 .App-Label-Selector-Voice .Select-control {
-    float: left;
     width: 45ch;
 }
 .App-Label-Selector-Mood .Select-control {
-    float: left;
     width: 45ch;
 }
 .App-Label-Selector-Gender .Select-control {
-    float: left;
     width: 45ch;
 }
 .App-Label-Selector-Number .Select-control {
-    float: left;
     width: 45ch;
 }
 .App-Label-Selector-Case .Select-control {
-    float: left;
     width: 45ch;
-    max-width: 50%;
 }
 .App-TokenTagger-Lemma {
-    float: left;
     width: 45ch;
 }
 .App-TokenTagger-Gloss {
-    float: left;
     width: 45ch;
 }
 .App-Label-Selector-Help {
@@ -433,6 +606,15 @@ path.link {
 .App-Modal-Para-Row-Editor {
     width: 90vw;
 }
+.App-Modal-Id-Builder {
+    width: 90vw;
+}
+.App-id-builder {
+    width: 85vw;
+}
+.App-id-builder-header {
+    width: 85vw;
+}
 .App-modal-body {
     background-color: #eaeced;
 }
@@ -450,7 +632,7 @@ path.link {
     width: 100%;
 }
 .App-Ages-Table-Row {
-    margin-top: 10px;
+    margin: 10px;
 }
 .App-Info-Row {
     margin-top: 10px;
@@ -478,4 +660,285 @@ path.link {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+.Button-Select {
+    margin: 2px;
+}
+.Button-Select-FontAwesome {
+    padding-left: 0px;
+}
+.Button-Cancel {
+    margin: 2px;
+}
+.App-DependencyDiagram-Node-Key {
+    padding-left: 4px;
+}
+.App-DependencyDiagram-Node-Label {
+    color: firebrick;
+    padding-left: 4px;
+}
+.App-DependencyDiagram-Node-Token {
+    font-weight: bold;
+    padding-left: 4px;
+}
+.App-DependencyDiagram-Node-Gloss {
+    color: darkgreen;
+    padding-left: 4px;
+}
+.App-DependencyDiagram-Node-Grammar {
+    color: black;
+    padding-left: 4px;
+}
+.App-DependencyDiagram-Node-Lemma {
+    padding-left: 4px;
+}
+.App-about-list-item {
+    font-size: larger;
+}
+.jumbotron {
+    padding: 10px;
+}
+.App-Text-Note-Text-Source {
+    padding-left: 10px;
+    font-size: smaller;
+}
+.App-Text-Note-Editor-Type-Row {
+    margin-top: 0px;
+}
+.App-Text-Note-Editor-Scope-Row {
+    margin-top: 0px;
+}
+.App-Text-Note-Editor-Scope-Biblical-Row {
+    margin-bottom: 8px;
+}
+.App-Text-Note-Editor-Lemma-Row {
+    margin-top: 0px;
+}
+.App-Text-Note-Editor-Title-Row {
+    margin-top: 0px;
+}
+.App-Bible-Ref-Selector-Row {
+    margin-top: 8px;
+}
+.App-Ontology-Ref-Selector-Row {
+    margin-top: 0px;
+}
+.App-Text-Note-Editor-Library-Row {
+    margin-top: 0px;
+}
+.App-Text-Note-Editor-Scope {
+    height: auto;
+    width: 80%;
+    box-sizing: border-box;
+}
+.App-Text-Note-Editor-Lemma {
+    height: auto;
+    width: 80%;
+    box-sizing: border-box;
+}
+.App-Text-Note-Editor-Title {
+    height: auto;
+    width: 80%;
+    box-sizing: border-box;
+}
+.mce-container-body {
+    width: 80vw;
+}
+.mce-branding {
+    visibility: hidden !important;
+}
+.App-Text-Note-Header-Scope-Glyph {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+.App-Text-Note-Type-As-Heading {
+    margins: 0px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: larger;
+}
+.App-Text-Note-Type-Glyph {
+    margin-left: 10px !important;
+}
+.App-Text-Note-Type {
+    text-align: center;
+}
+.App-Text-Note-Type-Selector {
+    width: 100%;
+}
+.App-Text-Note-formatted {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    text-align: justify;
+    word-spacing:normal;
+    text-justify: auto;
+    overflow-wrap: break-word;
+}
+.App-Text-Note-Header-Scope {
+    font-weight: bold;
+    text-justify: none;
+    display: inline-block;
+}
+
+.App-Text-Note-Header-Scope-Biblical {
+    font-weight: bold;
+    text-justify: none;
+    display: inline-block;
+}
+.App-Text-Note-Header-Scope-Ontological {
+    font-weight: bold;
+    text-justify: none;
+    display: inline-block;
+}
+.App-Text-Note-Header-Lemma {
+    font-weight: bold;
+    font-style: italic;
+    text-justify: none;
+    display: inline-block;
+    margin-left: 5px !important;
+}
+
+.App-Text-Note-Header-Title {
+    font-weight: bold;
+    text-justify: none;
+    display: inline-block !important;
+    margin-left: 5px !important;
+    margin-right: 5px;
+}
+
+.App-Text-Note-Header-Note > p {
+    text-justify: inter-word;
+    display: inline-block;
+}
+.App-Text-Note-Header-Note > ul {
+    padding-left: 16px;
+}
+.App-Text-Note-Header-Note > li {
+}
+.App-no-display {
+    margins: 0px;
+    padding: 0px;
+    display: none;
+}
+
+.App-Bible-Ref-Selector-Container {
+    display: inline-flex;
+}
+.App-Bible-Ref-Selector-Book .Select-control{
+    float: left;
+    width: 30ch;
+}
+.App-Bible-Ref-Selector-Chapter .Select-control{
+    float: left;
+    width: 12ch;
+}
+.App-Bible-Ref-Selector-Verse .Select-control{
+    float: left;
+    width: 12ch;
+}
+.App-Ontology-Ref-Selector-Container {
+    display: inline-block;
+    max-width: 80vw;
+}
+.App-Ontology-Ref-Selector-Type .Select-control{
+    float: left;
+    width: 30ch;
+}
+.App-Ontology-Ref-Selector-Entity{
+    width: 100%;
+}
+.App-Button {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.App-Workflow-Selector-Row {
+
+}
+.App-Workflow-Selector-Label {
+
+}
+.App-Workflow-Selector-Dropdown {
+
+}
+.Select-control {
+    margin-bottom: 10px;
+}
+
+.App-Text-Note-Editor-Button-Row {
+}
+.App-Text-Editor-Workflow-Glyph {
+    color: #5bc0de;
+}
+.App-Workflow-Selector-icon {
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 10px;
+    display: inline;
+}
+.App-search-text-input {
+    margin-bottom: 8px;
+}
+.App-spinner {
+    color: red;
+    margin-left: 20px;
+}
+.rdw-editor-main {
+    background-color: white;
+}
+
+.DraftEditor-root {
+    background: #fff;
+    border: 1px solid #ddd;
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    padding: 15px;
+}
+
+.RichEditor-editor {
+    border-top: 1px solid #ddd;
+    cursor: text;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.rdw-editor-wrapper {
+    border-style: solid;
+    border-width: thin;
+    border-color: lightgrey;
+}
+.rdw-inline-wrapper {
+    border-right-style: solid;
+    border-right-width: thin;
+    border-right-color: lightgrey;
+}
+.rdw-list-wrapper {
+    border-left-style: solid;
+    border-left-width: thin;
+    border-left-color: lightgrey;
+}
+.rdw-link-wrapper {
+    border-left-style: solid;
+    border-left-width: thin;
+    border-left-color: lightgrey;
+}
+.rdw-history-wrapper {
+    border-left-style: solid;
+    border-left-width: thin;
+    border-left-color: lightgrey;
+}
+.Text-Note-Add-Button {
+    margin-left: 10px;
+    padding: 1px;
+}
+.App-Window-Launch {
+    cursor: pointer;
+    font-style: italic;
+}
+.active {
+    color: inherit !important;
+}
+
+.btn {
+    padding-left: 5px;
+    padding-right: 5px;
 }

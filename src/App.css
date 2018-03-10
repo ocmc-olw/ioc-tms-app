@@ -1,3 +1,16 @@
+.App {
+    margin-right: 0px;
+    margin-left: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+.App-content-row {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 4px;
+}
 div.container-fluid {
     margin-right: 0px;
     margin-left: 0px;
@@ -13,6 +26,9 @@ div.container {
     padding-right: 10px;
     width: 100%;
 }
+div.well {
+    max-width: 95vw;
+}
 span {
     padding-left: 0px !important;
     margins: 0px;
@@ -20,20 +36,6 @@ span {
 span.App {
     padding-left: 5px;
     margin-left: 5px;
-}
-.App {
-    width: 98vw;
-    margin-right: 0px;
-    margin-left: 5px;
-    padding-left: 0px;
-    padding-right: 0px;
-    word-wrap: break-word;
-    white-space: normal;
-}
-.App-content-row {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 4px;
 }
 .App-header {
 }
@@ -70,6 +72,8 @@ span.App {
 }
 .App-footer-app-name {
     font-style: italic;
+}
+.App-grid {
 }
 .App-img-logo {
     margin-top: 3px;
@@ -305,12 +309,10 @@ a.collapsed {
 }
 
 .App-ParaRow-Text-Editor {
-    background-color: #eaeced;
 }
 .row {
     margin: 0px;
 }
-
 .App-search-checkbox {
     margin: 10px;
 }
@@ -496,9 +498,6 @@ div.App-logo.navbar-header {
 }
 .App-Para-Col-Editor {
     padding-left: 15px;
-}
-.App-ParaRow-Text-Editor {
-    background-color: #eaeced;
 }
 .resourceSelector {
     max-width: 80%;
@@ -707,6 +706,9 @@ path.link {
     padding-left: 10px;
     font-size: smaller;
 }
+.App-Text-Note-Editor {
+    margin-left: 20px;
+}
 .App-Text-Note-Editor-Type-Row {
     margin-top: 0px;
 }
@@ -856,6 +858,7 @@ path.link {
 .App-Button {
     margin-top: 10px;
     margin-right: 5px;
+    width: 100px !important;
 }
 .App-Workflow-Selector-Row {
 
