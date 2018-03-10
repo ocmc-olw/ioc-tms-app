@@ -8,7 +8,7 @@ div.container-fluid {
 }
 div.container {
     margin-right: 0px;
-    margin-left: 0px;
+    margin-left: 2px;
     padding-left: 10px;
     padding-right: 10px;
     width: 100%;
@@ -33,6 +33,7 @@ span.App {
 .App-content-row {
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 4px;
 }
 .App-header {
 }
@@ -44,7 +45,7 @@ span.App {
     textAlign: center;
     position: fixed;
     padding-left: 10px;
-    padding-top: 3px;
+    padding-top: 10px;
     left: 0px;
     bottom: 0px;
     height: 40px;
@@ -71,7 +72,11 @@ span.App {
     font-style: italic;
 }
 .App-img-logo {
+    margin-top: 3px;
     margin-right: 8px;
+}
+.App-img-logo-ocmc {
+    margin-top: 3px;
 }
 .App-page-about {
 }
@@ -366,11 +371,17 @@ div[class*='App-page'] {
 }
 @media screen
   and (max-width: 820px)
-    and (min-width: 200px)
-{
+    and (min-width: 200px) {
+    .App-content-row {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 0px;
+    }
     .App-img-logo {
         height: 40px;
         width: 40px;
+        margin-top: -2px;
+        margin-right: 8px;
     }
     .App-title-full {
         display: none;
@@ -392,7 +403,7 @@ div[class*='App-page'] {
         borderTop: 1px solid #E7E7E7;
         textAlign: center;
         position: fixed;
-        left: 0px;
+        left: -5px;
         padding-top: 5px;
         bottom: 0px;
         height: 30px;
