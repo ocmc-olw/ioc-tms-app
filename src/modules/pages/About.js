@@ -78,7 +78,6 @@ class About extends React.Component {
             </ol>
           </Jumbotron>
           <AboutDatabase labels={this.props.app.session.labels.pageAbout}/>
-          <p>{this.state.labels.about.monk} <a href={this.state.labels.about.monkSite}> website</a>.</p>
           {this.props.app.session.labels.pageAbout.contact} <Email />
           <p/>
           <Configuration

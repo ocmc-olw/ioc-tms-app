@@ -184,7 +184,7 @@ span.App {
 .navbar-brand {
     display: flex;
     position: relative;
-    top: -8px;
+    top: -14px;
 }
 .navbar-brand>img {
 }
@@ -369,6 +369,8 @@ div[class*='App-page'] {
     and (min-width: 200px)
 {
     .App-img-logo {
+        height: 40px;
+        width: 40px;
     }
     .App-title-full {
         display: none;

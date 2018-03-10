@@ -4,6 +4,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Hymnographers from '../components/images/Hymnographers';
+import Scriptorium from '../components/images/Scriptorium';
 import {Alert, Glyphicon, Col, Grid, Jumbotron, Row} from 'react-bootstrap'
 
 class Home extends React.Component {
@@ -17,6 +18,9 @@ class Home extends React.Component {
                 <Row>
                   <Col xs={8} md={8}>
                     <p>Welcome!</p>
+                  </Col>
+                  <Col xs={4} md={4}>
+                    <Scriptorium />
                   </Col>
                 </Row>
               </Grid>
