@@ -88,6 +88,8 @@ const   labels = {
       , securityFeature06: "When a record's status is 'Released', it is automatically copied to a separate read-only database. If the visibility is 'Public', anyone can view it in that database."
       , securityFeature07: "When a record is created or updated, the record contains the username and the date and time at which the record was created and/or updated.  It is possible to determine each step of the way, who changed what and when."
       , securityFeature08: "Multiple backups are periodically made from each database.  Access to the backups is secured."
+      , monk: "The image of a monk writing is from the public domain 'Scriptorium Monk at Work', obtained royalty free from this "
+      , monkSite: "http://www.fromoldbooks.org"
     }
   }
     , el: {
@@ -175,9 +177,11 @@ const   labels = {
       , securityFeature06: "When a record's status is 'Released', it is automatically copied to a separate read-only database. If the visibility is 'Public', anyone can view it in that database."
       , securityFeature07: "When a record is created or updated, the record contains the username and the date and time at which the record was created and/or updated.  It is possible to determine each step of the way, who changed what and when."
       , securityFeature08: "Multiple backups are periodically made from each database.  Access to the backups is secured."
+      , monk: "The image of a monk writing is from the public domain 'Scriptorium Monk at Work', obtained royalty free from this "
+      , monkSite: "http://www.fromoldbooks.org"
     }
   }
-}
+};
 
 module.exports = {
   localLabels : labels
