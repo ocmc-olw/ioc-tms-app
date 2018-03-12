@@ -54,7 +54,7 @@ export class Header extends React.Component {
                 {this.props.app.session.userInfo.authenticated ?
                     <NavDropdown eventKey={"edit"} title={<span><FontAwesome  className="App-header-ico" name="pencil-square-o"/> {this.props.app.session.localLabels.edit.menu}</span>} id="notes-nav-dropdown">
                       <LinkContainer to="/editages"><NavItem className="App-submenu-item" eventKey={"edit.ages"} >{this.props.app.session.localLabels.edit.itemAges}</NavItem></LinkContainer>
-                      <LinkContainer to="/editoslw"><NavItem  className="App-submenu-item" eventKey={"edit.oslw"} >{this.props.app.session.localLabels.edit.itemOslw}</NavItem></LinkContainer>
+                      {/*<LinkContainer to="/editoslw"><NavItem  className="App-submenu-item" eventKey={"edit.oslw"} >{this.props.app.session.localLabels.edit.itemOslw}</NavItem></LinkContainer>*/}
                       <LinkContainer to="/edittopic"><NavItem  className="App-submenu-item" eventKey={"edit.topic"} >{this.props.app.session.localLabels.edit.itemTopic}</NavItem></LinkContainer>
                     </NavDropdown>
                     :
@@ -63,7 +63,7 @@ export class Header extends React.Component {
                 {this.props.app.session.userInfo.authenticated ?
                     <NavDropdown eventKey={"generate"} title={<span><FontAwesome  className="App-header-ico" name="cogs"/> {this.props.app.session.localLabels.generate.menu}</span>} id="notes-nav-dropdown">
                       <LinkContainer to="/generateages"><NavItem className="App-submenu-item" eventKey={"generate.ages"} >{this.props.app.session.localLabels.generate.itemAges}</NavItem></LinkContainer>
-                      <LinkContainer to="/generateoslw"><NavItem  className="App-submenu-item" eventKey={"generate.oslw"} >{this.props.app.session.localLabels.generate.itemOslw}</NavItem></LinkContainer>
+                      {/*<LinkContainer to="/generateoslw"><NavItem  className="App-submenu-item" eventKey={"generate.oslw"} >{this.props.app.session.localLabels.generate.itemOslw}</NavItem></LinkContainer>*/}
                     </NavDropdown>
                     :
                     ""

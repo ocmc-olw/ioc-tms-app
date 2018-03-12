@@ -89,6 +89,7 @@ class Login extends React.Component {
       , noteTypesDropdown: forms.noteTypesDropdown
 
   };
+    console.log(uiSchemas);
     this.props.dispatch(
         {
           type: Actions.SET_SESSION_DROPDOWNS
@@ -99,7 +100,7 @@ class Login extends React.Component {
           , dropdowns: dropdowns
         }
     )
-  }
+  };
 
 
   render() {

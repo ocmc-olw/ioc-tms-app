@@ -3420,9 +3420,9 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-ioc-liturgical-react@0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.1.1.tgz#113a9cd9170245373ea72e4681493153f08274d6"
+ioc-liturgical-react@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.1.2.tgz#8633da985f35c289eee0171d079e28776d1a170d"
   dependencies:
     "@tinymce/tinymce-react" "^2.1.3"
     axios "^0.15.3"
