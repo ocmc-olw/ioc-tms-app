@@ -37,6 +37,9 @@ span.App {
     padding-left: 5px;
     margin-left: 5px;
 }
+.kvp {
+    padding-right: 1rem;
+}
 .App-header {
 }
 .App-footer {
@@ -178,13 +181,11 @@ span.App {
     resize: vertical;
 }
 .App-font-awesome-spinner {
-    display: block;
     margin-left: 30px;
     color: red;
+    font-size: 20px !important;
 }
-.fa-spin { -webkit-filter: blur(0); }
 .App-spinner-span {
-    display: block;
     color: black;
     margin-left: 30px;
 }
@@ -953,6 +954,9 @@ path.link {
     padding-left: 5px;
     padding-right: 5px;
 }
-.App-HREF {
-    margin-left: 20px;
+.App-Download-Row {
+    text-align: center;
+}
+.App-Download-Col {
+    text-align: center;
 }
