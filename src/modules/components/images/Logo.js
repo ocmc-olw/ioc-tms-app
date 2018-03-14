@@ -5,7 +5,7 @@ import globe from './graphics/Nicodemus.png';
 
 class Logo extends React.Component {
   render() {
-      return <img className="App-img App-img-logo" alt="OCMC-OLW Logo" role="presentation" src={globe} height="45px" width="45px"/>
+      return <img className="App-img App-img-logo" alt="OCMC-OLW Logo" role="presentation" src={globe} height="40px" width="40px"/>
   }
 };
 
