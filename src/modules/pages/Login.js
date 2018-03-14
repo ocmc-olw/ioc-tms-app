@@ -64,7 +64,6 @@ class Login extends React.Component {
 
   handleDropdownsCallback = (response) => {
     let forms = response.data;
-    console.log(forms);
     let domains = forms.domains;
     let uiSchemas = new UiSchemas(
         forms.formsDropdown
