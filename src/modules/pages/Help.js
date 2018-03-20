@@ -31,10 +31,10 @@ export class Help extends React.Component {
               <a href={"http://www.youtube.com/watch?v=6aqw7MJhMx8"} target={"_blank"}>Entering a Translation</a>
             </p>
             <p>
-              <a href={"http://www.youtube.com/watch?v=Q60boh0Toq8"} target={"_blank"}>Creating / Editing Notes about a Text</a>
+              <a href={"https://www.youtube.com/watch?v=hsh06ECDgIg"} target={"_blank"}>Creating / Editing Tags for a Note</a>
             </p>
           <p>
-            <a href={"http://www.youtube.com/watch?v=INabNd1RHG4"} target={"_blank"}>Searching Notes About a Text</a>
+            <a href={"https://www.youtube.com/watch?v=d-KsviCPTzY"} target={"_blank"}>Using Tags to Search for Notes</a>
           </p>
         </Jumbotron>
         <HelpSearch labels={this.props.app.session.labels.help.search}/>
