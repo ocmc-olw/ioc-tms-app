@@ -14,6 +14,7 @@ import server from './config/server';
 import About from './modules/pages/About';
 import Admin from './modules/pages/Admin';
 import AddEntity from './modules/pages/AddEntity';
+import ChangePassword from './modules/pages/ChangePassword';
 import EditWithAges from './modules/pages/EditWithAges';
 import EditWithTopic from './modules/pages/EditWithTopic';
 import GenerateWithAges from './modules/pages/GenerateWithAges';
@@ -163,15 +164,28 @@ class App extends React.Component {
                   />
                   <Route path="/home" component={Home}/>
                   <PrivateRoute
-                      authed={this.props.app.session.userInfo.authenticated}
+                      authed={this.props.app.session.userInfo.username === "wsadmin"}
                       path='/admin'
                       component={Admin}
+                  />
+                  <PrivateRoute
+                      authed={this.props.app.session.userInfo.authenticated}
+                      path='/password'
+                      component={ChangePassword}
+                  />
+                  <PrivateRoute
+                      authed={this.props.app.session.userInfo.authenticated}
+                      path='/download'
+                      component={MyRecords}
+                  />
+                  <PrivateRoute
+                      authed={this.props.app.session.userInfo.authenticated}
+                      path='/logout'
+                      component={Logout}
                   />
                   <Route path="/about" component={About}/>
                   <Route path="/help" component={Help}/>
                   <Route path="/login" component={Login} />
-                  <Route path="/logout" component={Logout}/>
-                  <Route path="/download" component={MyRecords}/>
                 </div>
               </div>
               <div className="App-footer">

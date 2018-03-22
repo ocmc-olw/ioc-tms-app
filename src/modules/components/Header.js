@@ -78,7 +78,7 @@ export class Header extends React.Component {
                     :
                     ""
                 }
-                {this.props.app.session.userInfo.authenticated ?
+                {this.props.app.session.userInfo.authenticated && this.props.app.session.userInfo.username === "wsadmin" ?
                     <LinkContainer to="/admin">
                       <NavItem eventKey={5}>{<FontAwesome className="App-header-ico"  name="lock"/>} {this.props.app.session.localLabels.administer.menu}</NavItem>
                     </LinkContainer>
@@ -97,7 +97,8 @@ export class Header extends React.Component {
                 {this.props.app.session.userInfo.authenticated ?
                     <NavDropdown className="App-nav-dropdown" eventKey={8} title={<FontAwesome  className="App-header-ico" name="user-o"/>} id="basic-nav-dropdown">
                       <LinkContainer to="/download"><NavItem eventKey={8.1} >{<Glyphicon glyph="download-alt"/>} {this.props.app.session.labels.header.myRecords}</NavItem></LinkContainer>
-                      <LinkContainer to="/logout"><NavItem eventKey={8.1} >{<Glyphicon glyph="log-out"/>} {this.props.app.session.labels.header.logout}</NavItem></LinkContainer>
+                      <LinkContainer to="/password"><NavItem eventKey={8.2} >{<FontAwesome className="App-header-ico"  name="key"/>} {this.props.app.session.labels.header.password}</NavItem></LinkContainer>
+                      <LinkContainer to="/logout"><NavItem eventKey={8.3} >{<Glyphicon glyph="log-out"/>} {this.props.app.session.labels.header.logout}</NavItem></LinkContainer>
                     </NavDropdown>
                     :
                     <NavDropdown className="App-nav-dropdown" eventKey={8} title={<FontAwesome  className="App-header-ico" name="user-o"/>} id="basic-nav-dropdown">

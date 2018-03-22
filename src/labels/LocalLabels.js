@@ -94,18 +94,32 @@ const   labels = {
       , securityFeature07: "When a record is created or updated, the record contains the username and the date and time at which the record was created and/or updated.  It is possible to determine each step of the way, who changed what and when."
       , securityFeature08: "Multiple backups are periodically made from each database.  Access to the backups is secured."
     }
+    , help: {
+      videos: "Videos"
+      , videoLogon: "How to logon and logoff"
+      , videoMenuOverview: "An overview of the menu items"
+      , videoChangeLanguage: "How to change the language of the user interface"
+      , videoSelectService: "How to select a Service or Liturgical Book from AGES DCS"
+      , videoGenerateService: "How to generate a service or liturgical book"
+      , videoEnterTranslation: "How to enter a Translation"
+      , videoCreateNote: "How to create a note"
+      , videoSearchNotes: "How to search for notes"
+      , videoCreateTag: "How to create or edit tags for a note"
+      , videoTagSearch: "How to use tags to search for notes"
+      , videoNoteDownload: "How to download your notes as json"
+    }
   }
     , el: {
     home: {
-      p1: "Welcome to translators of the liturgical texts, and to scholars who are creating resources to help us understand the meaning of the texts!"
-      , p2: "Through the prayers of the Holy Hymnographers Saints Komas the Melodist, John of Damascus, and Nikodemos the Athenite, may our work be done in God, by Him, and through Him, to His glory and honor!"
-      , msg1: "From time to time, we need to update the web app or the database. If you suddenly see messages about network errors or something not being available, wait a few minutes and try again."
+      p1: "Καλωσορίσατε στους μεταφραστές των λειτουργικών κειμένων και στους μελετητές που δημιουργούν πηγές για να μας βοηθήσουν να κατανοήσουμε το νόημα των κειμένων! "
+      , p2: "Μέσα από τις προσευχές των Αγίων Υμνογράφων, Αγίων Κοσμά του Μεθοδιστή, Ιωάννη της Δαμασκού και Νικόδημου του Αθωνίτη, είθε η εργασία να ολοκληρωθεί σύμφωνα με το θέλημα του Θεού, εις δόξαν και τιμήν Του! "
+      , msg1: "Κατά καιρούς, χρειάζεται να ενημερώνουμε τη διαδικτυακή εφαρμογή ή τη βάση δεδομένων. Αν ξαφνικά δείτε μηνύματα σχετικά με σφάλματα δικτύου ή κάτι άλλο, περιμένετε μερικά λεπτά και δοκιμάστε ξανά."
     }
     , paratexts: {
       menu: "Παράλληλα Κείμενα"
     }
     , myRecords: {
-      p1: "Πατήστε το παρακάτω πλήκτρο για να κάνετε λήψη των καταχωρήσεων στην προσωπική σας βιβλιοθήκη. Το αρχείο θα έχει την επέκταση .json. Οι καταχωρήσεις μορφοποιούνται χρησιμοποιώντας  json. Μπορείτε να ανοίξετε το αρχείο χρησιμοποιώντας οποιοδήποτε πρόγραμμα επεξεργασίας κειμένου."    }
+      p1: "Πατήστε το παρακάτω πλήκτρο για να κάνετε λήψη των καταχωρήσεων στην προσωπική σας βιβλιοθήκη. Το αρχείο θα έχει την επέκταση .json. Οι καταχωρήσεις μορφοποιούνται χρησιμοποιώντας json. Μπορείτε να ανοίξετε το αρχείο χρησιμοποιώντας οποιοδήποτε πρόγραμμα επεξεργασίας κειμένου."    }
     , texts: {
       menu: "Κείμενα"
       , itemNew: "Νέο Μέρος Κειμένου"
@@ -134,14 +148,14 @@ const   labels = {
     }
     , edit: {
       menu: "Επεξεργασία"
-    , itemAges: "Χρήση το AGES"
-    , itemOslw: "Χρήση το OSLW"
-    , itemTopic: "Χρήση το Topic"
+      , itemAges: "Χρήση του AGES"
+      , itemOslw: "Χρήση του OSLW"
+      , itemTopic: "Χρήση του Topic"
     }
     , generate: {
       menu: "Δημιουργία"
-      , itemAges: "Χρήση το AGES"
-      , itemOslw: "Χρήση το OSLW"
+      , itemAges: "Χρήση του AGES"
+      , itemOslw: "Χρήση του OSLW"
     }
     , search: {
       menu: "Αναζήτηση"
@@ -152,23 +166,23 @@ const   labels = {
       , itemTextNote: "Σημειώσεις κειμένου"
     }
     , about: {
-      title: "Σχετικά με το ΟΛΩ"
-      , p1: "Το Online Liturgical Workstation (ΟΛΩ) έγινε και διατηρείται από το προσωπικό του Ορθόδοξου Χριστιανικού Αποστολικού Κέντρου."
-      , p2: "It is Pan-Orthodox, available for all canonical jurisdictions of the Eastern Orthodox Christian Church world-wide."
-      , p3: "Σκοπός το ΟΛΩ είναι να εξασφαλίσει ένα ασφαλές περιβάλλον για όσους θέλουν να δημιουργήσουν, να διαχειριστούν και να δημοσιεύσουν μεταφράσεις λειτουργικών κειμένων από την Ανατολική Ορθόδοξη Εκκλησία. Επίσης, μπορεί να χρησιμοποιηθεί για άλλου είδους υλικού, όπως καθημερινή ανάγνωση, εκπαιδευτική ή κατηχητικά κείμενα."
-      , p4: "New user accounts are created by administrators who have verified the identity of the individual and his/her need for access to the system. During beta-testing, no requests for access will be taken."
-      , userFeaturesTitle: "Χαρακτηριστικά για χρήστες το ΟΛΩ"
-      , userFeaturesIntro: "Το ΟΛΩ παρέχει στους χρήστες τη δυνατότητα να..."
+      title: "Σχετικά με το OLW"
+      , p1: "Το Online Liturgical Workstation (OLW) ιδρύθηκε και διατηρείται από το προσωπικό του Ορθόδοξου Χριστιανικού Αποστολικού Κέντρου."
+      , p2: "Αυτό είναι Παν-Ορθόδοξο,διαθέσιμο για όλες τις κανονικές δικαιοδοσίες της Ανατολικής Ορθόδοξης Χριστιανικής Εκκλησίας παγκοσμίως."
+      , p3: "Σκοπός του OLW είναι να εξασφαλίσει ένα ασφαλές περιβάλλον για όσους θέλουν να δημιουργήσουν, να διαχειριστούν και να δημοσιεύσουν μεταφράσεις λειτουργικών κειμένων από την Ανατολική Ορθόδοξη Εκκλησία. Επίσης, μπορεί να χρησιμοποιηθεί για άλλου είδους υλικό, όπως καθημερινή ανάγνωση, εκπαιδευτική ή κατηχητικά κείμενα."
+      , p4: "Οι νέοι λογαριασμοί χρηστών δημιουργούνται από τους διαχειριστές που επαληθεύουν την ταυτότητα του ατόμου και την ανάγκη του για πρόσβαση στο σύστημα. Κατά τη διάρκεια των δοκιμών beta, δεν θα λαμβάνονται αιτήματα πρόσβασης.."
+      , userFeaturesTitle: "Χαρακτηριστικά για χρήστες του OLW "
+      , userFeaturesIntro: "Το OLW  παρέχει στους χρήστες τη δυνατότητα να..."
       , userFeature01: "Δημιουργήστε ή επικολλήστε την ίδια τη μετάφραση ενώ βλέπετε την ελληνική πηγή του κειμένου και μεταφράσεις του κειμένου."
       , userFeature02: "Δείτε γραμματικές πληροφορίες  σχετικά με το ελληνικό κείμενο."
       , userFeature03: "Προβολή σημειώσεων από μελετητές και άλλους μεταφραστές."
       , userFeature04: "Υποβολή μετάφρασης για έλεγχο ή/και έγκριση."
       , userFeature05: "Δημιουργήστε και κατεβάστε ένα PDF για βιβλίο ή υπηρεσία, με μία, δύο ή τρεις μεταφράσεις τη μία δίπλα στην άλλη."
-      , userFeature06: "Produce notes to be seen by readers of the translation."
-      , userFeature07: "Produce notes for personal use, which can only be viewed by that user unless he or she wants to share them with others."
-      , annotatorFeaturesTitle: "OLW Features for Annotators"
-      , annotatorFeaturesIntro: "The OLW provides researchers the ability to annotate the liturgical text with..."
-      , annotatorFeature01: "grammatical information (grammatical tags and dependency diagrams.);"
+      , userFeature06: "Παραγωγή σημειώσεων ορατές στους αναγνώστες της μετάφρασης."
+      , userFeature07: "Παραγωγή σημειώσεων για προσωπική χρήση, οι οποίες θα είναι ορατές μόνο από το συγκεκριμένο χρήστη εκτός εαν αυτός/αυτή θέλει να το μοιραστεί με άλλους."
+      , annotatorFeaturesTitle: "OLW Δυνατότητες για σχολιαστές"
+      , annotatorFeaturesIntro: "Το OLW παρέχει στους ερευνητές τη δυνατότητα να σχολιάσουν λειτουργικά κείμενα με..."
+      , annotatorFeature01: "γραμματικές πληροφορίες (γραμματικές ετικέτες και διαγράμματα εξάρτησης.);"
       , annotatorFeature02: "references to ontological entities such as God, events, humans, the mysteries, places, etc."
       , annotatorFeature03: "references to Biblical texts."
       , annotatorFeature04: "exegetical information."
@@ -185,6 +199,20 @@ const   labels = {
       , securityFeature07: "When a record is created or updated, the record contains the username and the date and time at which the record was created and/or updated.  It is possible to determine each step of the way, who changed what and when."
       , securityFeature08: "Multiple backups are periodically made from each database.  Access to the backups is secured."
     }
+    , help: {
+      videos: "βίντεο"
+      , videoLogon: "How to logon and logoff"
+      , videoMenuOverview: "An overview of the menu items"
+      , videoChangeLanguage: "How to change the language of the user interface"
+      , videoSelectService: "How to select a Service or Liturgical Book from AGES DCS"
+      , videoGenerateService: "How to generate a service or liturgical book"
+      , videoEnterTranslation: "How to enter a Translation"
+      , videoCreateNote: "How to create a note"
+      , videoSearchNotes: "How to search for notes"
+      , videoCreateTag: "How to create or edit tags for a note"
+      , videoTagSearch: "How to use tags to search for notes"
+      , videoNoteDownload: "How to download your notes as json"
+    }
   }
 };
 
@@ -198,6 +226,9 @@ module.exports = {
   }
   , getAboutOlwLabels: (code) => {
     return labels[code].about;
+  }
+  , getHelpLabels: (code) => {
+    return labels[code].help;
   }
   , getMyRecordsLabels: (code) => {
     return labels[code].myRecords;

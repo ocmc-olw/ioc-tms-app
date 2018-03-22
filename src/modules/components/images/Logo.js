@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-import globe from './graphics/Nicodemus.png';
+import globe from './graphics/nikodemos-red-yellow-circle.png';
 
 class Logo extends React.Component {
   render() {

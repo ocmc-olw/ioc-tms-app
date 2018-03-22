@@ -24,7 +24,7 @@ class About extends React.Component {
           }
         }
     )
-  }
+  };
 
     render() {
     const version = VersionNumbers.getPackageNumber();
