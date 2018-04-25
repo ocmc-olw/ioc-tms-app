@@ -107,6 +107,7 @@ const   labels = {
       , videoCreateTag: "How to create or edit tags for a note"
       , videoTagSearch: "How to use tags to search for notes"
       , videoNoteDownload: "How to download your notes as json"
+      , videoGrammar: "How to use the Grammar Explorer"
     }
   }
     , el: {
@@ -212,6 +213,7 @@ const   labels = {
       , videoCreateTag: "Πως να δημιουργήσετε ή να διορθώσετε τις ετικέτες των σημειώσεων"
       , videoTagSearch: "Πως να χρησιμοποιείτε  τις ετικέτες για την αναζήτηση σημειώσεων"
       , videoNoteDownload: "Πως να κάνετε λήψη των σημειώσεων ως json"    }
+      , videoGrammar: "Πως να χρησιμοποιείτε το Grammar Explorer"
   }
 };
 

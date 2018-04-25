@@ -50,6 +50,9 @@ export class Help extends React.Component {
               <a href={"http://www.youtube.com/watch?v=6aqw7MJhMx8"} target={"_blank"}>{this.state.labels.thisClass.videoEnterTranslation}</a>
             </p>
             <p>
+              <a href={"http://www.youtube.com/watch?v=xSm56wJBdWk"} target={"_blank"}>{this.state.labels.thisClass.videoCreateNote}</a>
+            </p>
+            <p>
               <a href={"https://www.youtube.com/watch?v=hsh06ECDgIg"} target={"_blank"}>{this.state.labels.thisClass.videoCreateTag}</a>
             </p>
           <p>
@@ -57,6 +60,9 @@ export class Help extends React.Component {
           </p>
           <p>
             <a href={"http://www.youtube.com/watch?v=BaYW8gFOQjE"} target={"_blank"}>{this.state.labels.thisClass.videoNoteDownload}</a>
+          </p>
+          <p>
+            <a href={"https://www.youtube.com/watch?v=RRrSvQzv5sA"} target={"_blank"}>{this.state.labels.thisClass.videoGrammar}</a>
           </p>
         </Jumbotron>
         <HelpSearch labels={this.props.app.session.labels.help.search}/>
