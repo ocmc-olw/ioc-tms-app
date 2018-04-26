@@ -39,6 +39,9 @@ class Home extends React.Component {
     } else {
       return (
           <div className="App-page App-home">
+            { this.props.app.session.db.domain ? <span></span>
+              : <h1>The application cannot be used at this time.  We apologize for the inconvenience. We are working to restore service as soon as possible.</h1>
+            }
             <Jumbotron>
               <Grid>
                 <Row>
