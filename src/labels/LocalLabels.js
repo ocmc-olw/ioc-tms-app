@@ -99,6 +99,7 @@ const   labels = {
       , videoLogon: "How to logon and logoff"
       , videoMenuOverview: "An overview of the menu items"
       , videoChangeLanguage: "How to change the language of the user interface"
+      , videoDailyReadings: "How to edit and generate daily readings"
       , videoSelectService: "How to select a Service or Liturgical Book from AGES DCS"
       , videoGenerateService: "How to generate a service or liturgical book"
       , videoEnterTranslation: "How to enter a Translation"
@@ -108,6 +109,7 @@ const   labels = {
       , videoTagSearch: "How to use tags to search for notes"
       , videoNoteDownload: "How to download your notes as json"
       , videoGrammar: "How to use the Grammar Explorer"
+      , videoDailyReadingsBlurb: "Regarding Daily Readings, note that there are place holders for the Feast or Saint commemorated [saint/com] and for narrative descriptions of the feast or the life of the saint [paragraph]. You can fill these in for your specific language.  If you do not enter a commemoration or paragraph, it will be removed when the daily readings are generated."
     }
   }
     , el: {
@@ -205,6 +207,7 @@ const   labels = {
       , videoLogon: "Πως κάνετε σύνδεση και αποσύνδεση"
       , videoMenuOverview: "Επισκόπηση των θεμάτων στο μενού"
       , videoChangeLanguage: "Πως αλλάζει η γλώσσα του περιβάλλοντος χρήστη"
+      , videoDailyReadings: "Πως να δημιουργήσετε τα καθημερινά κείμενα"
       , videoSelectService: "Πως να επιλέξετε μια Υπηρεσία ή ένα Λειτουργικό Βιβλίο από το AGES DCS"
       , videoGenerateService: "Πως να δημιουργήσετε μια υπηρεσία ή ένα λειτουργικό βιβλίο"
       , videoEnterTranslation: "Πως να εισάγεται μια μετάφραση"
@@ -212,8 +215,10 @@ const   labels = {
       , videoSearchNotes: "Πως να κάνετε αναζήτηση για σημειώσεις"
       , videoCreateTag: "Πως να δημιουργήσετε ή να διορθώσετε τις ετικέτες των σημειώσεων"
       , videoTagSearch: "Πως να χρησιμοποιείτε  τις ετικέτες για την αναζήτηση σημειώσεων"
-      , videoNoteDownload: "Πως να κάνετε λήψη των σημειώσεων ως json"    }
+      , videoNoteDownload: "Πως να κάνετε λήψη των σημειώσεων ως json"
       , videoGrammar: "Πως να χρησιμοποιείτε το Grammar Explorer"
+      , videoDailyReadingsBlurb: "Regarding Daily Readings, note that there are place holders for the Feast or Saint commemorated [saint/com] and for narrative descriptions of the feast or the life of the saint [paragraph]. You can fill these in for your specific language.  If you do not enter a commemoration or paragraph, it will be removed when the daily readings are generated."
+    }
   }
 };
 

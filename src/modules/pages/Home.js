@@ -40,7 +40,7 @@ class Home extends React.Component {
       return (
           <div className="App-page App-home">
             { this.props.app.session.db.domain ? <span></span>
-              : <h1>The application cannot be used at this time.  We apologize for the inconvenience. We are working to restore service as soon as possible.</h1>
+              : <Alert bsStyle="danger"><Glyphicon glyph="warning-sign" /> The application cannot be used at this time.  We apologize for the inconvenience. We are working to restore service as soon as possible.</Alert>
             }
             <Jumbotron>
               <Grid>

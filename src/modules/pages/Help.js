@@ -4,7 +4,7 @@
 import React from 'react';
 import {HelpSearch} from 'ioc-liturgical-react'
 import { connect } from 'react-redux';
-import { Jumbotron } from 'react-bootstrap';
+import { Alert, Glyphicon, Jumbotron } from 'react-bootstrap';
 import LocalLabels from "../../labels/LocalLabels";
 
 export class Help extends React.Component {
@@ -63,6 +63,12 @@ export class Help extends React.Component {
           </p>
           <p>
             <a href={"https://www.youtube.com/watch?v=RRrSvQzv5sA"} target={"_blank"}>{this.state.labels.thisClass.videoGrammar}</a>
+          </p>
+          <p>
+            <a href={"http://www.youtube.com/watch?v=_sTYUtxiZGM"} target={"_blank"}>{this.state.labels.thisClass.videoDailyReadings}</a>
+            <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />
+              {this.state.labels.thisClass.videoDailyReadingsBlurb}
+            </Alert>
           </p>
         </Jumbotron>
         <HelpSearch labels={this.props.app.session.labels.help.search}/>
