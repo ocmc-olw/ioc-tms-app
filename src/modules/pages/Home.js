@@ -18,7 +18,7 @@ class Home extends React.Component {
       labels: {
         thisClass: LocalLabels.getAboutHomeLabels(props.app.session.languageCode)
       }
-      , location: "liml.org" // document.location.hostname
+      , location: document.location.hostname // "liml.org"
     }
   };
 
