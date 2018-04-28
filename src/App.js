@@ -157,11 +157,12 @@ class App extends React.Component {
                       path='/searchontology'
                       component={SearchOntology}
                   />
-                  <PrivateRoute
-                      authed={this.props.app.session.userInfo.authenticated}
-                      path='/searchtext'
-                      component={SearchTextParts}
-                  />
+                  {/*<PrivateRoute*/}
+                      {/*authed={this.props.app.session.userInfo.authenticated}*/}
+                      {/*path='/searchtext'*/}
+                      {/*component={SearchTextParts}*/}
+                  {/*/>*/}
+                  <Route path="/searchtext" component={SearchTextParts}/>
                   <Route path="/home" component={Home}/>
                   <PrivateRoute
                       authed={this.props.app.session.userInfo.username === "wsadmin"}

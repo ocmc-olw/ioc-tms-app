@@ -6,7 +6,7 @@ import {SearchText as Search} from 'ioc-liturgical-react';
 class SearchText extends React.Component {
 
   componentWillMount = () => {
-  }
+  };
 
 render() {
     return (

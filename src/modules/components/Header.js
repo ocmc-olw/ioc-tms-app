@@ -10,7 +10,15 @@ import Logo from './images/Logo';
 export class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {someProp: ""}
+    let location = document.location.hostname; // "liml.org";
+
+    this.state = {
+      location: location
+      , titleLeft: location === "liml.org" ? "Liturgy in" : "Online Liturgical Workstation"
+      , titleCenter: location === "liml.org" ? "My" : ""
+      , titleRight: location === "liml.org" ? "Language" : ""
+      , titleShort: location === "liml.org" ? "LIML" : "OLW"
+    };
 
     this.handleLanguageChange = this.handleLanguageChange.bind(this);
   };
@@ -36,8 +44,8 @@ export class Header extends React.Component {
                 <IndexLinkContainer to="/home">
                   <NavItem eventKey={1}>
                     <Logo/>
-                    <span className="App-title-full">Online Liturgical Workstation</span>
-                    <span className="App-title-short">OLW</span>
+                    <span className="App-title-full">{this.state.titleLeft} <span className="titleCenter"> {this.state.titleCenter}</span> {this.state.titleRight}</span>
+                    <span className="App-title-short">{this.state.titleShort}</span>
                   </NavItem>
                 </IndexLinkContainer>
               </Navbar.Brand>
@@ -76,7 +84,9 @@ export class Header extends React.Component {
                       <LinkContainer to="/searchtextnotes"><NavItem  className="App-submenu-item" eventKey={"search.text.notes"} >{<FontAwesome className="App-header-sub-item-ico"  name="sticky-note"/>}{this.props.app.session.localLabels.search.itemTextNote}</NavItem></LinkContainer>
                     </NavDropdown>
                     :
-                    ""
+                    <NavDropdown eventKey={"search"} title={<span><FontAwesome  className="App-header-ico" name="search"/> {this.props.app.session.localLabels.search.menu}</span>} id="notes-nav-dropdown">
+                      <LinkContainer to="/searchtext"><NavItem  className="App-submenu-item" eventKey={"search.text"} >{<FontAwesome className="App-header-sub-item-ico"  name="file-text-o"/>}{this.props.app.session.localLabels.search.itemText}</NavItem></LinkContainer>
+                    </NavDropdown>
                 }
                 {this.props.app.session.userInfo.authenticated && this.props.app.session.userInfo.username === "wsadmin" ?
                     <LinkContainer to="/admin">
