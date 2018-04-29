@@ -53,7 +53,8 @@ export class Header extends React.Component {
             </Navbar.Header>
             <Navbar.Collapse>
               <Nav>
-                {this.props.app.session.userInfo.authenticated ?
+                {this.props.app.session.userInfo.authenticated
+                  && this.props.app.session.userInfo.username === "wsadmin" ?
                     <LinkContainer to="/add">
                       <NavItem className="App-nav-item" eventKey={"add"}>{<FontAwesome className="App-header-ico"  name="plus"/>} {this.props.app.session.localLabels.add.menu}</NavItem>
                     </LinkContainer>
@@ -88,7 +89,8 @@ export class Header extends React.Component {
                       <LinkContainer to="/searchtext"><NavItem  className="App-submenu-item" eventKey={"search.text"} >{<FontAwesome className="App-header-sub-item-ico"  name="file-text-o"/>}{this.props.app.session.localLabels.search.itemText}</NavItem></LinkContainer>
                     </NavDropdown>
                 }
-                {this.props.app.session.userInfo.authenticated && this.props.app.session.userInfo.username === "wsadmin" ?
+                {this.props.app.session.userInfo.authenticated
+                  && this.props.app.session.userInfo.username === "wsadmin" ?
                     <LinkContainer to="/admin">
                       <NavItem eventKey={5}>{<FontAwesome className="App-header-ico"  name="lock"/>} {this.props.app.session.localLabels.administer.menu}</NavItem>
                     </LinkContainer>
