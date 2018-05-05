@@ -22,6 +22,16 @@ class Home extends React.Component {
     }
   };
 
+  componentWillReceiveProps = (nextProps) => {
+    this.setState({
+      labels: {
+        thisClass: LocalLabels.getAboutHomeLabels(nextProps.app.session.languageCode)
+      }
+      , location: document.location.hostname // "liml.org"
+    })
+  };
+
+
 
   render() {
     console.log(this.state.location);
