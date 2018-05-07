@@ -51,6 +51,14 @@ class About extends React.Component {
               <li className="App-about-list-item">{this.state.labels.about.userFeature06}</li>
               <li className="App-about-list-item">{this.state.labels.about.userFeature07}</li>
             </ol>
+            <video
+                className="App-video-player"
+                width="320"
+                height="240"
+                controls>
+                <source src={"https://liml.org/static/video/olw-Overview.mp4"}/>
+            </video>
+            <div>{this.state.labels.about.aboutVideo01}</div>
           </Jumbotron>
           <PageHeader>{this.state.labels.about.annotatorFeaturesTitle}</PageHeader>
           <Jumbotron>
