@@ -95,7 +95,7 @@ const   labels = {
       , securityFeature08: "Multiple backups are periodically made from each database.  Access to the backups is secured."
     }
     , help: {
-      videos: "Videos"
+      videos: "How To..."
       , videoLogon: "How to logon and logoff"
       , videoMenuOverview: "An overview of the menu items"
       , videoChangeLanguage: "How to change the language of the user interface"
@@ -105,6 +105,7 @@ const   labels = {
       , videoEnterTranslation: "How to enter a Translation"
       , videoCreateNote: "How to create a note"
       , videoSearchNotes: "How to search for notes"
+      , videoSearchTexts: "How to search texts"
       , videoCreateTag: "How to create or edit tags for a note"
       , videoTagSearch: "How to use tags to search for notes"
       , videoNoteDownload: "How to download your notes as json"
@@ -203,7 +204,7 @@ const   labels = {
       , securityFeature08: "Πολλαπλά αντίγραφα ασφαλείας θα δημιουργούνται από κάθε βάση δεδομένων. Η πρόσβαση στα αντίγραφα είναι ασφαλής."
     }
     , help: {
-      videos: "βίντεο"
+      videos: "Πως να..."
       , videoLogon: "Πως κάνετε σύνδεση και αποσύνδεση"
       , videoMenuOverview: "Επισκόπηση των θεμάτων στο μενού"
       , videoChangeLanguage: "Πως αλλάζει η γλώσσα του περιβάλλοντος χρήστη"
@@ -212,7 +213,8 @@ const   labels = {
       , videoGenerateService: "Πως να δημιουργήσετε μια υπηρεσία ή ένα λειτουργικό βιβλίο"
       , videoEnterTranslation: "Πως να εισάγεται μια μετάφραση"
       , videoCreateNote: "Πως να δημιουργήσετε μια σημείωση"
-      , videoSearchNotes: "Πως να κάνετε αναζήτηση για σημειώσεις"
+      , videoSearchNotes: "Πως να κάνετε αναζήτηση για κείμενα"
+      , videoSearchText: "Πως να κάνετε αναζήτηση για σημειώσεις"
       , videoCreateTag: "Πως να δημιουργήσετε ή να διορθώσετε τις ετικέτες των σημειώσεων"
       , videoTagSearch: "Πως να χρησιμοποιείτε  τις ετικέτες για την αναζήτηση σημειώσεων"
       , videoNoteDownload: "Πως να κάνετε λήψη των σημειώσεων ως json"
