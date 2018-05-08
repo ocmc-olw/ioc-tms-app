@@ -2,7 +2,7 @@
  * Created by mac002 on 12/7/16.
  */
 import React from 'react';
-import {HelpPanel, HelpSearch} from 'ioc-liturgical-react';
+import {HelpSearch, Html5VideoPanel, YoutubeVideoPanel} from 'ioc-liturgical-react';
 import { connect } from 'react-redux';
 import {
   Accordion
@@ -10,6 +10,7 @@ import {
   , Glyphicon
   , Well
 } from 'react-bootstrap';
+
 import LocalLabels from "../../labels/LocalLabels";
 
 export class Help extends React.Component {
@@ -19,7 +20,22 @@ export class Help extends React.Component {
       labels: {
         thisClass: LocalLabels.getHelpLabels(props.app.session.languageCode)
       }
-    }
+      , videoId: {
+        createNote: "xSm56wJBdWk"
+        , createTag: "hsh06ECDgIg"
+        , dailyReadings: "_sTYUtxiZGM"
+        , downloadUserFiles: "BaYW8gFOQjE"
+        , enterTranslation: "6aqw7MJhMx8"
+        , generateService: "K6izGk5hJVs"
+        , grammar: "RRrSvQzv5sA"
+        , language: "o2IZx4JE4y4"
+        , menu: "0_kw1VYY2i4"
+        , searchTag: "d-KsviCPTzY"
+        , searchNotes: "QOeiwGjs3vo"
+        , selectService: "WM6aPV6cNZg"
+        , logon: "dwtervZaeQo"
+      }
+    };
   }
   componentWillReceiveProps = (nextProps) => {
     this.setState(
@@ -42,88 +58,87 @@ export class Help extends React.Component {
         </Well>
         <h2>{this.state.labels.thisClass.videos}</h2>
         <Accordion>
-            <HelpPanel
-                eventKey={"videoMenuOverview"}
+            <YoutubeVideoPanel
                 title={this.state.labels.thisClass.videoMenuOverview}
-                url={"https://liml.org/static/video/olw-menu.mp4"}
                 text={this.state.labels.thisClass.videoMenuOverviewText}
+                videoId={this.state.videoId.menu}
+                eventKey={"MenuOverview"}
             />
-            <HelpPanel
+            <YoutubeVideoPanel
               eventKey={"videoLogon"}
               title={this.state.labels.thisClass.videoLogon}
-              url={"https://liml.org/static/video/olw-login.mp4"}
+              videoId={this.state.videoId.logon}
               text={this.state.labels.thisClass.videoLogonText}
             />
-            <HelpPanel
+            <YoutubeVideoPanel
                 eventKey={"videoChangeLanguage"}
                 title={this.state.labels.thisClass.videoChangeLanguage}
-                url={"https://liml.org/static/video/olw-multi-language.mp4"}
+                videoId={this.state.videoId.language}
                 text={this.state.labels.thisClass.videoChangeLanguageText}
             />
-            <HelpPanel
+            <YoutubeVideoPanel
                 eventKey={"videoSelectService"}
                 title={this.state.labels.thisClass.videoSelectService}
-                url={"https://liml.org/static/video/olw-ages-selector.mp4"}
+                videoId={this.state.videoId.selectService}
                 text={this.state.labels.thisClass.videoSelectServiceText}
             />
-            <HelpPanel
+            <YoutubeVideoPanel
                 eventKey={"videoGenerateService"}
                 title={this.state.labels.thisClass.videoGenerateService}
-                url={"https://liml.org/static/video/olw-generator.mp4"}
+                videoId={this.state.videoId.generateService}
                 text={this.state.labels.thisClass.videoGenerateServiceText}
             />
-            <HelpPanel
+            <YoutubeVideoPanel
                 eventKey={"videoEnterTranslation"}
                 title={this.state.labels.thisClass.videoEnterTranslation}
-                url={"https://liml.org/static/video/olw-editor-enter-translation.mp4"}
+                videoId={this.state.videoId.enterTranslation}
                 text={this.state.labels.thisClass.videoEnterTranslationText}
             />
-            <HelpPanel
+            <YoutubeVideoPanel
                 eventKey={"videoCreateNote"}
                 title={this.state.labels.thisClass.videoCreateNote}
-                url={"https://liml.org/static/video/olw-ages-text-notes.mp4"}
+                videoId={this.state.videoId.createNote}
                 text={this.state.labels.thisClass.videoCreateNoteText}
             />
-            <HelpPanel
+            <Html5VideoPanel
                 eventKey={"videoSearchTexts"}
                 title={this.state.labels.thisClass.videoSearchTexts}
-                url={"https://liml.org/static/video/olw-searching-text.mp4"}
                 text={this.state.labels.thisClass.videoSearchTextText}
             />
-          <HelpPanel
+          <YoutubeVideoPanel
               eventKey={"videoSearchNotes"}
               title={this.state.labels.thisClass.videoSearchNotes}
-              url={"https://liml.org/static/video/olw-searching-text-notes.mp4"}
+              videoId={this.state.videoId.searchNotes}
               text={this.state.labels.thisClass.videoSearchNotesText}
           />
-          <HelpPanel
+          <YoutubeVideoPanel
               eventKey={"videoCreateTag"}
               title={this.state.labels.thisClass.videoCreateTag}
-              url={"https://liml.org/static/video/olw-text-notes-tags-creating.mp4"}
+              videoId={this.state.videoId.createTag}
               text={this.state.labels.thisClass.videoCreateTagText}
           />
-          <HelpPanel
+          <YoutubeVideoPanel
               eventKey={"videoTagSearch"}
               title={this.state.labels.thisClass.videoTagSearch}
-              url={"https://liml.org/static/video/olw-text-notes-tags-searching.mp4"}
+              videoId={this.state.videoId.searchTag}
               text={this.state.labels.thisClass.videoTagSearchText}
           />
-          <HelpPanel
+          <YoutubeVideoPanel
               eventKey={"videoNoteDownload"}
               title={this.state.labels.thisClass.videoNoteDownload}
-              url={"https://liml.org/static/video/olw-my-records.mp4"}
+              videoId={this.state.videoId.downloadUserFiles}
               text={this.state.labels.thisClass.videoNoteDownloadText}
           />
-          <HelpPanel
+          <YoutubeVideoPanel
               eventKey={"videoGrammar"}
               title={this.state.labels.thisClass.videoGrammar}
-              url={"https://liml.org/static/video/olw-grammar.mp4"}
+              videoId={this.state.videoId.grammar}
               text={this.state.labels.thisClass.videoGrammarText}
           />
-          <HelpPanel
+          <YoutubeVideoPanel
               eventKey={"videoDailyReadings"}
               title={this.state.labels.thisClass.videoDailyReadings}
-              url={"https://liml.org/static/video/olw-daily-readings.mp4"}
+              videoId={this.state.videoId.dailyReadings}
               text={this.state.labels.thisClass.videoDailyReadingsText}
           />
         </Accordion>
