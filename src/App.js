@@ -35,6 +35,7 @@ import TextParts from './modules/pages/TextParts';
 import Ocmc from './modules/components/images/Ocmc';
 
 import Header from './modules/components/Header'
+import EditWithSchemaEditor from "./modules/pages/EditWithSchemaEditor";
 
 function PrivateRoute ({component: Component, authed, ...rest}) {
   return (
@@ -116,6 +117,11 @@ class App extends React.Component {
                       authed={this.props.app.session.userInfo.authenticated}
                       path='/edittopic'
                       component={EditWithTopic}
+                  />
+                  <PrivateRoute
+                      authed={this.props.app.session.userInfo.authenticated}
+                      path='/editschema'
+                      component={EditWithSchemaEditor}
                   />
                   <PrivateRoute
                       authed={this.props.app.session.userInfo.authenticated}

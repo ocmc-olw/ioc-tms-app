@@ -6,6 +6,7 @@ import VersionNumbers from "../../config/VersionNumbers";
 import { connect } from 'react-redux';
 import LocalLabels from '../../labels/LocalLabels';
 import { Jumbotron, PageHeader } from 'react-bootstrap';
+import YouTube from 'react-youtube';
 
 class About extends React.Component {
   constructor(props) {
@@ -14,7 +15,20 @@ class About extends React.Component {
       labels: {
         about: LocalLabels.getAboutOlwLabels(props.app.session.languageCode)
       }
+      , video: {
+        introServiceGen: "jPqDaHl6TpM"
+        ,  opts: {
+          height: '390',
+          width: '640',
+          playerVars: { // https://developers.google.com/youtube/player_parameters
+            autoplay: 1
+            , modestbranding: 1
+            , rel: 0
+          }
+        }
+      }
     }
+    this.onReady = this.onReady.bind(this);
   }
   componentWillReceiveProps = (nextProps) => {
     this.setState(
@@ -26,7 +40,12 @@ class About extends React.Component {
     )
   };
 
-    render() {
+  onReady = (event) => {
+    event.target.pauseVideo();
+  };
+
+
+  render() {
     const version = VersionNumbers.getPackageNumber();
     return (
         <div className="App-page App-page-about">
@@ -51,13 +70,12 @@ class About extends React.Component {
               <li className="App-about-list-item">{this.state.labels.about.userFeature06}</li>
               <li className="App-about-list-item">{this.state.labels.about.userFeature07}</li>
             </ol>
-            <video
-                className="App-video-player"
-                width="320"
-                height="240"
-                controls>
-                <source src={"https://liml.org/static/video/olw-Overview.mp4"}/>
-            </video>
+            <YouTube
+                className="App-Youtube-player"
+                videoId={this.state.video.introServiceGen}
+                opts={this.state.video.opts}
+                onReady={this.onReady}
+            />
             <div>{this.state.labels.about.aboutVideo01}</div>
           </Jumbotron>
           <PageHeader>{this.state.labels.about.annotatorFeaturesTitle}</PageHeader>

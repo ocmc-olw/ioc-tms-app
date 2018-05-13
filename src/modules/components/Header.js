@@ -65,6 +65,8 @@ export class Header extends React.Component {
                       <LinkContainer to="/editages"><NavItem className="App-submenu-item" eventKey={"edit.ages"} >{this.props.app.session.localLabels.edit.itemAges}</NavItem></LinkContainer>
                       {/*<LinkContainer to="/editoslw"><NavItem  className="App-submenu-item" eventKey={"edit.oslw"} >{this.props.app.session.localLabels.edit.itemOslw}</NavItem></LinkContainer>*/}
                       <LinkContainer to="/edittopic"><NavItem  className="App-submenu-item" eventKey={"edit.topic"} >{this.props.app.session.localLabels.edit.itemTopic}</NavItem></LinkContainer>
+                      <MenuItem divider/>
+                      <LinkContainer to="/editschema"><NavItem  className="App-submenu-item" eventKey={"edit.schema"} >{this.props.app.session.localLabels.edit.itemSchEditor}</NavItem></LinkContainer>
                     </NavDropdown>
                     :
                     ""
