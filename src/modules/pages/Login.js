@@ -63,6 +63,8 @@ class Login extends React.Component {
   };
 
   handleDropdownsCallback = (response) => {
+    console.log('Login.handleDropdownsCallback');
+
     let forms = response.data;
     let domains = forms.domains;
     let uiSchemas = new UiSchemas(
@@ -70,6 +72,7 @@ class Login extends React.Component {
         , forms.valueSchemas
         , forms.values
     );
+    console.log(forms);
     let dropdowns = {
       biblicalBooksDropdown: forms.biblicalBooksDropdown
       , biblicalChaptersDropdown: forms.biblicalChaptersDropdown
@@ -87,6 +90,7 @@ class Login extends React.Component {
       , liturgicalBooksDropdown: forms.liturgicalBooksDropdown
       , noteTypesDropdown: forms.noteTypesDropdown
       , noteTypesBilDropdown: forms.noteTypesBilDropdown
+      , schemaEditorDropdown: forms.schemaEditorFormsDropdown
   };
     console.log(uiSchemas);
     this.props.dispatch(

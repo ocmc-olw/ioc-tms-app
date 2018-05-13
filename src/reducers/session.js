@@ -42,6 +42,7 @@ export default function session(
         , templateWhenDayOfSeasonCasesDropdown: []
         , templateWhenModeOfWeekCasesDropdown: []
         , templateWhenMonthNameCasesDropdown: []
+        , schemaEditorFormsDropdown: []
       }
       , db: {
         infoNotRetrieved: true

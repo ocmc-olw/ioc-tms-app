@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
 import { connect } from 'react-redux';
-import {AgesEditor} from 'ioc-liturgical-react';
+import {SearchGeneric} from 'ioc-liturgical-react';
 
 class EditWithSchemaEditor extends React.Component {
 
@@ -10,10 +10,12 @@ class EditWithSchemaEditor extends React.Component {
 
 render() {
     return (
-        <div className="App-page App-edit App-edit-ages">
-          <AgesEditor
-              session={this.props.app.session}
-          />
+        <div className="App-page App-edit App-edit-schema-editor">
+            <SearchGeneric
+                session={this.props.app.session}
+                editor={true}
+                fixedType={false}
+            />
         </div>
     )
   }
