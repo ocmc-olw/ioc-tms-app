@@ -212,7 +212,6 @@ class App extends React.Component {
     )
   }
 }
-//                <Route path="/login" render={props => <Login {...props} />} />
 
 const mapStateToProps = (state) => {
   return {
@@ -221,6 +220,4 @@ const mapStateToProps = (state) => {
 };
 
 export default
-    connect(
-        mapStateToProps
-    )(App);
+    connect(mapStateToProps)(App);

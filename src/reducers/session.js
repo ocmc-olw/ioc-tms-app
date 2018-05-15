@@ -2,7 +2,7 @@
  * Created by mac002 on 7/31/17.
  */
 import Actions from './actionTypes';
-import {Labels} from 'ioc-liturgical-react';
+import {Labels, User} from 'ioc-liturgical-react';
 import LocalLabels from '../labels/LocalLabels';
 
 export default function session(
@@ -11,17 +11,7 @@ export default function session(
       , languageCode: "en"
       , labels: Labels.getAllLabels("en")
       , localLabels: LocalLabels.getAllLabels("en")
-      , userInfo: {
-        username: ""
-        , password: ""
-        , domain: ""
-        , email: ""
-        , firstname: ""
-        , lastname: ""
-        , title: ""
-        , authenticated: false
-        , domains: {}
-      }
+      , userInfo: new User()
       , uiSchemas: {
         formsDropdown: []
         , formsSchemas: {}
@@ -86,17 +76,7 @@ export default function session(
       return new_state;
     }
     case Actions.SET_SESSION_USER_LOGOUT: {
-      new_state.userInfo = {
-        username: ""
-        , password: ""
-        , domain: ""
-        , email: ""
-        , firstname: ""
-        , lastname: ""
-        , title: ""
-        , authenticated: false
-        , domains: {}
-      };
+      new_state.userInfo = new User();
       return new_state;
     }
     case Actions.SET_SESSION_UI_SCHEMAS: {
@@ -104,7 +84,21 @@ export default function session(
       return new_state;
     }
     case Actions.SET_SESSION_DROPDOWNS: {
-      new_state.userInfo["domains"] = action.domains;
+      // Problem: when new_state clones the current state, it loses functions.
+      // So, in order to preserve the functions in userInfo, we need to explicitly
+      // make a new User, set the properties, and set new_state.userInfo to it.
+      let userInfo = new User(
+          new_state.userInfo.username
+          , new_state.userInfo.password
+          , new_state.userInfo.domain
+          , new_state.userInfo.email
+          , new_state.userInfo.firstname
+          , new_state.userInfo.lastname
+          , new_state.userInfo.title
+          , new_state.userInfo.authenticated
+          , action.domains
+      );
+      new_state.userInfo = userInfo;
       new_state.uiSchemas = action.uiSchema;
       new_state.dropdowns = action.dropdowns;
       return new_state;

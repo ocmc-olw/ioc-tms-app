@@ -2,7 +2,7 @@
  * Created by mac002 on 12/7/16.
  */
 import React from 'react';
-import {Login as IocLogin, UiSchemas} from 'ioc-liturgical-react'
+import {Login as IocLogin, UiSchemas, User} from 'ioc-liturgical-react'
 import server from '../../config/server';
 import { connect } from 'react-redux';
 import Actions from '../../reducers/actionTypes';
@@ -11,10 +11,9 @@ class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: ""
-      , password: ""
+      userInfo: new User()
       ,loginFormMsg: ""
-    }
+    };
     this.onSubmit = this.onSubmit.bind(this);
     this.handleDropdownsCallback = this.handleDropdownsCallback.bind(this);
   }
@@ -22,16 +21,18 @@ class Login extends React.Component {
   onSubmit = (status, valid, username, password, userinfo) => {
     let theStatusMsg = this.props.app.session.labels.pageLogin.good;
     if (status === 200) {
-      let userInfo = {
-        username: username
-        , password: password
-        , firstName: userinfo.firstname
-        , lastName: userinfo.lastname
-        , title: userinfo.title
-        , domain: userinfo.domain
-        , email: userinfo.email
-        , authenticated: valid
-      }
+      let userInfo = new User(
+          username
+          , password
+          , userinfo.domain
+          , userinfo.email
+          , userinfo.firstname
+          , userinfo.lastname
+          , userinfo.title
+          , valid
+          , {}
+      );
+
       this.props.dispatch(
           {
             type: Actions.SET_SESSION_USER_LOGIN
@@ -40,30 +41,21 @@ class Login extends React.Component {
       );
       this.setState(
           {
-            username: username
-            , password: password
+            userInfo: userInfo
             , loginFormMsg: theStatusMsg
-            , firstName: userinfo.firstname
-            , lastName: userinfo.lastname
-            , title: userinfo.title
-            , domain: userinfo.domain
-            , email: userinfo.email
           }
       );
     } else {
       theStatusMsg = this.props.app.session.labels.pageLogin.bad;
       this.setState(
           {
-            username: username
-            , password: password
-            , loginFormMsg: theStatusMsg
+            loginFormMsg: theStatusMsg
           }
       );
     }
   };
 
   handleDropdownsCallback = (response) => {
-    console.log('Login.handleDropdownsCallback');
 
     let forms = response.data;
     let domains = forms.domains;
@@ -72,7 +64,6 @@ class Login extends React.Component {
         , forms.valueSchemas
         , forms.values
     );
-    console.log(forms);
     let dropdowns = {
       biblicalBooksDropdown: forms.biblicalBooksDropdown
       , biblicalChaptersDropdown: forms.biblicalChaptersDropdown
@@ -92,7 +83,6 @@ class Login extends React.Component {
       , noteTypesBilDropdown: forms.noteTypesBilDropdown
       , schemaEditorDropdown: forms.schemaEditorFormsDropdown
   };
-    console.log(uiSchemas);
     this.props.dispatch(
         {
           type: Actions.SET_SESSION_DROPDOWNS
@@ -111,8 +101,8 @@ class Login extends React.Component {
         <div className="App-login">
           <IocLogin
               restServer={server.getWsServerPath()}
-              username={this.state.username}
-              password={this.state.password}
+              username={this.state.userInfo.username}
+              password={this.state.userInfo.password}
               loginCallback={this.onSubmit}
               formPrompt={this.props.app.session.labels.pageLogin.prompt}
               formMsg={this.state.loginFormMsg}
