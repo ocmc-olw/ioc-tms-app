@@ -17,6 +17,7 @@ class About extends React.Component {
       }
       , video: {
         introServiceGen: "jPqDaHl6TpM"
+        , commentary: "Rurn7qpL9uc"
         ,  opts: {
           height: '390',
           width: '640',
@@ -88,6 +89,12 @@ class About extends React.Component {
               <li className="App-about-list-item">{this.state.labels.about.annotatorFeature04}</li>
               <li className="App-about-list-item">{this.state.labels.about.annotatorFeature05}</li>
             </ol>
+            <YouTube
+                className="App-Youtube-player"
+                videoId={this.state.video.commentary}
+                opts={this.state.video.opts}
+                onReady={this.onReady}
+            />
           </Jumbotron>
           <PageHeader>{this.state.labels.about.securityFeaturesTitle}</PageHeader>
           <Jumbotron>
