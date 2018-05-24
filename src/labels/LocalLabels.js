@@ -130,6 +130,47 @@ const   labels = {
       , videoNoteDownloadText: "You can download your notes.  In the menu, select the user icon (it looks like a person), then select 'My Records'."
       , videoGrammarText: "The Grammar Explorer provides quick links to lexicons. If available for the text you are viewing, there will also be a Dependency Diagram that provides both morphological and syntactic information. If you are authorized, there is a Tagger tool that allows you to annotate each word with its grammatical tags and dependency information."
     }
+    , privacyPolicy: {
+      title: "Privacy Policy"
+      , aboutThisPolicy: "About this policy"
+      , aboutThisPolicyText: "Along with our Terms of Service, this policy explains how we collect and handle your information. We will review this policy from time to time to make sure it is up to date. If we make changes, we will post the latest version here. When we make significant changes, we will let you know when you next access our services, or by other communications."
+      , personalDataUse: "Why and how do we use your personal data?"
+      , personalDataUseText: "We only use your information where you have given us your consent, where it is necessary to deliver the services you have requested, where it is necessary to exercise or comply with legal rights or obligations, or for normal business purposes of the kind set out in this policy."
+      , personalDataCollected: "What personal data do we collect?"
+      , personalDataCollectedText: "If you do not have an account, no personal information is collected. Everyone who has a user account and uses our services will have some information about them collected, stored and processed. However, we do not collect more information than we need. Your user account information has your username, your first name, your surname, your title, e.g. Mr. or Dr. or Fr., and your email address. There is also record of the date and time you last accessed the system. When you create or update a record, your username is included in the record. This is to ensure there is a way to determine who changed information."
+      , personalDataHowLong: "How long do we store your personal data?"
+      , personalDataHowLongText: "We only keep your data for as long as your account is active. If you ask us to delete your account then your personal information will be deleted.  Records in your personal library will be deleted. If you had authority to create or update records in a non-personal library, we will anonymize your username so it does not identify you. You can ask us to delete your personal data at any time."
+      , thirdParty: "When is your information shared with or collected by third parties?"
+      , thirdPartyText: "We share your information only where you ask us to, where it’s a necessary part of providing service to you, or where we need to for legal reasons."
+      , personalDataSecurity: "How do we keep your personal data secure?"
+      , personalDataSecurityText: "We use industry standard means to protect your data. We use HTTPS encryption for communications over the Internet. The databases that contain your information are protected by username and password. Online access to your account information is restricted to you and to account administrators. Servers can only be logged into by server administrators with the proper encryption key."
+      , personalDataWhereStored: "Where do we store your information?"
+      , personalDataWhereStoredText: "We store your information in servers in the United States of America."
+      , personalDataAdvertising: "How is your information used for advertising?"
+      , personalDataAdvertisingText: "We do not use your information for advertising."
+      , cookies: "Do we use cookies?"
+      , cookiesText: "We do not use cookies."
+      , choicesAndRights: "What are your choices and rights?"
+      , choicesAndRightsText: "If you have a user account, you can ask us at anytime to delete your account.  You can also download your personal records using the 'My Records' menu item."
+      , whoAreWe: "Who are we and how can you contact us?"
+      , whoAreWeText: "This website is provided by the Orthodox Christian Mission Center (OCMC), St. Augustine, FL, USA.  At the bottom of the 'About' page there is an email address to contact us."
+      , optOut: "How do you contact me?"
+      , optOutText: "If we need to, we will contact you through email. If you want to subscribe to our newsletter, you can email us (see the bottom of the About page). If you subscribe to our newsletter, and change your mind, there is an unsubscribe link at the bottom of the newsletter."
+    }
+    , termsOfUse: {
+      title: "Terms of Use"
+      , disclaimer: "The service we are providing is this website. We (OCMC) provide our service as is, and we make no promises or guarantees about this service."
+      , liability: "We will not be liable for damages or losses arising from your use or inability to use the service or otherwise arising under this agreement."
+      , release: "You are fully responsible for your use of the service. You are responsible for ensuring that the texts and/or translations you enter are either your own, or in the public domain, or that permission has been received in written form (e.g. an email) to use them."
+      , cancellation: "You may ask us to delete your user account and personal records."
+      , enhancements: "If you ask us to modify or add new features to this website and associated software, and we do so, we still retain full and sole ownership and copyright of the software."
+      , copyrights: "We do our best to ensure that we only provide texts that are in the public domain or for which we have received authorization to use.  If you believe any text on this website is a copyright infringement, please contact us so we can discuss the situation and take action if needed."
+      , backups: "We maintain backups of all data.  However, it is your responsibility to download your records using the 'My Records' menu item.  We will not be held responsible for the loss of your records if you fail to save them, or if the backup of your data is not available."
+    }
+    , loginPage: {
+      msg1: "In order to login, you must agree to the terms of use and privacy policy."
+      , msg2: "I have read and agree to the terms of use and privacy policy."
+    }
   }
     , el: {
     home: {
@@ -194,8 +235,8 @@ const   labels = {
       , p2: "Αυτό είναι Παν-Ορθόδοξο,διαθέσιμο για όλες τις κανονικές δικαιοδοσίες της Ανατολικής Ορθόδοξης Χριστιανικής Εκκλησίας παγκοσμίως."
       , p3: "Σκοπός του OLW είναι να εξασφαλίσει ένα ασφαλές περιβάλλον για όσους θέλουν να δημιουργήσουν, να διαχειριστούν και να δημοσιεύσουν μεταφράσεις λειτουργικών κειμένων από την Ανατολική Ορθόδοξη Εκκλησία. Επίσης, μπορεί να χρησιμοποιηθεί για άλλου είδους υλικό, όπως καθημερινή ανάγνωση, εκπαιδευτική ή κατηχητικά κείμενα."
       , p4: "Οι νέοι λογαριασμοί χρηστών δημιουργούνται από τους διαχειριστές που επαληθεύουν την ταυτότητα του ατόμου και την ανάγκη του για πρόσβαση στο σύστημα. Κατά τη διάρκεια των δοκιμών beta, δεν θα λαμβάνονται αιτήματα πρόσβασης.."
-      , userFeaturesTitle: "Χαρακτηριστικά για χρήστες του OLW "
-      , userFeaturesIntro: "Το OLW  παρέχει στους χρήστες τη δυνατότητα να..."
+      , userFeaturesTitle: "Χαρακτηριστικά για χρήστες του OLW που είναι μεταφραστές"
+      , userFeaturesIntro: "Το OLW  παρέχει στους χρήστες που είναι μεταφραστές τη δυνατότητα να..."
       , userFeature01: "Δημιουργήστε ή επικολλήστε την ίδια τη μετάφραση ενώ βλέπετε την ελληνική πηγή του κειμένου και μεταφράσεις του κειμένου."
       , userFeature02: "Δείτε γραμματικές πληροφορίες  σχετικά με το ελληνικό κείμενο."
       , userFeature03: "Προβολή σημειώσεων από μελετητές και άλλους μεταφραστές."
@@ -257,6 +298,47 @@ const   labels = {
       , videoGrammar: "Πως να χρησιμοποιείτε το Grammar Explorer"
       , videoGrammarText: "Το Grammar Explorer παρέχει εύκολες συνδέσεις σε λεξικά. Είναι διαθέσιμο  για το κείμενο που βλέπετε, θα υπάρχει ένα Διάγραμμα Εξάρτησης που παρέχει μορφολογικές και συντακτικές πληροφορίες. Αν έχετε πρόσβαση, υπάρχει ένα εργαλείο Tagger που σας επιτρέπει να δείτε τις υποσημειώσεις κάθε λέξης με τις γραμματικές ετικέτες και την πληροφορία εξάρτησης."    }
   }
+  , privacyPolicy: {
+    title: "Privacy Policy"
+    , aboutThisPolicy: "About this policy"
+    , aboutThisPolicyText: "Along with our Terms of Service, this policy explains how we collect and handle your information. We will review this policy from time to time to make sure it is up to date. If we make changes, we will post the latest version here. When we make significant changes, we will let you know when you next access our services, or by other communications."
+    , personalDataUse: "Why and how do we use your personal data?"
+    , personalDataUseText: "We only use your information where you have given us your consent, where it is necessary to deliver the services you have requested, where it is necessary to exercise or comply with legal rights or obligations, or for normal business purposes of the kind set out in this policy."
+    , personalDataCollected: "What personal data do we collect?"
+    , personalDataCollectedText: "If you do not have an account, no personal information is collected. Everyone who has a user account and uses our services will have some information about them collected, stored and processed. However, we do not collect more information than we need. Your user account information has your username, your first name, your surname, your title, e.g. Mr. or Dr. or Fr., and your email address. There is also record of the date and time you last accessed the system. When you create or update a record, your username is included in the record. This is to ensure there is a way to determine who changed information."
+    , personalDataHowLong: "How long do we store your personal data?"
+    , personalDataHowLongText: "We only keep your data for as long as your account is active. If you ask us to delete your account then your personal information will be deleted.  Records in your personal library will be deleted. If you had authority to create or update records in a non-personal library, we will anonymize your username so it does not identify you. You can ask us to delete your personal data at any time."
+    , thirdParty: "When is your information shared with or collected by third parties?"
+    , thirdPartyText: "We share your information only where you ask us to, where it’s a necessary part of providing service to you, or where we need to for legal reasons."
+    , personalDataSecurity: "How do we keep your personal data secure?"
+    , personalDataSecurityText: "We use industry standard means to protect your data. We use HTTPS encryption for communications over the Internet. The databases that contain your information are protected by username and password. Online access to your account information is restricted to you and to account administrators. Servers can only be logged into by server administrators with the proper encryption key."
+    , personalDataWhereStored: "Where do we store your information?"
+    , personalDataWhereStoredText: "We store your information in servers in the United States of America."
+    , personalDataAdvertising: "How is your information used for advertising?"
+    , personalDataAdvertisingText: "We do not use your information for advertising."
+    , cookies: "Do we use cookies?"
+    , cookiesText: "We do not use cookies."
+    , choicesAndRights: "What are your choices and rights?"
+    , choicesAndRightsText: "If you have a user account, you can ask us at anytime to delete your account.  You can also download your personal records using the 'My Records' menu item."
+    , whoAreWe: "Who are we and how can you contact us?"
+    , whoAreWeText: "This website is provided by the Orthodox Christian Mission Center (OCMC), St. Augustine, FL, USA.  At the bottom of the 'About' page there is an email address to contact us."
+    , optOut: "How do you contact me?"
+    , optOutText: "If we need to, we will contact you through email. If you want to subscribe to our newsletter, you can email us (see the bottom of the About page). If you subscribe to our newsletter, and change your mind, there is an unsubscribe link at the bottom of the newsletter."
+  }
+  , termsOfUse: {
+    title: "Terms of Use"
+    , disclaimer: "The service we are providing is this website. We (OCMC) provide our service as is, and we make no promises or guarantees about this service."
+    , liability: "We will not be liable for damages or losses arising from your use or inability to use the service or otherwise arising under this agreement."
+    , release: "You are fully responsible for your use of the service. You are responsible for ensuring that the texts and/or translations you enter are either your own, or in the public domain, or that permission has been received in written form (e.g. an email) to use them."
+    , cancellation: "You may ask us to delete your user account and personal records."
+    , enhancements: "If you ask us to modify or add new features to this website and associated software, and we do so, we still retain full and sole ownership and copyright of the software."
+    , copyrights: "We do our best to ensure that we only provide texts that are in the public domain or for which we have received authorization to use.  If you believe any text on this website is a copyright infringement, please contact us so we can discuss the situation and take action if needed."
+    , backups: "We maintain backups of all data.  However, it is your responsibility to download your records using the 'My Records' menu item.  We will not be held responsible for the loss of your records if you fail to save them, or if the backup of your data is not available."
+  }
+  , loginPage: {
+    msg1: "In order to login, you must agree to the terms of use and privacy policy."
+    , msg2: "I have read and agree to the terms of use and privacy policy."
+  }
 };
 
 module.exports = {
@@ -273,7 +355,16 @@ module.exports = {
   , getHelpLabels: (code) => {
     return labels[code].help;
   }
+  , getLoginLabels: (code) => {
+    return labels[code].loginPage;
+  }
   , getMyRecordsLabels: (code) => {
     return labels[code].myRecords;
+  }
+  , getPrivacyLabels: (code) => {
+    return labels[code].privacyPolicy;
+  }
+  , getTermsOfUseLabels: (code) => {
+    return labels[code].termsOfUse;
   }
 };

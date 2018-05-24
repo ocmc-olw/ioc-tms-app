@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import LocalLabels from '../../labels/LocalLabels';
 import { Jumbotron, PageHeader } from 'react-bootstrap';
 import YouTube from 'react-youtube';
+import PrivacyAndUse from './PrivacyAndUse';
 
 class About extends React.Component {
   constructor(props) {
@@ -17,7 +18,8 @@ class About extends React.Component {
       }
       , video: {
         introServiceGen: "jPqDaHl6TpM"
-        , commentary: "Rurn7qpL9uc"
+        , commentary: "9RzC7jIpCEM"
+        , commentaryGreek: "9vFN_QsQa38"
         ,  opts: {
           height: '390',
           width: '640',
@@ -28,8 +30,9 @@ class About extends React.Component {
           }
         }
       }
-    }
+    };
     this.onReady = this.onReady.bind(this);
+    this.getCommentaryVideo = this.getCommentaryVideo.bind(this);
   }
   componentWillReceiveProps = (nextProps) => {
     this.setState(
@@ -45,6 +48,24 @@ class About extends React.Component {
     event.target.pauseVideo();
   };
 
+
+  getCommentaryVideo = () => {
+    let videoId = this.state.video.commentary;
+    if (this.props
+      && this.props.app
+      && this.props.app.session
+      && this.props.app.session.languageCode === "el") {
+      videoId = this.state.video.commentaryGreek;
+    }
+    return (
+        <YouTube
+            className="App-Youtube-player"
+            videoId={videoId}
+            opts={this.state.video.opts}
+            onReady={this.onReady}
+        />
+    );
+  };
 
   render() {
     const version = VersionNumbers.getPackageNumber();
@@ -89,12 +110,7 @@ class About extends React.Component {
               <li className="App-about-list-item">{this.state.labels.about.annotatorFeature04}</li>
               <li className="App-about-list-item">{this.state.labels.about.annotatorFeature05}</li>
             </ol>
-            <YouTube
-                className="App-Youtube-player"
-                videoId={this.state.video.commentary}
-                opts={this.state.video.opts}
-                onReady={this.onReady}
-            />
+            {this.getCommentaryVideo()}
           </Jumbotron>
           <PageHeader>{this.state.labels.about.securityFeaturesTitle}</PageHeader>
           <Jumbotron>
@@ -111,6 +127,7 @@ class About extends React.Component {
             </ol>
           </Jumbotron>
           <AboutDatabase labels={this.props.app.session.labels.pageAbout}/>
+          <PrivacyAndUse/>
           {this.props.app.session.labels.pageAbout.contact} <Email />
           <p/>
           <Configuration

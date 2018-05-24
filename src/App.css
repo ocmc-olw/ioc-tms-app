@@ -1031,3 +1031,6 @@ a.rdw-mention-link {
     left: 42px;
     margin-top: 10px;
 }
+.App-page-terms {
+    margin-top: 0px !important;
+}

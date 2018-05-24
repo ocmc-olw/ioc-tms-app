@@ -6,16 +6,26 @@ import {Login as IocLogin, UiSchemas, User} from 'ioc-liturgical-react'
 import server from '../../config/server';
 import { connect } from 'react-redux';
 import Actions from '../../reducers/actionTypes';
+import PrivacyAndUse from './PrivacyAndUse';
+import { Checkbox, ControlLabel, Well } from 'react-bootstrap';
+import LocalLabels from "../../labels/LocalLabels";
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userInfo: new User()
+      labels: {
+        thisClass: LocalLabels.getLoginLabels(props.app.session.languageCode)
+      }
+      , userInfo: new User()
       ,loginFormMsg: ""
+      , agree: false
     };
     this.onSubmit = this.onSubmit.bind(this);
+    this.getLogin = this.getLogin.bind(this);
+    this.handleAgreementChange = this.handleAgreementChange.bind(this);
     this.handleDropdownsCallback = this.handleDropdownsCallback.bind(this);
+    this.getTerms = this.getTerms.bind(this);
   }
 
   onSubmit = (status, valid, username, password, userinfo) => {
@@ -95,19 +105,58 @@ class Login extends React.Component {
     )
   };
 
+  handleAgreementChange = (evt) => {
+      this.setState({ agree: evt.target.checked });
+  };
 
+  getTerms = () => {
+    return (
+        <div>
+          <Well>
+          <ControlLabel>{this.state.labels.thisClass.msg1}</ControlLabel>
+          <Checkbox
+              checked={this.state.agree}
+              onChange={this.handleAgreementChange}
+              inline={true}
+          >
+            {this.state.labels.thisClass.msg2}
+          </Checkbox>
+          <PrivacyAndUse/>
+          </Well>
+        </div>
+      );
+  };
+
+  getLogin = () => {
+    if (this.state.agree) {
+      return (
+          <div>
+            <Well>
+            <IocLogin
+                restServer={server.getWsServerPath()}
+                username={this.state.userInfo.username}
+                password={this.state.userInfo.password}
+                loginCallback={this.onSubmit}
+                formPrompt={this.props.app.session.labels.pageLogin.prompt}
+                formMsg={this.state.loginFormMsg}
+                dropdownsCallback={this.handleDropdownsCallback}
+            />
+            </Well>
+            {this.getTerms()}
+          </div>
+      );
+    } else {
+      return (
+          <div>
+          {this.getTerms()}
+          </div>
+      );
+    }
+  };
   render() {
     return (
         <div className="App-login">
-          <IocLogin
-              restServer={server.getWsServerPath()}
-              username={this.state.userInfo.username}
-              password={this.state.userInfo.password}
-              loginCallback={this.onSubmit}
-              formPrompt={this.props.app.session.labels.pageLogin.prompt}
-              formMsg={this.state.loginFormMsg}
-              dropdownsCallback={this.handleDropdownsCallback}
-          />
+          {this.getLogin()}
         </div>
     );
   }
