@@ -102,7 +102,7 @@ export class Help extends React.Component {
             />
             <Html5VideoPanel
                 eventKey={"videoSearchTexts"}
-                title={this.state.labels.thisClass.videoSearchTexts}
+                title={this.state.labels.thisClass.videoSearchText}
                 text={this.state.labels.thisClass.videoSearchTextText}
             />
           <YoutubeVideoPanel

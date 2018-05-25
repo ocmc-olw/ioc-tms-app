@@ -110,7 +110,7 @@ const   labels = {
       , videoEnterTranslation: "How to enter a Translation"
       , videoCreateNote: "How to create a note"
       , videoSearchNotes: "How to search for notes"
-      , videoSearchTexts: "How to search texts"
+      , videoSearchText: "How to search texts"
       , videoCreateTag: "How to create or edit tags for a note"
       , videoTagSearch: "How to use tags to search for notes"
       , videoNoteDownload: "How to download your personal notes"
@@ -150,6 +150,8 @@ const   labels = {
       , personalDataAdvertisingText: "We do not use your information for advertising."
       , cookies: "Do we use cookies?"
       , cookiesText: "We do not use cookies."
+      , links: "What happens when I click on a link that takes me to another website?"
+      , linksText: "Occasionally our site may provide access to other web sites by linking to them. We’re not responsible for the data policies (including data protection and cookies), content or security of these linked websites. So, it is a good idea to make sure you refer to their privacy policies to ensure you know how they use your data."
       , choicesAndRights: "What are your choices and rights?"
       , choicesAndRightsText: "If you have a user account, you can ask us at anytime to delete your account.  You can also download your personal records using the 'My Records' menu item."
       , whoAreWe: "Who are we and how can you contact us?"
@@ -177,6 +179,10 @@ const   labels = {
       p1: "Καλωσήρθατε στους μεταφραστές των λειτουργικών κειμένων, και τους μαθητευόμενους που δημιουργούν πηγές για να μας βοηθήσουν να καταλάβουμε το νόημα των κειμένων!"
       , p2: "Μέσω των προσευχών των Αγίων Υμνογράφων Κοσμά του Μελωδού, Ιωάννη της Δαμασκού και Νικοδήμου του Αγιορείτη, είθε η δουλειά μας να γίνει με τη βοήθεια του Θεού, από Αυτόν και μέσω Αυτού, στη δόξα και την τιμή Του!"
       , msg1: "Κατά καιρούς, χρειάζεται να ενημερώνουμε τη διαδικτυακή εφαρμογή ή τη βάση δεδομένων. Αν ξαφνικά δείτε μηνύματα σχετικά με σφάλματα δικτύου ή κάτι άλλο, περιμένετε μερικά λεπτά και δοκιμάστε ξανά."
+    }
+    , loginPage: {
+      msg1: "In order to login, you must agree to the terms of use and privacy policy."
+      , msg2: "I have read and agree to the terms of use and privacy policy."
     }
     , paratexts: {
       menu: "Παράλληλα Κείμενα"
@@ -318,6 +324,8 @@ const   labels = {
     , personalDataAdvertisingText: "We do not use your information for advertising."
     , cookies: "Do we use cookies?"
     , cookiesText: "We do not use cookies."
+    , links: "What happens when I click on a link that takes me to another website?"
+    , linksText: "Occasionally our site may provide access to other web sites by linking to them. We’re not responsible for the data policies (including data protection and cookies), content or security of these linked websites. So, it is a good idea to make sure you refer to their privacy policies to ensure you know how they use your data."
     , choicesAndRights: "What are your choices and rights?"
     , choicesAndRightsText: "If you have a user account, you can ask us at anytime to delete your account.  You can also download your personal records using the 'My Records' menu item."
     , whoAreWe: "Who are we and how can you contact us?"
@@ -334,10 +342,6 @@ const   labels = {
     , enhancements: "If you ask us to modify or add new features to this website and associated software, and we do so, we still retain full and sole ownership and copyright of the software."
     , copyrights: "We do our best to ensure that we only provide texts that are in the public domain or for which we have received authorization to use.  If you believe any text on this website is a copyright infringement, please contact us so we can discuss the situation and take action if needed."
     , backups: "We maintain backups of all data.  However, it is your responsibility to download your records using the 'My Records' menu item.  We will not be held responsible for the loss of your records if you fail to save them, or if the backup of your data is not available."
-  }
-  , loginPage: {
-    msg1: "In order to login, you must agree to the terms of use and privacy policy."
-    , msg2: "I have read and agree to the terms of use and privacy policy."
   }
 };
 

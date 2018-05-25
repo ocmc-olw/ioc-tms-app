@@ -263,9 +263,23 @@ a.collapsed {
     padding: 5px !important;
 }
 .App-login {
-    margin: 20%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
-
+.App-login > div {
+    width: 50vw;
+}
+.App-login > div > div > div.well {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.App-login-prompt {
+    font-size: medium;
+}
+.App-page-terms > div > h2 {
+    font-size: medium;
+}
 .App-col-selector {
     width: 10px;
     min-width: 10px;
@@ -460,6 +474,17 @@ div[class*='App-page'] {
     }
     .collapse.in{
         display:block !important;
+    }
+    .App-login {
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+    .App-login > div {
+        width: 90vw;
+    }
+    .App-login > div > div > div.well {
+        margin-left: 10px;
+        margin-right: 5px;
     }
 }
 div.App-logo.navbar-header {

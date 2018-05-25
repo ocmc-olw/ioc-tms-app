@@ -95,6 +95,10 @@ class PrivacyAndUse extends React.Component {
                 <div>{this.state.labels.privacy.cookiesText}</div>
               </Well>
               <Well>
+                <h3>{this.state.labels.privacy.links}</h3>
+                <div>{this.state.labels.privacy.linksText}</div>
+              </Well>
+              <Well>
                 <h3>{this.state.labels.privacy.choicesAndRights}</h3>
                 <div>{this.state.labels.privacy.choicesAndRightsText}</div>
               </Well>

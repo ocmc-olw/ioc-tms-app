@@ -7,7 +7,7 @@ import server from '../../config/server';
 import { connect } from 'react-redux';
 import Actions from '../../reducers/actionTypes';
 import PrivacyAndUse from './PrivacyAndUse';
-import { Checkbox, ControlLabel, Well } from 'react-bootstrap';
+import { Checkbox, Well } from 'react-bootstrap';
 import LocalLabels from "../../labels/LocalLabels";
 
 class Login extends React.Component {
@@ -27,6 +27,15 @@ class Login extends React.Component {
     this.handleDropdownsCallback = this.handleDropdownsCallback.bind(this);
     this.getTerms = this.getTerms.bind(this);
   }
+
+  componentWillReceiveProps = (nextProps) => {
+    this.setState({
+          labels: {
+            thisClass: LocalLabels.getLoginLabels(nextProps.app.session.languageCode)
+          }
+    }
+    );
+  };
 
   onSubmit = (status, valid, username, password, userinfo) => {
     let theStatusMsg = this.props.app.session.labels.pageLogin.good;
@@ -113,7 +122,8 @@ class Login extends React.Component {
     return (
         <div>
           <Well>
-          <ControlLabel>{this.state.labels.thisClass.msg1}</ControlLabel>
+          <div>{this.state.labels.thisClass.msg1}</div>
+            <p/>
           <Checkbox
               checked={this.state.agree}
               onChange={this.handleAgreementChange}
@@ -131,7 +141,6 @@ class Login extends React.Component {
     if (this.state.agree) {
       return (
           <div>
-            <Well>
             <IocLogin
                 restServer={server.getWsServerPath()}
                 username={this.state.userInfo.username}
@@ -141,7 +150,6 @@ class Login extends React.Component {
                 formMsg={this.state.loginFormMsg}
                 dropdownsCallback={this.handleDropdownsCallback}
             />
-            </Well>
             {this.getTerms()}
           </div>
       );
