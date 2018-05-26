@@ -790,6 +790,7 @@ path.link {
 .mce-branding {
     visibility: hidden !important;
 }
+
 .App-Text-Note-Header-Scope-Glyph {
     padding-left: 8px !important;
     padding-right: 8px !important;
@@ -865,21 +866,23 @@ path.link {
     display: none;
 }
 
+.App-Bible-Ref-Selector-Label {
+    padding-left: 10px;
+}
 .App-Bible-Ref-Selector-Container {
-    margin-left: 60px;
     display: inline-flex;
 }
 .App-Bible-Ref-Selector-Book .Select-control{
     float: left;
-    width: 30ch;
+    width: 20vw;
 }
 .App-Bible-Ref-Selector-Chapter .Select-control{
     float: left;
-    width: 12ch;
+    width: 10vw;
 }
 .App-Bible-Ref-Selector-Verse .Select-control{
     float: left;
-    width: 12ch;
+    width: 10vw;
 }
 .App-Ontology-Ref-Selector-Container {
     display: inline-block;
@@ -897,6 +900,12 @@ path.link {
     margin-right: 5px;
     display: inline-block;
 }
+
+
+
+
+
+
 .App-Workflow-Selector-Row {
 
 }
