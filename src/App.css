@@ -48,7 +48,7 @@ span.App {
     backgroundColor: #F8F8F8;
     borderTop: 1px solid #E7E7E7;
     textAlign: center;
-    position: fixed;
+    position: fixed !important;
     padding-left: 10px;
     padding-top: 10px;
     left: 0px;
@@ -866,6 +866,7 @@ path.link {
 }
 
 .App-Bible-Ref-Selector-Container {
+    margin-left: 60px;
     display: inline-flex;
 }
 .App-Bible-Ref-Selector-Book .Select-control{
@@ -894,7 +895,7 @@ path.link {
 .App-Button {
     margin-top: 10px;
     margin-right: 5px;
-    width: 100px !important;
+    display: inline-block;
 }
 .App-Workflow-Selector-Row {
 
@@ -969,6 +970,7 @@ path.link {
 .Text-Note-Add-Button {
     margin-left: 10px;
     padding: 1px;
+    display: inline-block;
 }
 .App-Window-Launch {
     cursor: pointer;
@@ -1022,6 +1024,7 @@ a.rdw-mention-link {
     padding: 0px !important;
     position: relative !important;
     top: 25px;
+    display: inline-block;
 }
 .App-Add-Library-Selector {
     padding: 0px !important;
@@ -1047,6 +1050,7 @@ a.rdw-mention-link {
 .App-Delete-Button {
     top: -4px;
     margin-left: 40px;
+    display: inline-block;
 }
 .App-Text-Note-Editor-Button-Row {
     margin-left: -20px !important;
@@ -1055,6 +1059,7 @@ a.rdw-mention-link {
     position: relative;
     left: 42px;
     margin-top: 10px;
+    display: inline-block;
 }
 .App-page-terms {
     margin-top: 0px !important;
