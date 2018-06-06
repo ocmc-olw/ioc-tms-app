@@ -25,12 +25,28 @@ export class Header extends React.Component {
 
   handleLanguageChange = (event) => {
     if (event.target.id) {
-      this.props.dispatch(
-          {
-            type: Actions.SET_SESSION_LANGUAGE_CODE
-            , code: event.target.id
-          }
-      );
+      if (this.props.session
+          && this.props.session.dropdowns
+          && this.props.session.uiSchema
+          && this.props.session.userInfo
+      ) {
+        this.props.dispatch(
+            {
+              type: Actions.SET_SESSION_LANGUAGE_CODE
+              , code: event.target.id
+              , dropdowns: this.props.session.dropdowns
+              , uiSchema: this.props.session.uiSchema
+              , userInfo: this.props.session.userInfo
+            }
+        );
+      } else {
+        this.props.dispatch(
+            {
+              type: Actions.SET_SESSION_LANGUAGE_CODE
+              , code: event.target.id
+            }
+        );
+      }
       event.preventDefault();
     }
   };

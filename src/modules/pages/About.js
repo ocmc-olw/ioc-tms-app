@@ -16,6 +16,9 @@ class About extends React.Component {
       labels: {
         about: LocalLabels.getAboutOlwLabels(props.app.session.languageCode)
       }
+      , presentations: {
+        aristotle2018: "https://liml.org/static/presentations/2018-06-04-Colburn-Olw.pdf"
+      }
       , video: {
         introServiceGen: "jPqDaHl6TpM"
         , commentary: "9RzC7jIpCEM"
@@ -124,6 +127,12 @@ class About extends React.Component {
               <li className="App-about-list-item">{this.state.labels.about.securityFeature06}</li>
               <li className="App-about-list-item">{this.state.labels.about.securityFeature07}</li>
               <li className="App-about-list-item">{this.state.labels.about.securityFeature08}</li>
+            </ol>
+          </Jumbotron>
+          <PageHeader>{this.state.labels.about.presentations}</PageHeader>
+          <Jumbotron>
+            <ol>
+              <li className="App-about-list-item"><a href={this.state.presentations.aristotle2018}>2018.06.04 - {this.state.labels.about.liturgics}. {this.state.labels.about.aristotle}.</a></li>
             </ol>
           </Jumbotron>
           <AboutDatabase labels={this.props.app.session.labels.pageAbout}/>

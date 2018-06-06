@@ -95,6 +95,9 @@ const   labels = {
       , securityFeature06: "When a record's status is 'Released', it is automatically copied to a separate read-only database. If the visibility is 'Public', anyone can view it in that database."
       , securityFeature07: "When a record is created or updated, the record contains the username and the date and time at which the record was created and/or updated.  It is possible to determine each step of the way, who changed what and when."
       , securityFeature08: "Multiple backups are periodically made from each database.  Access to the backups is secured."
+      , presentations: "Presentations"
+      , aristotle: "Aristotle University of Thessaloniki"
+      , liturgics: "The Laboratory of Liturgical Studies of the School of Pastoral and Social Theology"
     }
     , help: {
       title: "Help Page"
@@ -269,6 +272,9 @@ const   labels = {
       , securityFeature06: "Όταν η κατάσταση της καταχώρησης είναι «Δημοσίευση», αυτόματα αντιγράφεται σε μία ξεχωριστή βάση δεδομένων μόνο για ανάγνωση. Αν η προβολή είναι «Δημόσια», οποιοσδήποτε μπορεί να το δει στη συγκεκριμένη βάση δεδομένων."
       , securityFeature07: "Όταν η καταχώρηση δημιουργείται ή ενημερώνεται, η καταχήρηση περιέχει το όνομα χρήστη, την ημερομηνία και την ώρα στην οποία η καταχώρηση δημιουργήθηκε και/ή ενημερώθηκε.  Είναι δυνατό να ορίζεται κάθε βήμα της διαδικασίας, ποιος τροποποιεί, τι και πότε."
       , securityFeature08: "Πολλαπλά αντίγραφα ασφαλείας θα δημιουργούνται από κάθε βάση δεδομένων. Η πρόσβαση στα αντίγραφα είναι ασφαλής."
+      , presentations: "Παρουσιάσεις"
+      , aristotle: "ΑΡΙΣΤΟΤΕΛΕΙΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΘΕΣΣΑΛΟΝΙΚΙΗΣ"
+      , liturgics: "To Εργαστήριο Λειτουργικών Μελετών του Τμήματος Ποιμαντικής και Κοινωνικής Θεολογίας"
     }
     , help: {
       title: "Βοήθεια"
