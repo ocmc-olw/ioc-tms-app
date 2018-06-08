@@ -64,7 +64,6 @@ class Home extends React.Component {
                   <Col xs={8} md={8}>
                     <p> {this.state.labels.thisClass.p1}</p>
                     <p> {this.state.labels.thisClass.p2}</p>
-                    <Alert bsStyle="info"><Glyphicon glyph="warning-sign" /> This is the beta-test version. Beta testers - please report issues or change requests to Michael Colburn.</Alert>
                     <Alert bsStyle="warning"><Glyphicon glyph="warning-sign" /> {this.state.labels.thisClass.msg1}</Alert>
                     <Alert bsStyle="info"><Glyphicon glyph="bullhorn" /> If you want to work with us to add your language to the user interface, or the translation of the liturgical texts in your language, please contact us. We are especially looking for volunteers to translate the user interface for this website into: Arabic, Chinese, French, Spanish, and Swahili. Also, we are looking for volunteers to enter officially approved Arabic, Chinese, French, Spanish, and Swahili translations of the liturgical texts. See how to contact us by looking at the bottom of the About page.</Alert>
                   </Col>
@@ -88,7 +87,6 @@ class Home extends React.Component {
                   <Col xs={8} md={8}>
                     <p> {this.state.labels.thisClass.p1}</p>
                     <p> {this.state.labels.thisClass.p2}</p>
-                    <Alert bsStyle="info"><Glyphicon glyph="warning-sign" /> This is the beta-test version. Beta testers - please report issues or change requests to Michael Colburn.</Alert>
                     <Alert bsStyle="warning"><Glyphicon glyph="warning-sign" /> {this.state.labels.thisClass.msg1}</Alert>
                     <Alert bsStyle="info"><Glyphicon glyph="bullhorn" /> If you want to work with us to add your language to the user interface, or the translation of the liturgical texts in your language, please contact us. We are especially looking for volunteers to translate the user interface for this website into: Arabic, Chinese, French, Spanish, and Swahili. Also, we are looking for volunteers to enter officially approved Arabic, Chinese, French, Spanish, and Swahili translations of the liturgical texts. See how to contact us by looking at the bottom of the About page.</Alert>
                   </Col>

@@ -1,5 +1,5 @@
 import React from 'react'
-import screenShot from './graphics/emailOcmc.jpg'
+import screenShot from './graphics/olw.ocmc.org.png'
 
 class SsEmailContact extends React.Component {
   render() {

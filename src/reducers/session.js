@@ -46,7 +46,6 @@ export default function session(
 
   // preserve immutability of current state by copying it
   let new_state = JSON.parse(JSON.stringify(state));
-
   switch (action.type) {
     case Actions.SET_SESSION: {
       new_state.restServer = action.restServer;
