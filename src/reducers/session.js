@@ -96,6 +96,7 @@ export default function session(
           , new_state.userInfo.title
           , new_state.userInfo.authenticated
           , action.domains
+          , new_state.userInfo.prefs
       );
       new_state.userInfo = userInfo;
       new_state.uiSchemas = action.uiSchema;

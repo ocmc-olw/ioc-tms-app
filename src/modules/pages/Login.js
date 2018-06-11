@@ -37,9 +37,11 @@ class Login extends React.Component {
     );
   };
 
-  onSubmit = (status, valid, username, password, userinfo) => {
+  onSubmit = (status, valid, username, password, userdata) => {
     let theStatusMsg = this.props.app.session.labels.pageLogin.good;
     if (status === 200) {
+      let userinfo = userdata[0];
+      let userprefs = userdata[1];
       let userInfo = new User(
           username
           , password
@@ -50,6 +52,7 @@ class Login extends React.Component {
           , userinfo.title
           , valid
           , {}
+          , userprefs
       );
 
       this.props.dispatch(
@@ -101,6 +104,7 @@ class Login extends React.Component {
       , noteTypesDropdown: forms.noteTypesDropdown
       , noteTypesBilDropdown: forms.noteTypesBilDropdown
       , schemaEditorDropdown: forms.schemaEditorFormsDropdown
+      , bibTexStylesDropdown: forms.bibTexStyles
   };
     this.props.dispatch(
         {
