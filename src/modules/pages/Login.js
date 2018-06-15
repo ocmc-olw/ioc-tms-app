@@ -105,6 +105,9 @@ class Login extends React.Component {
       , noteTypesBilDropdown: forms.noteTypesBilDropdown
       , schemaEditorDropdown: forms.schemaEditorFormsDropdown
       , bibTexStylesDropdown: forms.bibTexStyles
+      , uiDomainsDropdown: forms.uiDomains
+      , uiLanguagesDropdown: forms.uiLanguages
+      , uiSystemsDropdown: forms.uiSystems
   };
     this.props.dispatch(
         {
