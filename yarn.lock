@@ -2290,6 +2290,10 @@ entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
 
+enumify@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/enumify/-/enumify-1.0.4.tgz#2bb6263071dd4551e54c55755707fad24a40cd7e"
+
 errno@^0.1.3, errno@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/errno/-/errno-0.1.4.tgz#b896e23a9e5e8ba33871fc996abd3635fc9a1c7d"
@@ -3534,9 +3538,9 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-ioc-liturgical-react@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.6.1.tgz#f54f270ea2c2c4368aeca5e2a7612b68b2d6401c"
+ioc-liturgical-react@^0.6.6:
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.6.6.tgz#83b96116815378a48f6e3347c39b5eb751346a65"
   dependencies:
     "@tinymce/tinymce-react" "^2.1.3"
     axios "^0.15.3"
@@ -3547,6 +3551,7 @@ ioc-liturgical-react@^0.6.1:
     draft-js-counter-plugin "^2.0.1"
     draft-js-mention-plugin "^3.0.4"
     draftjs-to-html "^0.8.3"
+    enumify "^1.0.4"
     file-loader "^0.10.0"
     file-saver "^1.3.3"
     font-awesome "^4.7.0"

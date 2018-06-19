@@ -1,25 +1,30 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import LocalLabels from '../../labels/LocalLabels';
 import { PanelGroup, Panel, Well } from 'react-bootstrap';
 
 class PrivacyAndUse extends React.Component {
   constructor(props) {
     super(props);
+
+    let labels = props.app.session.localLabels;
+    let labelTopics = props.app.session.labelTopics;
+
     this.state = {
       labels: {
-        terms: LocalLabels.getTermsOfUseLabels(props.app.session.languageCode)
-        , privacy: LocalLabels.getPrivacyLabels(props.app.session.languageCode)
+        terms: labels[labelTopics.termsOfUse]
+        , privacy: labels[labelTopics.privacyPolicy]
       }
     };
     this.getContent = this.getContent.bind(this);
   }
   componentWillReceiveProps = (nextProps) => {
+    let labels = nextProps.app.session.localLabels;
+    let labelTopics = nextProps.app.session.labelTopics;
     this.setState(
         {
           labels: {
-            terms: LocalLabels.getTermsOfUseLabels(nextProps.app.session.languageCode)
-            , privacy: LocalLabels.getPrivacyLabels(nextProps.app.session.languageCode)
+            terms: labels[labelTopics.termsOfUse]
+            , privacy: labels[labelTopics.privacyPolicy]
           }
         }
     )

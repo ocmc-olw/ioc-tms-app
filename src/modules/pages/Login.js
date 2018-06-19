@@ -8,14 +8,17 @@ import { connect } from 'react-redux';
 import Actions from '../../reducers/actionTypes';
 import PrivacyAndUse from './PrivacyAndUse';
 import { Checkbox, Well } from 'react-bootstrap';
-import LocalLabels from "../../labels/LocalLabels";
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
+
+    let labels = props.app.session.localLabels;
+    let labelTopics = props.app.session.labelTopics;
+
     this.state = {
       labels: {
-        thisClass: LocalLabels.getLoginLabels(props.app.session.languageCode)
+        thisClass: labels[labelTopics.loginPage]
       }
       , userInfo: new User()
       ,loginFormMsg: ""
@@ -29,9 +32,13 @@ class Login extends React.Component {
   }
 
   componentWillReceiveProps = (nextProps) => {
+
+    let labels = nextProps.app.session.localLabels;
+    let labelTopics = nextProps.app.session.labelTopics;
+
     this.setState({
           labels: {
-            thisClass: LocalLabels.getLoginLabels(nextProps.app.session.languageCode)
+            thisClass: labels[labelTopics.loginPage]
           }
     }
     );
@@ -81,6 +88,7 @@ class Login extends React.Component {
 
     let forms = response.data;
     let domains = forms.domains;
+    console.log(domains);
     let uiSchemas = new UiSchemas(
         forms.formsDropdown
         , forms.valueSchemas
@@ -117,6 +125,9 @@ class Login extends React.Component {
           , domains: domains
           , uiSchema: uiSchemas
           , dropdowns: dropdowns
+          , labelsAll: forms.uiLabels["ilr"]
+          , localLabelsAll: forms.uiLabels["olw"]
+          , labelTopics: forms.uiLabelTopics
         }
     )
   };

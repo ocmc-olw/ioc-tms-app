@@ -5,27 +5,30 @@
 import React from 'react';
 import { Well } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import LocalLabels from '../../labels/LocalLabels';
 import { DownloadUserRecords } from 'ioc-liturgical-react';
 
 class MyRecords extends React.Component {
   constructor(props) {
     super(props);
+    let labels = props.app.session.localLabels;
+    let labelTopics = props.app.session.labelTopics;
     this.state = {
       labels: {
-        about: LocalLabels.getMyRecordsLabels(props.app.session.languageCode)
+        about: labels[labelTopics.myRecords]
       }
     }
   }
   componentWillReceiveProps = (nextProps) => {
+    let labels = nextProps.app.session.localLabels;
+    let labelTopics = nextProps.app.session.labelTopics;
     this.setState(
         {
           labels: {
-            about: LocalLabels.getMyRecordsLabels(nextProps.app.session.languageCode)
+            about: labels[labelTopics.myRecords]
           }
         }
     )
-  }
+  };
 
   render() {
     return <div className="App-page-download">

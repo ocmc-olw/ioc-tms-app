@@ -1089,3 +1089,13 @@ a.rdw-mention-link {
 .App-See-Biblatex {
     margin-top: 30px;
 }
+.App-lang-code {
+    margin-left: 5px;
+}
+App-header-flag-ico {
+    position: relative;
+    right: 2px;
+}
+.App-calendar {
+    margin: 5vw;
+}

@@ -14,8 +14,10 @@ import server from './config/server';
 import About from './modules/pages/About';
 import Admin from './modules/pages/Admin';
 import AddEntity from './modules/pages/AddEntity';
+import Calendar from './modules/pages/Calendar';
 import ChangePassword from './modules/pages/ChangePassword';
 import EditWithAges from './modules/pages/EditWithAges';
+import EditLabels from './modules/pages/EditLabels';
 import EditWithTopic from './modules/pages/EditWithTopic';
 import GenerateWithAges from './modules/pages/GenerateWithAges';
 import Help from './modules/pages/Help';
@@ -110,6 +112,11 @@ class App extends React.Component {
                   />
                   <PrivateRoute
                       authed={this.props.app.session.userInfo.authenticated}
+                      path='/calendar'
+                      component={Calendar}
+                  />
+                  <PrivateRoute
+                      authed={this.props.app.session.userInfo.authenticated}
                       path='/editages'
                       component={EditWithAges}
                   />
@@ -117,6 +124,11 @@ class App extends React.Component {
                       authed={this.props.app.session.userInfo.authenticated}
                       path='/edittopic'
                       component={EditWithTopic}
+                  />
+                  <PrivateRoute
+                      authed={this.props.app.session.userInfo.authenticated}
+                      path='/editlabels'
+                      component={EditLabels}
                   />
                   <PrivateRoute
                       authed={this.props.app.session.userInfo.authenticated}

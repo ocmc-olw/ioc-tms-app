@@ -7,8 +7,6 @@ class SearchLinks extends React.Component {
     return <div className="App-page App-page-search-links">
       <SearchRelationships
           session={this.props.app.session}
-          searchLabels={this.props.app.session.labels.searchLinks}
-          resultsTableLabels={this.props.app.session.labels.linkSearchResultsTable}
       />
     </div>
   }

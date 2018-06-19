@@ -48,6 +48,7 @@ const   labels = {
     , edit: {
       menu: "Edit"
       , itemAges: "Using AGES DCS"
+      , itemLabels: "Using Labels Editor"
       , itemOslw: "Using OSLW"
       , itemTopic: "Using Topic"
       , itemSchEditor: "Using Schema Editor"
@@ -221,6 +222,7 @@ const   labels = {
     , edit: {
       menu: "Επεξεργασία"
       , itemAges: "Χρήση του AGES"
+      , itemLabels: "Χρήση του Labels Editor"
       , itemOslw: "Χρήση του OSLW"
       , itemTopic: "Χρήση του Topic"
       , itemSchEditor: "Χρήση του Schema Editor"
@@ -378,4 +380,5 @@ module.exports = {
   , getTermsOfUseLabels: (code) => {
     return labels[code].termsOfUse;
   }
+  , getJson: () => { return JSON.stringify(labels)}
 };

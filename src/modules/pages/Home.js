@@ -7,25 +7,32 @@ import Hymnographers from '../components/images/Hymnographers';
 import KenyaDeaconCensing from '../components/images/KenyaDeaconCensing';
 import Scriptorium from '../components/images/Scriptorium';
 import {Alert, Glyphicon, Col, Grid, Jumbotron, Row} from 'react-bootstrap'
-import LocalLabels from '../../labels/LocalLabels';
 
 class Home extends React.Component {
 
 
   constructor(props) {
     super(props);
+
+    let labels = props.app.session.localLabels;
+    let labelTopics = props.app.session.labelTopics;
+
     this.state = {
       labels: {
-        thisClass: LocalLabels.getAboutHomeLabels(props.app.session.languageCode)
+        thisClass: labels[labelTopics.home]
       }
       , location: document.location.hostname // "liml.org"
     }
   };
 
   componentWillReceiveProps = (nextProps) => {
+
+    let labels = nextProps.app.session.localLabels;
+    let labelTopics = nextProps.app.session.labelTopics;
+
     this.setState({
       labels: {
-        thisClass: LocalLabels.getAboutHomeLabels(nextProps.app.session.languageCode)
+        thisClass: labels[labelTopics.home]
       }
       , location: document.location.hostname // "liml.org"
     })

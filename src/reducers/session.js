@@ -2,15 +2,30 @@
  * Created by mac002 on 7/31/17.
  */
 import Actions from './actionTypes';
-import {Labels, User} from 'ioc-liturgical-react';
+import {StaticLabels, User} from 'ioc-liturgical-react';
 import LocalLabels from '../labels/LocalLabels';
+import LabelTopics from '../labels/LabelTopics';
+
+// staticLabels is used to jumpstart the labels.
+// After a user logs in, we replace these labels
+// with ones sent to us by the server.
+const staticLabels = new StaticLabels();
+let labelTopics = {};
+for (var p in LabelTopics) {
+  if (LabelTopics.hasOwnProperty(p)) {
+    labelTopics[p] = p;
+  }
+}
 
 export default function session(
     state = {
       restServer: ""
       , languageCode: "en"
-      , labels: Labels.getAllLabels("en")
+      , labelTopics: labelTopics
+      , labelsAll: staticLabels.labelsJson
+      , labels: staticLabels.labelsJson["en"]
       , localLabels: LocalLabels.getAllLabels("en")
+      , localLabelsAll: LocalLabels.localLabels
       , userInfo: new User()
       , uiSchemas: {
         formsDropdown: []
@@ -33,6 +48,9 @@ export default function session(
         , templateWhenModeOfWeekCasesDropdown: []
         , templateWhenMonthNameCasesDropdown: []
         , schemaEditorFormsDropdown: []
+        , uiDomains: []
+        , uiLanguages: []
+        , uiSystems: []
       }
       , db: {
         infoNotRetrieved: true
@@ -54,10 +72,37 @@ export default function session(
       new_state.uiSchemas = action.uiSchemas;
       new_state.dropdowns = action.dropdowns;
       new_state.db = action.db;
+      new_state.labelTopics = StaticLabels.LabelTopics;
       return new_state;
     }
     case Actions.SET_SESSION_DB_INFO: {
       new_state.db = action.db;
+      return new_state;
+    }
+    case Actions.SET_SESSION_LABELS: {
+      try {
+        if (action.system === "ilr") {
+          new_state.labelsAll[new_state.languageCode][action.topic][action.key] = action.value;
+          if (action.language.endsWith(new_state.languageCode)) {
+            new_state.labels[action.topic][action.key] = action.value;
+          }
+        } else {
+          new_state.localLabelsAll[new_state.languageCode][action.topic][action.key] = action.value;
+          if (action.language.endsWith(new_state.languageCode)) {
+            new_state.localLabels[action.topic][action.key] = action.value;
+          }
+        }
+      } catch (err) {
+        console.log(err);
+      }
+      try {
+        if (! new_state.labelTopics[action.topic]){
+          new_state.labelTopics[action.topic] = action.topic;
+        }
+      } catch (err) {
+        console.log(err);
+      }
+
       return new_state;
     }
     case Actions.SET_SESSION_REST_SERVER: {
@@ -66,8 +111,8 @@ export default function session(
     }
     case Actions.SET_SESSION_LANGUAGE_CODE: {
       new_state.languageCode = action.code;
-      new_state.labels = Labels.getAllLabels(action.code);
-      new_state.localLabels = LocalLabels.getAllLabels(action.code);
+      new_state.labels = new_state.labelsAll[action.code];
+      new_state.localLabels = new_state.localLabelsAll[action.code];
       return new_state;
     }
     case Actions.SET_SESSION_USER_LOGIN: {
@@ -101,6 +146,11 @@ export default function session(
       new_state.userInfo = userInfo;
       new_state.uiSchemas = action.uiSchema;
       new_state.dropdowns = action.dropdowns;
+      new_state.labelsAll = action.labelsAll;
+      new_state.localLabelsAll = action.localLabelsAll;
+      new_state.labels = action.labelsAll[new_state.languageCode];
+      new_state.localLabels = action.localLabelsAll[new_state.languageCode];
+      new_state.labelTopics = action.labelTopics;
       return new_state;
     }
     default: {

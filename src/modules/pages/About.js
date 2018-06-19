@@ -4,7 +4,6 @@ import Email from "../components/images/SsEmailContact"
 import {AboutDatabase, Configuration} from 'ioc-liturgical-react'
 import VersionNumbers from "../../config/VersionNumbers";
 import { connect } from 'react-redux';
-import LocalLabels from '../../labels/LocalLabels';
 import { Jumbotron, PageHeader } from 'react-bootstrap';
 import YouTube from 'react-youtube';
 import PrivacyAndUse from './PrivacyAndUse';
@@ -12,9 +11,14 @@ import PrivacyAndUse from './PrivacyAndUse';
 class About extends React.Component {
   constructor(props) {
     super(props);
+
+    let labels = props.app.session.localLabels;
+    let labelTopics = props.app.session.labelTopics;
+
+    console.log(props);
     this.state = {
       labels: {
-        about: LocalLabels.getAboutOlwLabels(props.app.session.languageCode)
+        about: labels[labelTopics.about]
       }
       , presentations: {
         aristotle2018: "https://liml.org/static/presentations/2018-06-04-Colburn-Olw.pdf"
@@ -38,10 +42,12 @@ class About extends React.Component {
     this.getCommentaryVideo = this.getCommentaryVideo.bind(this);
   }
   componentWillReceiveProps = (nextProps) => {
+    let labels = nextProps.app.session.localLabels;
+    let labelTopics = nextProps.app.session.labelTopics;
     this.setState(
         {
           labels: {
-            about: LocalLabels.getAboutOlwLabels(nextProps.app.session.languageCode)
+            about: labels[labelTopics.about]
           }
         }
     )
@@ -135,19 +141,16 @@ class About extends React.Component {
               <li className="App-about-list-item"><a href={this.state.presentations.aristotle2018}>2018.06.04 - {this.state.labels.about.liturgics}. {this.state.labels.about.aristotle}.</a></li>
             </ol>
           </Jumbotron>
-          <AboutDatabase labels={this.props.app.session.labels.pageAbout}/>
+          <AboutDatabase
+              session={this.props.app.session}
+          />
           <PrivacyAndUse/>
           {this.props.app.session.labels.pageAbout.contact} <Email />
           <p/>
           <Configuration
+            session={this.props.app.session}
             appVersion={version}
-            appVersionLabel={this.props.app.session.labels.pageAbout.appVersion}
             restServer={server.getWsServerPath()}
-            restServerLabel={this.props.app.session.labels.pageAbout.RestServer}
-            wsVersionLabel={this.props.app.session.labels.pageAbout.wsVersion}
-            dbServerLabel={this.props.app.session.labels.pageAbout.DbServer}
-            synchEnabledLabel={this.props.app.session.labels.pageAbout.synchEnabled}
-            synchDbConnectionOkLabel={this.props.app.session.labels.pageAbout.synchDbConnectionOk}
         />
       </div>
     )

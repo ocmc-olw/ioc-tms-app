@@ -11,14 +11,16 @@ import {
   , Well
 } from 'react-bootstrap';
 
-import LocalLabels from "../../labels/LocalLabels";
-
 export class Help extends React.Component {
   constructor(props) {
     super(props);
+
+    let labels = props.app.session.localLabels;
+    let labelTopics = props.app.session.labelTopics;
+
     this.state = {
       labels: {
-        thisClass: LocalLabels.getHelpLabels(props.app.session.languageCode)
+        thisClass: labels[labelTopics.help]
       }
       , videoId: {
         createNote: "xSm56wJBdWk"
@@ -38,10 +40,12 @@ export class Help extends React.Component {
     };
   }
   componentWillReceiveProps = (nextProps) => {
+    let labels = nextProps.app.session.localLabels;
+    let labelTopics = nextProps.app.session.labelTopics;
     this.setState(
         {
           labels: {
-            thisClass: LocalLabels.getHelpLabels(nextProps.app.session.languageCode)
+            thisClass: labels[labelTopics.help]
           }
         }
     )
@@ -142,7 +146,7 @@ export class Help extends React.Component {
               text={this.state.labels.thisClass.videoDailyReadingsText}
           />
         </Accordion>
-        <HelpSearch labels={this.props.app.session.labels.help.search}/>
+        <HelpSearch session={this.props.app.session}/>
       </div>
     )
   }
