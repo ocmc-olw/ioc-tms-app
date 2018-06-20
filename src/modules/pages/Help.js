@@ -36,6 +36,7 @@ export class Help extends React.Component {
         , searchNotes: "QOeiwGjs3vo"
         , selectService: "WM6aPV6cNZg"
         , logon: "dwtervZaeQo"
+        , labelEditor: "0KlOmmlGV4o"
       }
     };
   }
@@ -144,6 +145,12 @@ export class Help extends React.Component {
               title={this.state.labels.thisClass.videoDailyReadings}
               videoId={this.state.videoId.dailyReadings}
               text={this.state.labels.thisClass.videoDailyReadingsText}
+          />
+          <YoutubeVideoPanel
+              eventKey={"videoLabelEdtior"}
+              title={this.state.labels.thisClass.videoLabelEditor}
+              videoId={this.state.videoId.labelEditor}
+              text={this.state.labels.thisClass.videoLabelEditorText}
           />
         </Accordion>
         <HelpSearch session={this.props.app.session}/>

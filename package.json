@@ -1,6 +1,6 @@
 {
   "name": "ocmc-olw",
-  "version": "2018.06.19.5",
+  "version": "2018.06.20.1",
   "private": true,
   "license": "EPL-1.0",
   "devDependencies": {
