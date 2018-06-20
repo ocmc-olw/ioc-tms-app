@@ -4,12 +4,13 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import {Administrator} from 'ioc-liturgical-react';
+import { ActivityLister, Administrator } from 'ioc-liturgical-react';
 
 class Admin extends React.Component {
   render() {
     return (
     <div className="App-page-admin"><p>Admin page...</p>
+      <ActivityLister session={this.props.app.session}/>
       <Administrator
           session={this.props.app.session}
       />

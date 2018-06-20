@@ -588,6 +588,7 @@ div.App-logo.navbar-header {
     padding-top: 10px;
 }
 .App-data-tr {
+    cursor: pointer;
     max-width: 90%;
 }
 

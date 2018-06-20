@@ -3538,9 +3538,9 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-ioc-liturgical-react@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.7.0.tgz#f2c576cfb40ca34f21ab550de7734e14ffce886a"
+ioc-liturgical-react@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.7.1.tgz#384a33bb5e0198ca4657a0ebf0f6686a18e4e84b"
   dependencies:
     "@tinymce/tinymce-react" "^2.1.3"
     axios "^0.15.3"
@@ -3563,6 +3563,7 @@ ioc-liturgical-react@^0.7.0:
     jquery "^3.2.1"
     json2csv "^3.11.5"
     lodash "^4.17.4"
+    moment "^2.22.2"
     orgchart "2.0.4"
     prop-types "^15.5.10"
     react "^15.5.4"
@@ -4657,6 +4658,10 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+moment@^2.22.2:
+  version "2.22.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
 
 ms@2.0.0:
   version "2.0.0"
