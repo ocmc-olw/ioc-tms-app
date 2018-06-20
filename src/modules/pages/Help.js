@@ -147,7 +147,7 @@ export class Help extends React.Component {
               text={this.state.labels.thisClass.videoDailyReadingsText}
           />
           <YoutubeVideoPanel
-              eventKey={"videoLabelEdtior"}
+              eventKey={"videoLabelEditor"}
               title={this.state.labels.thisClass.videoLabelEditor}
               videoId={this.state.videoId.labelEditor}
               text={this.state.labels.thisClass.videoLabelEditorText}

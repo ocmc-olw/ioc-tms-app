@@ -10,6 +10,8 @@ import LabelTopics from '../labels/LabelTopics';
 // After a user logs in, we replace these labels
 // with ones sent to us by the server.
 const staticLabels = new StaticLabels();
+const localLabels = new LocalLabels();
+
 let labelTopics = {};
 for (var p in LabelTopics) {
   if (LabelTopics.hasOwnProperty(p)) {
@@ -24,8 +26,8 @@ export default function session(
       , labelTopics: labelTopics
       , labelsAll: staticLabels.labelsJson
       , labels: staticLabels.labelsJson["en"]
-      , localLabels: LocalLabels.getAllLabels("en")
-      , localLabelsAll: LocalLabels.localLabels
+      , localLabels: localLabels.labelsJson["en"]
+      , localLabelsAll: localLabels.labelsJson
       , userInfo: new User()
       , uiSchemas: {
         formsDropdown: []
