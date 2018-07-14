@@ -33,6 +33,7 @@ export default function session(
         formsDropdown: []
         , formsSchemas: {}
         , forms: {}
+        , adminForms: {}
       }
       , dropdowns: {
         formsLoaded: false

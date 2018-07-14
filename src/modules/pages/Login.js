@@ -93,6 +93,7 @@ class Login extends React.Component {
         forms.formsDropdown
         , forms.valueSchemas
         , forms.values
+        , forms.adminForms
     );
     let dropdowns = {
       biblicalBooksDropdown: forms.biblicalBooksDropdown
