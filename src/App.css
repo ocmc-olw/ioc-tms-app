@@ -579,10 +579,12 @@ div.App-logo.navbar-header {
     width: 45ch;
 }
 .App-TokenTagger-Lemma {
- width: 45ch;
+    width: 45ch;
+    padding-left: 8pt;
 }
 .App-TokenTagger-Gloss {
     width: 45ch;
+    padding-left: 8pt;
 }
 .App-Label-Selector-Help {
     padding-top: 10px;
@@ -1099,4 +1101,36 @@ App-header-flag-ico {
 }
 .App-calendar {
     margin: 5vw;
+}
+
+
+.App-Label-Editor-Row {
+    margin-top: 20px;
+}
+.App-Label-Editor-New-Key {
+    margin-bottom: 10px;
+}
+.App-Label-Editor-New-Value {
+    margin-bottom: 10px;
+}
+
+.App-Domain-Builder-Well {
+    width: 66vw;
+}
+.App-Domain-Builder {
+    margin-top: 20px;
+}
+.App-Domain-Builder-Checkbox {
+    margin-top: -18px;
+}
+.editMessage {
+    color: red;
+}
+
+.App-Tagger-Tabs {
+    margin-top: 12px;
+    margin-left: 20px;
+}
+.App-Token-Tagger-OED-glyphicon {
+    margin-left: 20px;
 }
