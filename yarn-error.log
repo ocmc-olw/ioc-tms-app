@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.7.3.tgz: Request failed "404 Not Found"
+  Error: https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.7.8.tgz: Request failed "404 Not Found"
       at ResponseError.ExtendableBuiltin (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:218:66)
       at new ResponseError (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:324:124)
       at Request.<anonymous> (/usr/local/Cellar/yarn/1.7.0/libexec/lib/cli.js:62463:26)
@@ -29,7 +29,7 @@ Trace:
 npm manifest: 
   {
     "name": "ocmc-olw",
-    "version": "2018.06.20.4",
+    "version": "2018.07.30.1",
     "private": true,
     "license": "EPL-1.0",
     "devDependencies": {
@@ -42,7 +42,7 @@ npm manifest:
       "bootstrap-select": "^1.12.1",
       "file-loader": "^0.10.0",
       "font-awesome": "^4.7.0",
-      "ioc-liturgical-react": "^0.7.3",
+      "ioc-liturgical-react": "^0.7.8",
       "jest-cli": "^20.0.4",
       "neo4j-driver": "^1.0.4",
       "pkginfo": "^0.4.0",
@@ -3465,6 +3465,10 @@ Lockfile:
     version "0.0.1"
     resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-0.0.1.tgz#3f91365cabe60b77ed0ebba24b454e3e09d95a82"
   
+  i18n-iso-countries@^3.7.0:
+    version "3.7.3"
+    resolved "https://registry.yarnpkg.com/i18n-iso-countries/-/i18n-iso-countries-3.7.3.tgz#ed4140483ce8ba72effc726fd043e6fea6f9092c"
+  
   iconv-lite@0.4.13:
     version "0.4.13"
     resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.13.tgz#1f88aba4ab0b1508e8312acc39345f36e992e2f2"
@@ -3617,9 +3621,9 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
   
-  ioc-liturgical-react@^0.7.2:
-    version "0.7.2"
-    resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.7.2.tgz#cb0574cdb186a10579b540d6313342393c36acd7"
+  ioc-liturgical-react@^0.7.7:
+    version "0.7.7"
+    resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.7.7.tgz#583290928711ef418c96cc5c154d8f997373a3c3"
     dependencies:
       "@tinymce/tinymce-react" "^2.1.3"
       axios "^0.15.3"
@@ -3638,9 +3642,11 @@ Lockfile:
       fs-promise "^0.5.0"
       greek-utils "^1.2.1"
       html-to-draftjs "^1.3.0"
+      i18n-iso-countries "^3.7.0"
       immutable "^3.8.2"
       jquery "^3.2.1"
       json2csv "^3.11.5"
+      langs "^2.0.0"
       lodash "^4.17.4"
       moment "^2.22.2"
       orgchart "2.0.4"
@@ -4355,6 +4361,10 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/klaw/-/klaw-1.3.1.tgz#4088433b46b3b1ba259d78785d8e96f73ba02439"
     optionalDependencies:
       graceful-fs "^4.1.9"
+  
+  langs@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/langs/-/langs-2.0.0.tgz#00c32ce48152a49a614450b9ba2632ab58a0a364"
   
   latest-version@^2.0.0:
     version "2.0.0"
