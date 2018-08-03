@@ -21,6 +21,59 @@ var getWsServer = () => {
   }
 };
 
+const restGetAddress = (callback) => {
+  return new Promise((resolve, reject) => {
+    let path = "https://api.ipify.org/?format=json";
+    let result = {
+      ip: ""
+      , status: 0
+    };
+
+    axios.get(path)
+        .then(response => {
+          result.status = response.status;
+          result.ip = response.data.ip;
+          callback(result);
+        })
+        .catch((error) => {
+          result.status = error.status;
+          callback(result);
+        });
+  })
+};
+
+const restGetLocation = (address, callback) => {
+  return new Promise((resolve, reject) => {
+    let path = "http://ip-api.com/json/" + address;
+
+    let result = {
+      location: ""
+      , status: 0
+    };
+
+    axios.get(path)
+        .then(response => {
+          result.status = response.status;
+          result.location = response.data.countryCode
+              + "|"
+              + response.data.country
+              + "|"
+              + response.data.region
+              + "|"
+              + response.data.regionName
+              + "|"
+              + response.data.city
+          ;
+          callback(result);
+        })
+        .catch((error) => {
+          result.status = error.status;
+          callback(result);
+        });
+  })
+};
+
+
 export default {
   getDbInfo: () => {
     return new Promise(function(resolve,reject) {
@@ -53,4 +106,20 @@ export default {
   , getWsServerPath: () => { return getWsServer();}
   , getWsServerAdminApi: () => { return getWsServer() + adminApi;}
   , getWsServerDbApi: () => { return getWsServer() + dbApi;}
+  , restGetAddress: (
+      callback
+  ) => {
+    return restGetAddress(
+        callback
+    );
+  }
+  , restGetLocation: (
+      address
+      , callback
+  ) => {
+    return restGetLocation(
+        address
+        , callback
+    );
+  }
 }

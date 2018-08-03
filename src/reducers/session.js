@@ -23,6 +23,7 @@ export default function session(
     state = {
       restServer: ""
       , languageCode: "en"
+      , location: "country|countryCode|region|regionName|countryCode|city"
       , labelTopics: labelTopics
       , labelsAll: staticLabels.labelsJson
       , labels: staticLabels.labelsJson["en"]
@@ -116,6 +117,10 @@ export default function session(
       new_state.languageCode = action.code;
       new_state.labels = new_state.labelsAll[action.code];
       new_state.localLabels = new_state.localLabelsAll[action.code];
+      return new_state;
+    }
+    case Actions.SET_SESSION_LOCATION: {
+      new_state.location = action.location;
       return new_state;
     }
     case Actions.SET_SESSION_USER_LOGIN: {

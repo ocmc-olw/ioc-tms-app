@@ -7,6 +7,8 @@ import Hymnographers from '../components/images/Hymnographers';
 import KenyaDeaconCensing from '../components/images/KenyaDeaconCensing';
 import Scriptorium from '../components/images/Scriptorium';
 import {Alert, Glyphicon, Col, Grid, Jumbotron, Row} from 'react-bootstrap'
+import Server from '../../config/server';
+import Actions from "../../reducers/actionTypes";
 
 class Home extends React.Component {
 
@@ -22,7 +24,11 @@ class Home extends React.Component {
         thisClass: labels[labelTopics.home]
       }
       , location: document.location.hostname // "liml.org"
-    }
+    };
+    this.fetchAddress = this.fetchAddress.bind(this);
+    this.handleAddressCallback = this.handleAddressCallback.bind(this);
+    this.handleLocationCallback = this.handleLocationCallback.bind(this);
+
   };
 
   componentWillReceiveProps = (nextProps) => {
@@ -38,10 +44,35 @@ class Home extends React.Component {
     })
   };
 
+  componentDidMount = () => {
+    this.fetchAddress();
+  };
 
+  fetchAddress = () => {
+    Server.restGetAddress(this.handleAddressCallback);
+  };
+
+  handleAddressCallback = (restCallResult) => {
+    if (restCallResult) {
+      if (restCallResult.status === 200) {
+        Server.restGetLocation(restCallResult.ip, this.handleLocationCallback);
+      }
+    }
+  };
+
+  handleLocationCallback = (restCallResult) => {
+    console.log(restCallResult);
+    if (restCallResult && restCallResult.status === 200) {
+      this.props.dispatch(
+          {
+            type: Actions.SET_SESSION_LOCATION
+            , location: restCallResult.location
+          }
+      );
+    }
+  };
 
   render() {
-    console.log(this.state.location);
     if (this.state.location === "olw.thescriptorium.us") {
       return (
           <div className="App-page App-home">
