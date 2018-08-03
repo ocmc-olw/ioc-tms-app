@@ -44,8 +44,7 @@ const restGetAddress = (callback) => {
 
 const restGetLocation = (address, callback) => {
   return new Promise((resolve, reject) => {
-    let path = "http://ip-api.com/json/" + address;
-
+    let path = "https://ipapi.co/" + address + "/json/";
     let result = {
       location: ""
       , status: 0
@@ -53,14 +52,14 @@ const restGetLocation = (address, callback) => {
 
     axios.get(path)
         .then(response => {
-          result.status = response.status;
-          result.location = response.data.countryCode
+          result.status = 200;
+          result.location = response.data.country
               + "|"
-              + response.data.country
+              + response.data.country_name
+              + "|"
+              + response.data.region_code
               + "|"
               + response.data.region
-              + "|"
-              + response.data.regionName
               + "|"
               + response.data.city
           ;

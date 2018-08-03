@@ -168,6 +168,7 @@ class Login extends React.Component {
                 formPrompt={this.props.app.session.labels.pageLogin.prompt}
                 formMsg={this.state.loginFormMsg}
                 dropdownsCallback={this.handleDropdownsCallback}
+                location={this.props.app.session.location}
             />
             {this.getTerms()}
           </div>

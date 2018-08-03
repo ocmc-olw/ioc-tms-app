@@ -61,7 +61,6 @@ class Home extends React.Component {
   };
 
   handleLocationCallback = (restCallResult) => {
-    console.log(restCallResult);
     if (restCallResult && restCallResult.status === 200) {
       this.props.dispatch(
           {
