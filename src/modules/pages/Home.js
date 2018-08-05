@@ -55,23 +55,30 @@ class Home extends React.Component {
   handleAddressCallback = (restCallResult) => {
     if (restCallResult) {
       if (restCallResult.status === 200) {
+        console.log(restCallResult.ip);
         Server.restGetLocation(restCallResult.ip, this.handleLocationCallback);
+      } else {
+        console.log(restCallResult);
       }
     }
   };
 
   handleLocationCallback = (restCallResult) => {
-    if (restCallResult && restCallResult.status === 200) {
+    if (restCallResult && restCallResult.status === 200 && restCallResult.location) {
+      console.log(restCallResult.location);
       this.props.dispatch(
           {
             type: Actions.SET_SESSION_LOCATION
             , location: restCallResult.location
           }
       );
+    } else if (restCallResult) {
+      console.log(restCallResult);
     }
   };
 
   render() {
+    console.log(this.state.location);
     if (this.state.location === "olw.thescriptorium.us") {
       return (
           <div className="App-page App-home">
