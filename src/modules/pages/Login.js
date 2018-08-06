@@ -88,7 +88,6 @@ class Login extends React.Component {
 
     let forms = response.data;
     let domains = forms.domains;
-    console.log(domains);
     let uiSchemas = new UiSchemas(
         forms.formsDropdown
         , forms.valueSchemas

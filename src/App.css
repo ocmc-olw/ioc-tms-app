@@ -1134,3 +1134,11 @@ App-header-flag-ico {
 .App-Token-Tagger-OED-glyphicon {
     margin-left: 20px;
 }
+.App-Modal-Close-Button {
+    float: left;
+    margin-left: -15px;
+    margin-top: 4px;
+}
+.App-Pub-Date-Selector {
+    margin-bottom: 5px;
+}
