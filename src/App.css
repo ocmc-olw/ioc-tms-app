@@ -29,6 +29,10 @@ div.container {
 div.well {
     max-width: 95vw;
 }
+.App-HyperToken-Word {
+    padding-bottom: 15px;
+    display: flex !important;
+}
 span {
     padding-left: 0px !important;
     margins: 0px;
