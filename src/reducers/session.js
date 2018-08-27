@@ -129,6 +129,7 @@ export default function session(
     }
     case Actions.SET_SESSION_USER_LOGOUT: {
       new_state.userInfo = new User();
+      new_state.displayAdditionalMenus = false;
       return new_state;
     }
     case Actions.SET_SESSION_UI_SCHEMAS: {
@@ -151,6 +152,7 @@ export default function session(
           , action.domains
           , new_state.userInfo.prefs
       );
+      new_state.displayAdditionalMenus = true;
       new_state.userInfo = userInfo;
       new_state.uiSchemas = action.uiSchema;
       new_state.dropdowns = action.dropdowns;

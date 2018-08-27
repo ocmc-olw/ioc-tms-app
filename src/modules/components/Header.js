@@ -68,20 +68,20 @@ export class Header extends React.Component {
             </Navbar.Header>
             <Navbar.Collapse>
               <Nav>
-                {this.props.app.session.userInfo.authenticated
+                {this.props.app.session.displayAdditionalMenus
                   && this.props.app.session.userInfo.username === "wsadmin" ?
                     <LinkContainer to="/add">
                       <NavItem className="App-nav-item" eventKey={"add"}>{<FontAwesome className="App-header-ico"  name="plus"/>} {this.props.app.session.localLabels.add.menu}</NavItem>
                     </LinkContainer>
                     : ""
                 }
-                {this.props.app.session.userInfo.authenticated ?
+                {this.props.app.session.displayAdditionalMenus ?
                     <NavDropdown eventKey={"edit"} title={<span><FontAwesome  className="App-header-ico" name="pencil-square-o"/> {this.props.app.session.localLabels.edit.menu}</span>} id="notes-nav-dropdown">
                       <LinkContainer to="/editages"><NavItem className="App-submenu-item" eventKey={"edit.ages"} >{this.props.app.session.localLabels.edit.itemAges}</NavItem></LinkContainer>
                       {/*<LinkContainer to="/editoslw"><NavItem  className="App-submenu-item" eventKey={"edit.oslw"} >{this.props.app.session.localLabels.edit.itemOslw}</NavItem></LinkContainer>*/}
                       <LinkContainer to="/edittopic"><NavItem  className="App-submenu-item" eventKey={"edit.topic"} >{this.props.app.session.localLabels.edit.itemTopic}</NavItem></LinkContainer>
                       <MenuItem divider/>
-                      {this.props.app.session.userInfo.authenticated
+                      {this.props.app.session.displayAdditionalMenus
                       && this.props.app.session.userInfo.domains.isLabelEditor ?
                           <LinkContainer to="/editlabels"><NavItem  className="App-submenu-item" eventKey={"edit.labels"} >{this.props.app.session.localLabels.edit.itemLabels}</NavItem></LinkContainer>
                           : ""
@@ -91,7 +91,7 @@ export class Header extends React.Component {
                     :
                     ""
                 }
-                {this.props.app.session.userInfo.authenticated ?
+                {this.props.app.session.displayAdditionalMenus ?
                     <NavDropdown eventKey={"generate"} title={<span><FontAwesome  className="App-header-ico" name="cogs"/> {this.props.app.session.localLabels.generate.menu}</span>} id="notes-nav-dropdown">
                       <LinkContainer to="/generateages"><NavItem className="App-submenu-item" eventKey={"generate.ages"} >{this.props.app.session.localLabels.generate.itemAges}</NavItem></LinkContainer>
                       {/*<LinkContainer to="/generateoslw"><NavItem  className="App-submenu-item" eventKey={"generate.oslw"} >{this.props.app.session.localLabels.generate.itemOslw}</NavItem></LinkContainer>*/}
@@ -99,7 +99,7 @@ export class Header extends React.Component {
                     :
                     ""
                 }
-                {this.props.app.session.userInfo.authenticated ?
+                {this.props.app.session.displayAdditionalMenus ?
                     <NavDropdown eventKey={"search"} title={<span><FontAwesome  className="App-header-ico" name="search"/> {this.props.app.session.localLabels.search.menu}</span>} id="notes-nav-dropdown">
                       <LinkContainer to="/searchontology"><NavItem  className="App-submenu-item" eventKey={"search.ontology"} >{<FontAwesome className="App-header-sub-item-ico"  name="sitemap"/>}{this.props.app.session.localLabels.search.itemOntology}</NavItem></LinkContainer>
                       <LinkContainer to="/searchnotes"><NavItem  className="App-submenu-item" eventKey={"search.notes"} >{<FontAwesome className="App-header-sub-item-ico"  name="comment-o"/>}{this.props.app.session.localLabels.search.itemNote}</NavItem></LinkContainer>
@@ -112,14 +112,14 @@ export class Header extends React.Component {
                     </NavDropdown>
                     :
                     <NavDropdown eventKey={"search"} title={<span><FontAwesome  className="App-header-ico" name="search"/> {this.props.app.session.localLabels.search.menu}</span>} id="notes-nav-dropdown">
-                      {this.props.app.session.userInfo.authenticated && this.props.app.session.userInfo.domains.isSuperAdmin ?
+                      {this.props.app.session.displayAdditionalMenus && this.props.app.session.userInfo.domains.isSuperAdmin ?
                           <LinkContainer to="/calendar"><NavItem  className="App-submenu-item" eventKey={"search.calendar"} >{<FontAwesome className="App-header-sub-item-ico"  name="calendar"/>}Calendar</NavItem></LinkContainer>
                       : ""
                       }
                       <LinkContainer to="/searchtext"><NavItem  className="App-submenu-item" eventKey={"search.text"} >{<FontAwesome className="App-header-sub-item-ico"  name="file-text-o"/>}{this.props.app.session.localLabels.search.itemText}</NavItem></LinkContainer>
                     </NavDropdown>
                 }
-                {this.props.app.session.userInfo.authenticated
+                {this.props.app.session.displayAdditionalMenus
                   && this.props.app.session.userInfo.domains.isSuperAdmin ?
                     <LinkContainer to="/admin">
                       <NavItem eventKey={5}>{<FontAwesome className="App-header-ico"  name="lock"/>} {this.props.app.session.localLabels.administer.menu}</NavItem>
@@ -136,7 +136,7 @@ export class Header extends React.Component {
                   <MenuItem eventKey={7.1} id="el" onClick={this.handleLanguageChange}>el - Ελληνικά</MenuItem>
                   <MenuItem eventKey={7.2} id="en" onClick={this.handleLanguageChange}>en - English</MenuItem>
                 </NavDropdown>
-                {this.props.app.session.userInfo.authenticated ?
+                {this.props.app.session.displayAdditionalMenus ?
                     <NavDropdown className="App-nav-dropdown" eventKey={8} title={<FontAwesome  className="App-header-ico" name="user-o"/>} id="basic-nav-dropdown">
                       <LinkContainer to="/download"><NavItem eventKey={8.1} >{<Glyphicon glyph="download-alt"/>} {this.props.app.session.labels.header.myRecords}</NavItem></LinkContainer>
                       <LinkContainer to="/password"><NavItem eventKey={8.2} >{<FontAwesome className="App-header-ico"  name="key"/>} {this.props.app.session.labels.header.password}</NavItem></LinkContainer>

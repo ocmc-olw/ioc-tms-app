@@ -2,7 +2,7 @@
  * Created by mac002 on 12/7/16.
  */
 import React from 'react';
-import {Login as IocLogin, UiSchemas, User} from 'ioc-liturgical-react'
+import {Login as IocLogin, Spinner, UiSchemas, User} from 'ioc-liturgical-react'
 import server from '../../config/server';
 import { connect } from 'react-redux';
 import Actions from '../../reducers/actionTypes';
@@ -28,6 +28,7 @@ class Login extends React.Component {
     this.getLogin = this.getLogin.bind(this);
     this.handleAgreementChange = this.handleAgreementChange.bind(this);
     this.handleDropdownsCallback = this.handleDropdownsCallback.bind(this);
+    this.getDropdownsLoading = this.getDropdownsLoading.bind(this);
     this.getTerms = this.getTerms.bind(this);
   }
 
@@ -72,6 +73,7 @@ class Login extends React.Component {
           {
             userInfo: userInfo
             , loginFormMsg: theStatusMsg
+            , fetchingDropdowns: true
           }
       );
     } else {
@@ -79,6 +81,7 @@ class Login extends React.Component {
       this.setState(
           {
             loginFormMsg: theStatusMsg
+            , fetchingDropdowns: false
           }
       );
     }
@@ -129,11 +132,24 @@ class Login extends React.Component {
           , localLabelsAll: forms.uiLabels["olw"]
           , labelTopics: forms.uiLabelTopics
         }
-    )
+    );
   };
 
   handleAgreementChange = (evt) => {
       this.setState({ agree: evt.target.checked });
+  };
+
+  getDropdownsLoading = () => {
+    if (this.props.app.session.displayAdditionalMenus) {
+      return (<span></span>)
+    } else {
+      if (this.state.fetchingDropdowns) {
+        return (
+            <Spinner message={this.state.labels.thisClass.preparingApp}/>      );
+      } else {
+        return (<span></span>)
+      }
+    }
   };
 
   getTerms = () => {
@@ -169,7 +185,7 @@ class Login extends React.Component {
                 dropdownsCallback={this.handleDropdownsCallback}
                 location={this.props.app.session.location}
             />
-            {this.getTerms()}
+            {this.getDropdownsLoading()}
           </div>
       );
     } else {
