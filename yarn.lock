@@ -3542,9 +3542,9 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-ioc-liturgical-react@^0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.8.1.tgz#6186b25428658d95e2d65d13ce6c2a7738d46e79"
+ioc-liturgical-react@^0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-0.8.4.tgz#595a11d9c76e0696eb91d7e4c98a6ded881471bd"
   dependencies:
     "@tinymce/tinymce-react" "^2.1.3"
     axios "^0.15.3"
@@ -3587,6 +3587,7 @@ ioc-liturgical-react@^0.8.1:
     react-rte "^0.16.0"
     react-select "^1.0.0-rc.5"
     react-sortable-tree "^1.5.2"
+    react-splitter-layout "^3.0.1"
     react-virtualized-select "^3.1.0"
     react-youtube "^7.6.0"
     svgo "^0.7.2"
@@ -6098,6 +6099,10 @@ react-sortable-tree@^1.5.2:
     react-dnd-html5-backend "2.5.4"
     react-dnd-scrollzone "^4.0.0"
     react-virtualized "^9.16.1"
+
+react-splitter-layout@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-splitter-layout/-/react-splitter-layout-3.0.1.tgz#c2e00e69b35d240ab7a44f395d41803c5f4b70ef"
 
 react-themeable@^1.1.0:
   version "1.1.0"
