@@ -6,7 +6,8 @@ import { connect } from 'react-redux';
 import Hymnographers from '../components/images/Hymnographers';
 import KenyaDeaconCensing from '../components/images/KenyaDeaconCensing';
 import Scriptorium from '../components/images/Scriptorium';
-import {Alert, Glyphicon, Col, Grid, Jumbotron, Row} from 'react-bootstrap'
+import {Alert, Glyphicon, Col, Grid, Jumbotron, Row, Well} from 'react-bootstrap'
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import Server from '../../config/server';
 import Actions from "../../reducers/actionTypes";
 
@@ -125,6 +126,7 @@ class Home extends React.Component {
                   <Col xs={8} md={8}>
                     <p> {this.state.labels.thisClass.p1}</p>
                     <p> {this.state.labels.thisClass.p2}</p>
+                    <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />Please check the Tweets at the bottom of the page for important announcements or news.</Alert>
                     <Alert bsStyle="warning"><Glyphicon glyph="warning-sign" /> This web application should be used with Google Chrome or Apple Safari. If you use it with another browser it might not work properly.</Alert>
                     <Alert bsStyle="warning"><Glyphicon glyph="warning-sign" /> {this.state.labels.thisClass.msg1}</Alert>
                     <Alert bsStyle="info"><Glyphicon glyph="bullhorn" /> If you want to work with us to add your language to the user interface, or the translation of the liturgical texts in your language, please contact us. We are especially looking for volunteers to translate the user interface for this website into: Arabic, Chinese, French, Spanish, and Swahili. Also, we are looking for volunteers to enter officially approved Arabic, Chinese, French, Spanish, and Swahili translations of the liturgical texts. See how to contact us by looking at the bottom of the About page.</Alert>
@@ -135,6 +137,14 @@ class Home extends React.Component {
                 </Row>
               </Grid>
             </Jumbotron>
+            <Well>
+              <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+              <TwitterTimelineEmbed
+                  sourceType="profile"
+                  screenName="olw_ocmc"
+                  options={{height: 400}}
+              />
+            </Well>
           </div>
       );
     }
