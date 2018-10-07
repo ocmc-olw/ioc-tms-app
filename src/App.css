@@ -1146,3 +1146,6 @@ App-header-flag-ico {
 .App-Pub-Date-Selector {
     margin-bottom: 5px;
 }
+p.timeline-Tweet-text {
+    font-size: small !important;
+}

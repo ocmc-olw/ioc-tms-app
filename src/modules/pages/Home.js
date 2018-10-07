@@ -142,7 +142,7 @@ class Home extends React.Component {
               <TwitterTimelineEmbed
                   sourceType="profile"
                   screenName="olw_ocmc"
-                  options={{height: 400}}
+                  options={{height: 400, width: 545}}
               />
             </Well>
           </div>
