@@ -1149,3 +1149,6 @@ App-header-flag-ico {
 p.timeline-Tweet-text {
     font-size: small !important;
 }
+.App-Form-Delete-Button {
+    margin-left: 100px;
+}
