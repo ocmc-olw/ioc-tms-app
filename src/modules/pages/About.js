@@ -83,7 +83,7 @@ class About extends React.Component {
           <PageHeader>{this.state.labels.about.title}</PageHeader>
           <Jumbotron>
             <p>{this.state.labels.about.p1}
-            <a rel="noopener noreferrer" href="http://www.ocmc.org/" target="_blank"> (OCMC)</a>
+            <a rel="noopener noreferrer" href="https://www.ocmc.org/" target="_blank"> (OCMC)</a>
             </p>
             <p>{this.state.labels.about.p2}</p>
             <p>{this.state.labels.about.p3}</p>

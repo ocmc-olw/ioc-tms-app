@@ -1,7 +1,7 @@
 import labelsJson from './labels.json';
 import LabelTopics from './LabelTopics';
 // To produce labels.json and LabelTopics.js,
-//   run ioc-liturgical-ws net.ages.alwb.utils.transformers.LabelsNeoToJson
+//   run ioc-liturgical-ws net.ages.alwb.utils.transformers.RunToWriteUiLabelsToWebStormProject
 // Note that labels.json is replaced once the user logs on.
 
 class LocalLabels {
