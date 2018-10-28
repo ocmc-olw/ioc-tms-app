@@ -114,6 +114,8 @@ export default function session(
       return new_state;
     }
     case Actions.SET_SESSION_LANGUAGE_CODE: {
+      console.log(action.code);
+      console.log(new_state.labelsAll[action.code]);
       new_state.languageCode = action.code;
       new_state.labels = new_state.labelsAll[action.code];
       new_state.localLabels = new_state.localLabelsAll[action.code];

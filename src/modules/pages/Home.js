@@ -6,8 +6,8 @@ import { connect } from 'react-redux';
 import Hymnographers from '../components/images/Hymnographers';
 import KenyaDeaconCensing from '../components/images/KenyaDeaconCensing';
 import Scriptorium from '../components/images/Scriptorium';
-import {Alert, Glyphicon, Col, Grid, Jumbotron, Row} from 'react-bootstrap'
-//import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import {Alert, Glyphicon, Col, Grid, Jumbotron, Row, Well} from 'react-bootstrap'
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import Server from '../../config/server';
 import Actions from "../../reducers/actionTypes";
 
@@ -137,14 +137,14 @@ class Home extends React.Component {
                 </Row>
               </Grid>
             </Jumbotron>
-            {/*<Well>*/}
-              {/*<script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>*/}
-              {/*<TwitterTimelineEmbed*/}
-                  {/*sourceType="profile"*/}
-                  {/*screenName="olw_ocmc"*/}
-                  {/*options={{height: 400, width: 545}}*/}
-              {/*/>*/}
-            {/*</Well>*/}
+            <Well>
+              <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+              <TwitterTimelineEmbed
+                  sourceType="profile"
+                  screenName="olw_ocmc"
+                  options={{height: 400, width: 545}}
+              />
+            </Well>
           </div>
       );
     }
