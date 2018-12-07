@@ -1,6 +1,6 @@
 {
   "name": "ocmc-olw",
-  "version": "2018.11.28.1",
+  "version": "2018.12.07.01",
   "private": true,
   "license": "EPL-1.0",
   "devDependencies": {
@@ -13,7 +13,7 @@
     "bootstrap-select": "^1.12.1",
     "file-loader": "^0.10.0",
     "font-awesome": "^4.7.0",
-    "ioc-liturgical-react": "^0.9.5",
+    "ioc-liturgical-react": "^0.9.7",
     "jest-cli": "^20.0.4",
     "neo4j-driver": "^1.0.4",
     "pkginfo": "^0.4.0",
@@ -25,7 +25,7 @@
     "react-dom": "^15.6.1",
     "react-file-download": "^0.3.2",
     "react-fontawesome": "^1.5.0 ",
-    "react-jsonschema-form": "^0.41.2",
+    "react-jsonschema-form": "^1.0.6",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.2",
     "react-router-bootstrap": "^0.24.2",
