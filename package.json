@@ -1,6 +1,6 @@
 {
   "name": "ocmc-olw",
-  "version": "2018.12.07.01",
+  "version": "2018.12.08.01",
   "private": true,
   "license": "EPL-1.0",
   "devDependencies": {
@@ -13,7 +13,7 @@
     "bootstrap-select": "^1.12.1",
     "file-loader": "^0.10.0",
     "font-awesome": "^4.7.0",
-    "ioc-liturgical-react": "^0.9.7",
+    "ioc-liturgical-react": "^0.9.8",
     "jest-cli": "^20.0.4",
     "neo4j-driver": "^1.0.4",
     "pkginfo": "^0.4.0",
