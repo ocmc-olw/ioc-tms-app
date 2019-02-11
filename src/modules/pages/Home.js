@@ -95,7 +95,7 @@ class Home extends React.Component {
       return (
           <div className="App-page App-home">
             { this.props.app.session.db.domain ? <span></span>
-                : <Alert bsStyle="danger"><Glyphicon glyph="warning-sign" /> The application cannot be used at this time.  We apologize for the inconvenience. We are working to restore service as soon as possible.</Alert>
+                : <Alert bsStyle="danger"><Glyphicon glyph="warning-sign" />Loading the web page...  If you see this message, it can mean your Internet connection is slow, or that the back-end server is being restarted.  If this message does not disappear within two minutes, please reload the page.</Alert>
             }
             <Jumbotron>
               <Grid>
@@ -118,7 +118,7 @@ class Home extends React.Component {
       return (
           <div className="App-page App-home">
             { this.props.app.session.db.domain ? <span></span>
-              : <Alert bsStyle="danger"><Glyphicon glyph="warning-sign" /> The application cannot be used at this time.  We apologize for the inconvenience. We are working to restore service as soon as possible.</Alert>
+                : <Alert bsStyle="danger"><Glyphicon glyph="warning-sign" />Loading the web page... If you see this message, it can mean your Internet connection is slow, or that the back-end server is being restarted.  If this message does not disappear within two minutes, please reload the page.</Alert>
             }
             <Jumbotron>
               <Grid>
@@ -129,7 +129,7 @@ class Home extends React.Component {
                     <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />Please check the Tweets at the bottom of the page for important announcements or news.</Alert>
                     <Alert bsStyle="warning"><Glyphicon glyph="warning-sign" /> This web application should be used with Google Chrome or Apple Safari. If you use it with another browser it might not work properly.</Alert>
                     <Alert bsStyle="warning"><Glyphicon glyph="warning-sign" /> {this.state.labels.thisClass.msg1}</Alert>
-                    <Alert bsStyle="info"><Glyphicon glyph="bullhorn" /> If you want to work with us to add your language to the user interface, or the translation of the liturgical texts in your language, please contact us. We are especially looking for volunteers to translate the user interface for this website into: Arabic, Chinese, French, Spanish, and Swahili. Also, we are looking for volunteers to enter officially approved Arabic, Chinese, French, Spanish, and Swahili translations of the liturgical texts. See how to contact us by looking at the bottom of the About page.</Alert>
+                    <Alert bsStyle="info"><Glyphicon glyph="bullhorn" /> If you want to work with us to add your language to the user interface, or the translation of the liturgical texts in your language, please contact us. We are especially looking for volunteers to translate the user interface for this website into: Arabic, Chinese, French, and Swahili. Also, we are looking for volunteers to enter officially approved Arabic, Chinese, French, and Swahili translations of the liturgical texts. See how to contact us by looking at the bottom of the About page.</Alert>
                   </Col>
                   <Col xs={4} md={4}>
                     <Hymnographers />
