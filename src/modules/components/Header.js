@@ -135,7 +135,8 @@ export class Header extends React.Component {
                 <NavDropdown className="App-nav-dropdown" eventKey={7} title={<span><FontAwesome  className="App-header-ico" name="flag"/><span className="App-lang-code">{this.props.app.session.languageCode}</span></span>} id="basic-nav-dropdown">
                   <MenuItem eventKey={7.1} id="el" onClick={this.handleLanguageChange}>el - Ελληνικά</MenuItem>
                   <MenuItem eventKey={7.2} id="en" onClick={this.handleLanguageChange}>en - English</MenuItem>
-                  <MenuItem eventKey={7.3} id="spa" onClick={this.handleLanguageChange}>spa - Español</MenuItem>
+                  <MenuItem eventKey={7.3} id="ind" onClick={this.handleLanguageChange}>ind - Bahasa Indonesia</MenuItem>
+                  <MenuItem eventKey={7.4} id="spa" onClick={this.handleLanguageChange}>spa - Español</MenuItem>
                 </NavDropdown>
                 {this.props.app.session.displayAdditionalMenus ?
                     <NavDropdown className="App-nav-dropdown" eventKey={8} title={<FontAwesome  className="App-header-ico" name="user-o"/>} id="basic-nav-dropdown">
