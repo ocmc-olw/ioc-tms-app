@@ -23,6 +23,7 @@ import GenerateWithAges from './modules/pages/GenerateWithAges';
 import Help from './modules/pages/Help';
 import Home from './modules/pages/Home';
 import Links from './modules/pages/Links';
+import Lookup from './modules/pages/Lookup';
 import Login from './modules/pages/Login';
 import Logout from './modules/pages/Logout';
 import MyRecords from './modules/pages/MyRecords';
@@ -175,12 +176,8 @@ class App extends React.Component {
                       path='/searchontology'
                       component={SearchOntology}
                   />
-                  {/*<PrivateRoute*/}
-                      {/*authed={this.props.app.session.userInfo.authenticated}*/}
-                      {/*path='/searchtext'*/}
-                      {/*component={SearchTextParts}*/}
-                  {/*/>*/}
                   <Route path="/searchtext" component={SearchTextParts}/>
+                  <Route path="/db/:domain/:topic/:key" component={Lookup} />
                   <Route path="/home" component={Home}/>
                   <PrivateRoute
                       authed={this.props.app.session.userInfo.username === "wsadmin"}
@@ -224,6 +221,7 @@ class App extends React.Component {
     )
   }
 }
+
 
 const mapStateToProps = (state) => {
   return {
