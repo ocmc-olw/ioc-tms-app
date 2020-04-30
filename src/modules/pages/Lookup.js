@@ -4,10 +4,6 @@ import {Lookup as Looker} from 'ioc-liturgical-react';
 
 export class Lookup extends React.Component {
 
-  constructor(props) {
-    super(props);
-  };
-
   render() {
     return (
     <div className="App-page">
