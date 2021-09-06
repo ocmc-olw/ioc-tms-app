@@ -4210,10 +4210,10 @@ invert-kv@^1.0.0:
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
   integrity sha1-EEqOSqym09jNFXqO+L+rLXo//bY=
 
-ioc-liturgical-react@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-1.0.2.tgz#483c0238ddf8dea2842fe831322ad45619788434"
-  integrity sha512-evDzoqR42BUmjaFCGt7dkb8sm8rBwRw37/lC3NokDYoyaws4J+cbgUkJdmGw0KSOESCKm8xEOa3C1fv9WA865w==
+ioc-liturgical-react@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/ioc-liturgical-react/-/ioc-liturgical-react-1.0.3.tgz#adcb3a650f67d4445c38784254d5e3a759320c50"
+  integrity sha512-FROb1VU/s7QBqlzKr/nkuSQG2uBgCpmNLSwOR6zAS8U6pgCuRKath8w3h+D6VEce5l/RHI2uVxsIJw46yruEIQ==
   dependencies:
     "@tinymce/tinymce-react" "^2.1.3"
     axios "^0.19.0"

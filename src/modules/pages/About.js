@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import {Alert, Col, Glyphicon, Grid, Jumbotron, PageHeader, Row} from 'react-bootstrap';
 import YouTube from 'react-youtube';
 import PrivacyAndUse from './PrivacyAndUse';
-import Hymnographers from "../components/images/Hymnographers";
+//import Hymnographers from "../components/images/Hymnographers";
 
 class About extends React.Component {
   constructor(props) {
