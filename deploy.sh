@@ -1,6 +1,6 @@
 #!/bin/bash
 
-gitHubRepo="https://github.com/OCMC-Translation-Projects/ioc-tms-website.git"
+gitHubRepo="git@github.com:ocmc-olw/ioc-tms-website.git"
 repoPath="./deploy/"
 wwwPath="./wwwTest"
 zipFile=""

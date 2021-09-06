@@ -73,7 +73,8 @@ class Home extends React.Component {
   };
 
   render() {
-    var volunteersSought = "Consider volunteering: Are you interested in contributing your knowledge and experience to help liturgical translators world-wide? We are seeking volunteers to assist in a variety of ways.  Check out the volunteer opportunities towards the bottom of the About page."
+    const doxa = "OCMC is developing the next generation liturgical software called 'Doxa'.  It combines the features of ALWB and OLW in a single application that can be run on your local computer.  It will also power the future version of OLW on the Internet.  If there are features you would like to see, contact us using the email address at the bottom of the About page. We would also like to hear from you what you use OLW for. Let us know if you want to subscribe to the OCMC liturgical software newsletter."
+    const volunteersSought = "Consider volunteering: Are you interested in contributing your knowledge and experience to help liturgical translators world-wide? We are seeking volunteers to assist in a variety of ways.  Check out the volunteer opportunities towards the bottom of the About page.";
     console.log(this.state.location);
     if (this.state.location === "olw.thescriptorium.us") {
       return (
@@ -106,6 +107,9 @@ class Home extends React.Component {
                     <p> {this.state.labels.thisClass.p2}</p>
                     <Alert bsStyle="warning"><Glyphicon glyph="warning-sign" /> {this.state.labels.thisClass.msg1}</Alert>
                     <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />
+                      {doxa}
+                    </Alert>
+                    <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />
                       {volunteersSought}
                     </Alert>
                   </Col>
@@ -129,6 +133,7 @@ class Home extends React.Component {
                   <Col xs={8} md={8}>
                     <p> {this.state.labels.thisClass.p1}</p>
                     <p> {this.state.labels.thisClass.p2}</p>
+                    <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />{doxa}</Alert>
                     <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />{volunteersSought}</Alert>
                     <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />Please check the Tweets at the bottom of the page for important announcements or news.</Alert>
                     <Alert bsStyle="warning"><Glyphicon glyph="warning-sign" /> This web application should be used with Google Chrome or Apple Safari. If you use it with another browser it might not work properly.</Alert>
