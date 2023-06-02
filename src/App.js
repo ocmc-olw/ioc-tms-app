@@ -180,7 +180,7 @@ class App extends React.Component {
                   <Route path="/db/:domain/:topic/:key" component={Lookup} />
                   <Route path="/home" component={Home}/>
                   <PrivateRoute
-                      authed={this.props.app.session.userInfo.username === "wsadmin"}
+                      authed={this.props.app.session.userInfo.username === "wsadmin" || this.props.app.session.userInfo.username === "jhadmin"}
                       path='/admin'
                       component={Admin}
                   />

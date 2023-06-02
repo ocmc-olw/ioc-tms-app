@@ -69,7 +69,7 @@ export class Header extends React.Component {
             <Navbar.Collapse>
               <Nav>
                 {this.props.app.session.displayAdditionalMenus
-                  && this.props.app.session.userInfo.username === "wsadmin" ?
+                  && (this.props.app.session.userInfo.username === "wsadmin" || this.props.app.session.userInfo.username === "jhadmin") ?
                     <LinkContainer to="/add">
                       <NavItem className="App-nav-item" eventKey={"add"}>{<FontAwesome className="App-header-ico"  name="plus"/>} {this.props.app.session.localLabels.add.menu}</NavItem>
                     </LinkContainer>
