@@ -1,7 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 /node_modules/
 /static/
-/build/
+/ioc-tms-website.v2023.06.02.01/
 /deploy/
 /old/
 /.idea/

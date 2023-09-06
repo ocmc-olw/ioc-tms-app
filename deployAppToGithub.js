@@ -7,7 +7,7 @@
  *
  * Be sure that you update the version number first in package.json
  *
- * This script will create a zip of the contents of the build file,
+ * This script will create a zip of the contents of the ioc-tms-website.v2023.06.02.01 file,
  * place it in the deploy directory,
  * and push it to github.
  *
@@ -35,7 +35,7 @@ if (test('-d', './deploy')) {
 }
 ls;
 exec(
-    'cd build' +
+    'cd ioc-tms-website.v2023.06.02.01' +
     '; zip -r ../deploy/ioc-tms-website.v' + pjson.version + '.zip *; cd ..'
         + '; cd deploy'
     + '; ls'

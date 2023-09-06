@@ -9,11 +9,10 @@ const user = "/user/";
 const hostname = document.location.hostname;
 const protocol = document.location.protocol;
 
-var getDbServer = () => {
+let getDbServer = () => {
   return protocol +  "//" + hostname + ":7474";
 };
-
-var getWsServer = () => {
+let getWsServer = () => {
   if (hostname === "localhost") {
     return protocol +  "//" + hostname + ":4567";
   } else {

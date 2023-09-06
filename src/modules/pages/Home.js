@@ -6,8 +6,7 @@ import { connect } from 'react-redux';
 import Hymnographers from '../components/images/Hymnographers';
 import KenyaDeaconCensing from '../components/images/KenyaDeaconCensing';
 import Scriptorium from '../components/images/Scriptorium';
-import {Alert, Glyphicon, Col, Grid, Jumbotron, Row, Well} from 'react-bootstrap'
-import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import {Alert, Glyphicon, Col, Grid, Jumbotron, Row} from 'react-bootstrap'
 import Server from '../../config/server';
 import Actions from "../../reducers/actionTypes";
 
@@ -33,7 +32,6 @@ class Home extends React.Component {
   };
 
   componentWillReceiveProps = (nextProps) => {
-
     let labels = nextProps.app.session.localLabels;
     let labelTopics = nextProps.app.session.labelTopics;
 
@@ -73,8 +71,6 @@ class Home extends React.Component {
   };
 
   render() {
-    const doxa = "OCMC is developing the next generation liturgical software called 'Doxa'.  It combines the features of ALWB and OLW in a single application that can be run on your local computer.  It will also power the future version of OLW on the Internet.  If there are features you would like to see, contact us using the email address at the bottom of the About page. We would also like to hear from you what you use OLW for. Let us know if you want to subscribe to the OCMC liturgical software newsletter."
-    const volunteersSought = "Consider volunteering: Are you interested in contributing your knowledge and experience to help liturgical translators world-wide? We are seeking volunteers to assist in a variety of ways.  Check out the volunteer opportunities towards the bottom of the About page.";
     console.log(this.state.location);
     if (this.state.location === "olw.thescriptorium.us") {
       return (
@@ -103,15 +99,36 @@ class Home extends React.Component {
               <Grid>
                 <Row>
                   <Col xs={8} md={8}>
+                    <Row>
+                      <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />
+                        Attention OLW users in Australia and elsewhere!
+                        <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        OCMC is developing the next generation liturgical software called 'Doxa'.
+                        <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        It combines the features of ALWB and OLW in a single application that can be run on your local computer.
+                        <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        ALWB is used to produce the Greek Orthodox Archdiocese of America's <a href='https://dcs.goarch.org' target='_blank'>DIGITAL CHANT STAND</a>.
+                        <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Doxa will replace ALWB and will also power the future version of OLW on the Internet.
+                        <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='https://us7.list-manage.com/contact-form?u=5cda59d72a32e019e8f560398&form_id=2c82c6e7fd711b0ce9c377742de573d4' target='_blank'><span>CONTACT</span></a> us if there are features you would like to see.
+                        <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='https://eepurl.com/hJZnfT' target='_blank'>SUBSCRIBE</a> to our liturgical software newsletter to learn when Doxa will be released.
+                        <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Our software is always open-source and always provided at no cost.
+                      </Alert>
+                    </Row>
+
                     <p> {this.state.labels.thisClass.p1}</p>
                     <p> {this.state.labels.thisClass.p2}</p>
                     <Alert bsStyle="warning"><Glyphicon glyph="warning-sign" /> {this.state.labels.thisClass.msg1}</Alert>
-                    <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />
-                      {doxa}
-                    </Alert>
-                    <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />
-                      {volunteersSought}
-                    </Alert>
                   </Col>
                   <Col xs={4} md={4}>
                     <KenyaDeaconCensing/>
@@ -125,17 +142,42 @@ class Home extends React.Component {
       return (
           <div className="App-page App-home">
             { this.props.app.session.db.domain ? <span></span>
-                : <Alert bsStyle="danger"><Glyphicon glyph="warning-sign" />Loading the web page... If you see this message, it can mean your Internet connection is slow, or that the back-end server is being restarted.  If this message does not disappear within two minutes, please reload the page.</Alert>
+                : <Alert bsStyle="success"><Glyphicon glyph="success" />Loading the web page... If you see this message, it can mean your Internet connection is slow, or that the back-end server is being restarted.  If this message does not disappear within two minutes, please reload the page.</Alert>
             }
+            <Row>
+              <Grid>
+                <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />
+                  Attention OLW users in Australia and elsewhere!
+                  <br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  OCMC is developing the next generation liturgical software called 'Doxa'.
+                  <br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  It combines the features of ALWB and OLW in a single application that can be run on your local computer.
+                  <br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  ALWB is used to produce the Greek Orthodox Archdiocese of America's <a href='https://dcs.goarch.org' target='_blank'>DIGITAL CHANT STAND</a>.
+                  <br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  Doxa will replace ALWB and will also power the future version of OLW on the Internet.
+                  <br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href='https://us7.list-manage.com/contact-form?u=5cda59d72a32e019e8f560398&form_id=2c82c6e7fd711b0ce9c377742de573d4' target='_blank'><span>CONTACT</span></a> us if there are features you would like to see.
+                  <br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href='https://eepurl.com/hJZnfT' target='_blank'>SUBSCRIBE</a> to our liturgical software newsletter to learn when Doxa will be released.
+                  <br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  Our software is always open-source and always provided at no cost.
+                </Alert>
+              </Grid>
+            </Row>
             <Jumbotron>
               <Grid>
                 <Row>
                   <Col xs={8} md={8}>
                     <p> {this.state.labels.thisClass.p1}</p>
                     <p> {this.state.labels.thisClass.p2}</p>
-                    <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />{doxa}</Alert>
-                    <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />{volunteersSought}</Alert>
-                    <Alert bsStyle="info"><Glyphicon glyph="bullhorn" />Please check the Tweets at the bottom of the page for important announcements or news.</Alert>
                     <Alert bsStyle="warning"><Glyphicon glyph="warning-sign" /> This web application should be used with Google Chrome or Apple Safari. If you use it with another browser it might not work properly.</Alert>
                     <Alert bsStyle="warning"><Glyphicon glyph="warning-sign" /> {this.state.labels.thisClass.msg1}</Alert>
                   </Col>
@@ -145,14 +187,6 @@ class Home extends React.Component {
                 </Row>
               </Grid>
             </Jumbotron>
-            <Well>
-              <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
-              <TwitterTimelineEmbed
-                  sourceType="profile"
-                  screenName="olw_ocmc"
-                  options={{height: 400, width: 545}}
-              />
-            </Well>
           </div>
       );
     }
